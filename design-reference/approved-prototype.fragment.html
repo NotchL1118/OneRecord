@@ -1,0 +1,307 @@
+<!-- Throwaway discussion prototype. Sample diaries, chats, playback, recording and saves are local simulations only. -->
+<div id="diary-theme-system-demo">
+<div class="viz-dotted-background dp-stage">
+<div class="dp-phone" aria-label="OneRecord 页面体验原型">
+<div class="dp-status"><span>9:41</span><span>••• ▰</span></div>
+<header class="dp-header"></header>
+<main class="dp-main"></main>
+<footer class="dp-footer"></footer>
+<nav class="dp-nav" aria-label="主要导航"></nav>
+<div class="dp-homebar"></div>
+<div class="dp-shade" hidden></div><section class="dp-sheet" aria-label="页面操作" hidden></section>
+</div></div>
+<style>
+#diary-theme-system-demo .dp-stage{padding:24px 0}
+#diary-theme-system-demo .dp-phone{--theme-background:light-dark(#fffaf2,#2d2822);--theme-text:light-dark(#514233,#f2e7d7);--theme-text-secondary:light-dark(#887461,#c6b19b);--theme-border:light-dark(#e9dfd0,#564a3b);--theme-surface:light-dark(#fffdf8,#382f27);--theme-tint:light-dark(#f3e7d4,#45392a);--theme-primary:light-dark(#edc49d,#946a44);--theme-primary-text:light-dark(#634329,#fff1df);--theme-reference:light-dark(#e9ebd8,#3e4430);--theme-danger:light-dark(#a74735,#f1b4a5);max-width:398px;width:100%;height:752px;margin:auto;padding:20px 23px 12px;display:flex;flex-direction:column;border:1px solid var(--theme-border);border-radius:38px;background:var(--theme-background);color:var(--theme-text);font:15px/1.65 ui-rounded,-apple-system,BlinkMacSystemFont,"PingFang SC",sans-serif;box-sizing:border-box;overflow:hidden;position:relative;box-shadow:0 12px 32px #00000009}
+#diary-theme-system-demo .dp-phone *{box-sizing:border-box}
+#diary-theme-system-demo .dp-phone{color-scheme:light;--theme-background:#fffdf3;--theme-text:#443d37;--theme-text-secondary:#786c62;--theme-border:#e7e1d7;--theme-surface:#ffffff;--theme-tint:#fff6de;--theme-primary:#ffe39b;--theme-primary-text:#443d37;--theme-secondary:#ffc9b0;--theme-reference:#ffecdf;--theme-danger:#a74735}
+#diary-theme-system-demo .dp-phone button,#diary-theme-system-demo .dp-phone input,#diary-theme-system-demo .dp-phone select,#diary-theme-system-demo .dp-phone textarea{font:inherit;color:inherit}
+#diary-theme-system-demo .dp-phone button{cursor:var(--cursor-interaction,pointer);-webkit-tap-highlight-color:transparent}
+#diary-theme-system-demo .dp-phone button:focus-visible{outline:2px solid var(--theme-primary-text);outline-offset:3px}
+#diary-theme-system-demo .dp-phone button:disabled{opacity:.5;cursor:default}
+#diary-theme-system-demo .dp-phone [hidden]{display:none!important}
+#diary-theme-system-demo .dp-status{display:flex;justify-content:space-between;font-weight:600;font-size:12px;margin:0 3px 22px;flex:none}
+#diary-theme-system-demo .dp-status span:last-child{letter-spacing:2px}
+#diary-theme-system-demo .dp-header{flex:none;display:flex;align-items:center;justify-content:space-between;gap:10px;min-height:46px;margin-bottom:15px}
+#diary-theme-system-demo .dp-header h2{font-size:29px;font-weight:650;letter-spacing:-1px;line-height:1.35;margin:0;color:var(--theme-text)}
+#diary-theme-system-demo .dp-header .dp-small-title{font-size:18px;font-weight:600;letter-spacing:0}
+#diary-theme-system-demo .dp-avatar,#diary-theme-system-demo .dp-icon{width:42px;height:42px;border:0;border-radius:50%;background:var(--theme-tint);display:grid;place-items:center;flex:none}
+#diary-theme-system-demo .dp-icon.quiet{background:none}
+#diary-theme-system-demo .dp-avatar span{display:block;width:25px;height:22px;background:var(--theme-primary);border-radius:47% 50% 42% 45%;position:relative}
+#diary-theme-system-demo .dp-avatar span:before{content:"";position:absolute;left:6px;top:8px;width:3px;height:3px;border-radius:50%;background:var(--theme-primary-text);box-shadow:9px 0 0 var(--theme-primary-text)}
+#diary-theme-system-demo .dp-avatar span:after{content:"";position:absolute;left:10px;top:13px;width:5px;height:3px;border:1px solid var(--theme-primary-text);border-top:0;border-radius:0 0 5px 5px}
+#diary-theme-system-demo .dp-main{flex:1;min-height:0;overflow:auto;overscroll-behavior:contain;scrollbar-width:thin;scrollbar-color:var(--theme-border) transparent;overflow-wrap:anywhere}
+#diary-theme-system-demo .dp-search{display:flex;align-items:center;gap:9px;border-radius:15px;background:var(--theme-tint);padding:10px 13px;margin:1px 0 24px;color:var(--theme-text-secondary)}
+#diary-theme-system-demo .dp-search input{width:100%;min-width:0;border:0;background:none;outline-offset:5px;font-size:14px}
+#diary-theme-system-demo .dp-search input::placeholder{color:var(--theme-text-secondary);opacity:1}
+#diary-theme-system-demo .dp-group{margin:0 0 26px}
+#diary-theme-system-demo .dp-day{display:flex;justify-content:space-between;align-items:baseline;color:var(--theme-text-secondary);font-size:12px;letter-spacing:.2px;margin-bottom:6px}
+#diary-theme-system-demo .dp-day strong{font-size:14px;font-weight:600;color:var(--theme-text)}
+#diary-theme-system-demo .dp-entry{width:100%;display:block;text-align:left;border:0;border-bottom:1px solid var(--theme-border);background:none;padding:14px 0 16px}
+#diary-theme-system-demo .dp-entry:last-child{border-bottom:0}
+#diary-theme-system-demo .dp-meta{display:flex;align-items:center;justify-content:space-between;gap:8px;color:var(--theme-text-secondary);font-size:12px;margin-bottom:7px}
+#diary-theme-system-demo .dp-meta>span{display:flex;gap:6px;align-items:center}
+#diary-theme-system-demo .dp-meta svg{width:13px;height:13px}
+#diary-theme-system-demo .dp-entry p{margin:0;font-size:15px;line-height:1.85;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden}
+#diary-theme-system-demo .dp-mood{background:var(--theme-tint);border-radius:9px;padding:1px 7px;font-size:11px;color:var(--theme-text-secondary)}
+#diary-theme-system-demo .dp-nav{display:flex;justify-content:space-around;border-top:1px solid var(--theme-border);padding-top:10px;margin-top:10px;flex:none}
+#diary-theme-system-demo .dp-nav button{display:flex;align-items:center;flex-direction:column;gap:4px;min-width:70px;min-height:47px;padding:5px 14px;border:0;border-radius:16px;background:none;color:var(--theme-text-secondary);font-size:11px}
+#diary-theme-system-demo .dp-nav button.active{background:var(--theme-tint);color:var(--theme-text)}
+#diary-theme-system-demo .dp-homebar{height:4px;width:103px;margin:16px auto 0;border-radius:5px;background:var(--theme-text);opacity:.5;flex:none}
+#diary-theme-system-demo .dp-footer{flex:none}
+#diary-theme-system-demo .dp-empty{padding:55px 12px;text-align:center;color:var(--theme-text-secondary);font-size:14px}
+#diary-theme-system-demo .dp-detail{min-height:0;display:flex;flex-direction:column;height:100%}
+#diary-theme-system-demo .dp-detail-top{display:flex;align-items:center;justify-content:space-between;gap:8px;margin-bottom:15px;flex:none}
+#diary-theme-system-demo .dp-detail-top h2{margin:0;font-size:25px;line-height:1.4;color:var(--theme-text);font-weight:600;letter-spacing:-.5px}
+#diary-theme-system-demo .dp-detail-top small{display:block;color:var(--theme-text-secondary);font-size:12px;margin-top:4px}
+#diary-theme-system-demo .dp-saved{display:flex;gap:4px;align-items:center;color:var(--theme-text-secondary);font-size:12px}
+#diary-theme-system-demo .dp-saved svg{width:15px;height:15px}
+#diary-theme-system-demo .dp-player{display:flex;align-items:center;gap:10px;background:var(--theme-tint);border-radius:16px;padding:7px 10px 7px 7px;margin-bottom:15px;flex:none;font-size:13px}
+#diary-theme-system-demo .dp-player .dp-icon{background:var(--theme-surface);height:36px;width:36px}
+#diary-theme-system-demo .dp-duration{font-size:12px;margin-left:auto;color:var(--theme-text-secondary);font-variant-numeric:tabular-nums}
+#diary-theme-system-demo .dp-reading-head{display:flex;align-items:center;justify-content:space-between;color:var(--theme-text-secondary);font-size:12px;flex:none;margin-bottom:9px}
+#diary-theme-system-demo .dp-text-button{border:0;background:none;display:flex;align-items:center;gap:5px;padding:6px 0 6px 10px;min-height:36px;color:var(--theme-text-secondary);font-size:12px}
+#diary-theme-system-demo .dp-reading{overflow:auto;min-height:0;flex:1;scrollbar-width:thin;scrollbar-color:var(--theme-border) transparent;padding-right:5px}
+#diary-theme-system-demo .dp-reading p{font-size:16px;line-height:1.95;margin:0 0 18px}
+#diary-theme-system-demo .dp-reading .dp-addendum{border-top:1px solid var(--theme-border);padding-top:15px;margin-top:23px}
+#diary-theme-system-demo .dp-reading small{color:var(--theme-text-secondary);font-size:12px}
+#diary-theme-system-demo .dp-toolbar{display:flex;align-items:center;gap:8px;justify-content:space-between;border-top:1px solid var(--theme-border);margin-top:12px;padding-top:10px}
+#diary-theme-system-demo .dp-toolbar button{border:0;background:none;display:flex;align-items:center;justify-content:center;gap:7px;padding:9px 7px;min-height:44px;font-size:13px;color:var(--theme-text-secondary)}
+#diary-theme-system-demo .dp-toolbar .dp-finish{background:var(--theme-primary);color:var(--theme-primary-text);border-radius:15px;padding:10px 17px;font-weight:600}
+#diary-theme-system-demo .dp-primary{width:100%;background:var(--theme-primary);color:var(--theme-primary-text)!important;border:0;border-radius:18px;min-height:47px;padding:11px 17px;font-weight:600;display:flex;align-items:center;justify-content:center;gap:7px}
+#diary-theme-system-demo .dp-new-chat{margin:4px 0 24px}
+#diary-theme-system-demo .dp-thread{display:flex;align-items:flex-start;gap:13px;width:100%;padding:20px 0;border:0;border-bottom:1px solid var(--theme-border);background:none;text-align:left}
+#diary-theme-system-demo .dp-thread-art{width:37px;height:37px;background:var(--theme-tint);border-radius:14px;display:grid;place-items:center;flex:none;margin-top:1px}
+#diary-theme-system-demo .dp-thread-body{flex:1;min-width:0}
+#diary-theme-system-demo .dp-thread-title{display:flex;align-items:baseline;justify-content:space-between;gap:8px}
+#diary-theme-system-demo .dp-thread-title strong{font-size:15px;font-weight:600}
+#diary-theme-system-demo .dp-thread-title small{font-size:11px;color:var(--theme-text-secondary);white-space:nowrap}
+#diary-theme-system-demo .dp-thread p{font-size:13px;color:var(--theme-text-secondary);margin:7px 0 0;line-height:1.7;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden}
+#diary-theme-system-demo .dp-chat{display:flex;flex-direction:column;min-height:0;height:100%}
+#diary-theme-system-demo .dp-chat-options{display:flex;flex-wrap:wrap;gap:7px;padding:0 0 12px;flex:none;border-bottom:1px solid var(--theme-border)}
+#diary-theme-system-demo .dp-chip{display:flex;align-items:center;gap:6px;background:var(--theme-tint);border:0;border-radius:13px;padding:7px 10px;min-height:36px;font-size:12px}
+#diary-theme-system-demo .dp-chip svg{width:14px;height:14px}
+#diary-theme-system-demo .dp-chip:disabled{opacity:1;color:var(--theme-text-secondary)}
+#diary-theme-system-demo .dp-messages{overflow:auto;min-height:0;flex:1;padding:19px 0 6px;scrollbar-width:thin;scrollbar-color:var(--theme-border) transparent}
+#diary-theme-system-demo .dp-message{margin:0 0 23px;max-width:100%}
+#diary-theme-system-demo .dp-message.user{margin-left:35px;background:var(--theme-tint);padding:12px 15px;border-radius:19px 19px 6px 19px}
+#diary-theme-system-demo .dp-message p{font-size:15px;line-height:1.9;margin:0 0 11px}
+#diary-theme-system-demo .dp-message p:last-child{margin-bottom:0}
+#diary-theme-system-demo .dp-assistant-label{display:flex;align-items:center;gap:7px;margin-bottom:9px;font-size:11px;color:var(--theme-text-secondary)}
+#diary-theme-system-demo .dp-assistant-label .dp-avatar{width:25px;height:25px;background:none}
+#diary-theme-system-demo .dp-citation{display:inline-flex;align-items:center;gap:5px;font-size:11px;background:var(--theme-reference);border:0;border-radius:8px;padding:5px 8px;margin:4px 6px 0 0;min-height:32px}
+#diary-theme-system-demo .dp-citation svg{width:13px;height:13px}
+#diary-theme-system-demo .dp-compose{display:flex;align-items:flex-end;gap:9px;padding:11px 0 0;border-top:1px solid var(--theme-border)}
+#diary-theme-system-demo .dp-compose textarea{resize:none;min-height:49px;height:69px;max-height:130px;flex:1;min-width:0;border:1px solid var(--theme-border);border-radius:17px;background:var(--theme-surface);padding:11px 12px;font-size:16px;line-height:1.5}
+#diary-theme-system-demo .dp-send{border:0;border-radius:15px;background:var(--theme-primary);color:var(--theme-primary-text);height:43px;width:43px;display:grid;place-items:center;flex:none;margin-bottom:3px}
+#diary-theme-system-demo .dp-hint{font-size:11px;color:var(--theme-text-secondary);margin:7px 0 0;min-height:18px}
+#diary-theme-system-demo .dp-start-chat{padding:80px 5px 10px;text-align:center}
+#diary-theme-system-demo .dp-start-chat .dp-avatar{margin:auto auto 18px;width:48px;height:48px}
+#diary-theme-system-demo .dp-start-chat h3{font-size:20px;font-weight:600;line-height:1.6;margin:0;color:var(--theme-text)}
+#diary-theme-system-demo .dp-start-chat p{font-size:13px;color:var(--theme-text-secondary);margin:11px 0}
+#diary-theme-system-demo .dp-shade{position:absolute;inset:0;background:#00000022;z-index:5}
+#diary-theme-system-demo .dp-sheet{position:absolute;bottom:0;left:0;right:0;z-index:6;max-height:90%;overflow:auto;border-radius:28px 28px 0 0;border-top:1px solid var(--theme-border);padding:22px 23px 28px;background:var(--theme-surface);box-shadow:0 -10px 30px #00000008}
+#diary-theme-system-demo .dp-sheet-heading{display:flex;align-items:center;justify-content:space-between;gap:10px;margin-bottom:17px}
+#diary-theme-system-demo .dp-sheet-heading h3{margin:0;font-size:19px;font-weight:600;color:var(--theme-text)}
+#diary-theme-system-demo .dp-sheet p{font-size:13px;color:var(--theme-text-secondary);line-height:1.85}
+#diary-theme-system-demo .dp-row{display:flex;align-items:center;justify-content:space-between;gap:12px;width:100%;border:0;border-bottom:1px solid var(--theme-border);background:none;text-align:left;padding:14px 0;min-height:52px;font-size:14px}
+#diary-theme-system-demo .dp-row small{display:block;color:var(--theme-text-secondary);font-size:11px}
+#diary-theme-system-demo .dp-danger{color:var(--theme-danger)!important}
+#diary-theme-system-demo .dp-editor{width:100%;min-height:260px;border:1px solid var(--theme-border);border-radius:17px;background:var(--theme-background);padding:14px;resize:vertical;font-size:16px;line-height:1.9;margin-bottom:15px}
+#diary-theme-system-demo .dp-mood-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px;margin-bottom:10px}
+#diary-theme-system-demo .dp-mood-grid button{background:var(--theme-background);border:1px solid var(--theme-border);border-radius:15px;min-height:55px;font-size:15px}
+#diary-theme-system-demo .dp-mood-grid button[aria-pressed="true"]{background:var(--theme-tint);border-color:var(--theme-primary-text)}
+#diary-theme-system-demo .dp-field{display:flex;flex-direction:column;gap:6px;font-size:13px;margin:13px 0}
+#diary-theme-system-demo .dp-field input{width:100%;min-width:0;padding:10px;border:1px solid var(--theme-border);border-radius:12px;background:var(--theme-background);font-size:16px}
+#diary-theme-system-demo .dp-home{text-align:center;padding-top:60px}
+#diary-theme-system-demo .dp-home h2{font-size:26px;font-weight:600;letter-spacing:-.5px;margin:0 0 35px;color:var(--theme-text)}
+#diary-theme-system-demo .dp-blob{position:relative;width:212px;height:186px;margin:auto;border:0;border-radius:47% 49% 40% 42%;background:var(--theme-tint);display:grid;place-items:center;box-shadow:inset 0 -8px 0 #af88610c}
+#diary-theme-system-demo .dp-blob:before{content:"";position:absolute;width:7px;height:10px;left:70px;top:46px;border-radius:5px;background:var(--theme-text);box-shadow:65px 0 0 var(--theme-text)}
+#diary-theme-system-demo .dp-blob:after{content:"";position:absolute;left:100px;top:60px;width:17px;height:9px;border:2px solid var(--theme-text);border-top:0;border-radius:0 0 14px 14px}
+#diary-theme-system-demo .dp-blob-label{display:flex;align-items:center;gap:7px;margin-top:54px;padding:10px 15px;border-radius:23px;background:var(--theme-surface);font-size:15px;font-weight:600}
+#diary-theme-system-demo .dp-type-link{margin:25px auto 0;border:0;background:none;display:flex;align-items:center;justify-content:center;gap:7px;min-height:44px;color:var(--theme-text-secondary);font-size:13px}
+#diary-theme-system-demo .dp-home.recording .dp-blob:before,#diary-theme-system-demo .dp-home.recording .dp-blob:after{display:none}
+#diary-theme-system-demo .dp-home.recording .dp-blob-label{margin:0;background:none;flex-direction:column;gap:16px}
+#diary-theme-system-demo .dp-timer{font-variant-numeric:tabular-nums}
+#diary-theme-system-demo .dp-blob{background:var(--theme-primary)}
+#diary-theme-system-demo .dp-avatar{background:var(--theme-secondary)}
+#diary-theme-system-demo .dp-theme-summary{display:flex;align-items:center;gap:9px;color:var(--theme-text-secondary);font-size:12px}
+#diary-theme-system-demo .dp-theme-dot{height:16px;width:16px;border-radius:50%;background:var(--theme-primary);box-shadow:inset 0 0 0 1px #00000009;flex:none}
+#diary-theme-system-demo .dp-theme-preview{display:flex;align-items:center;gap:18px;padding:21px 17px;margin:2px 0 26px;background:var(--theme-surface);border:1px solid var(--theme-border);border-radius:23px}
+#diary-theme-system-demo .dp-theme-character{width:75px;height:65px;background:var(--theme-primary);border-radius:47% 49% 41% 43%;flex:none;position:relative}
+#diary-theme-system-demo .dp-theme-character:before{content:"";position:absolute;left:23px;top:22px;width:4px;height:6px;border-radius:4px;background:var(--theme-text);box-shadow:24px 0 0 var(--theme-text)}
+#diary-theme-system-demo .dp-theme-character:after{content:"";position:absolute;left:32px;top:31px;width:10px;height:6px;border:1.5px solid var(--theme-text);border-top:0;border-radius:0 0 9px 9px}
+#diary-theme-system-demo .dp-theme-preview strong{display:block;font-size:19px;font-weight:600}
+#diary-theme-system-demo .dp-theme-preview small{font-size:12px;color:var(--theme-text-secondary);display:block;margin-top:4px}
+#diary-theme-system-demo .dp-theme-group{margin-bottom:27px}
+#diary-theme-system-demo .dp-theme-group h3{font-size:13px;font-weight:500;color:var(--theme-text-secondary);margin:0 0 11px}
+#diary-theme-system-demo .dp-theme-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}
+#diary-theme-system-demo .dp-theme-option{display:block;min-width:0;overflow:hidden;border:1.5px solid var(--theme-border);border-radius:16px;padding:0;background:var(--theme-surface);text-align:left;color:var(--theme-text)}
+#diary-theme-system-demo .dp-theme-option[aria-pressed="true"]{border-color:var(--theme-text);box-shadow:0 0 0 1px var(--theme-text)}
+#diary-theme-system-demo .dp-theme-swatches{display:flex;height:42px}
+#diary-theme-system-demo .dp-theme-swatches span:first-child{flex:1.1}#diary-theme-system-demo .dp-theme-swatches span:nth-child(2){flex:1.7}#diary-theme-system-demo .dp-theme-swatches span:last-child{flex:1}
+#diary-theme-system-demo .dp-theme-option-label{display:flex;align-items:center;justify-content:space-between;gap:4px;padding:10px 10px;font-size:12px;min-height:40px}
+#diary-theme-system-demo .dp-theme-option-label svg{height:15px;width:15px;flex:none;visibility:hidden}
+#diary-theme-system-demo .dp-theme-option[aria-pressed="true"] .dp-theme-option-label svg{visibility:visible}
+#diary-theme-system-demo .dp-theme-default{border:0;background:none;color:var(--theme-text-secondary);min-height:44px;font-size:12px;padding:8px 0;display:block;margin:0 auto}
+@media(max-width:360px){#diary-theme-system-demo .dp-phone{padding:18px 17px 12px}#diary-theme-system-demo .dp-chip{font-size:11px;padding:7px 8px}#diary-theme-system-demo .dp-header h2{font-size:26px}}
+</style>
+<script>
+(()=>{
+ const root=document.getElementById('diary-theme-system-demo');
+ const paletteCatalog=[
+  {id:1,name:'向日葵奶白',family:'阳光与果实',bg:'#FFFEF8',main:'#FFDF58',secondary:'#FFCDA4'},
+  {id:2,name:'橘子汽水',family:'阳光与果实',bg:'#FFFCF7',main:'#FFBE68',secondary:'#FFEFA8'},
+  {id:3,name:'杏子果酱',family:'阳光与果实',bg:'#FFF9F4',main:'#FFAC78',secondary:'#FFE19F'},
+  {id:4,name:'柠檬奶油',family:'阳光与果实',bg:'#FFFFF6',main:'#F2ED78',secondary:'#FFD1A3'},
+  {id:5,name:'香草布丁',family:'阳光与果实',bg:'#FFFDF3',main:'#FFE39B',secondary:'#FFC9B0'},
+  {id:6,name:'菠萝雪糕',family:'阳光与果实',bg:'#FFFEF1',main:'#F6D85B',secondary:'#CCE7AE'},
+  {id:7,name:'白桃软糖',family:'蜜桃与花瓣',bg:'#FFFAF8',main:'#FFC2B0',secondary:'#FFDF9C'},
+  {id:8,name:'草莓牛奶',family:'蜜桃与花瓣',bg:'#FFFAFC',main:'#FFB5CF',secondary:'#FFE3A8'},
+  {id:9,name:'珊瑚雪糕',family:'蜜桃与花瓣',bg:'#FFFCFA',main:'#FFA18E',secondary:'#FFD9AD'},
+  {id:10,name:'樱花奶白',family:'蜜桃与花瓣',bg:'#FFFBFD',main:'#F7C4E1',secondary:'#D7D3FF'},
+  {id:11,name:'西瓜苏打',family:'蜜桃与花瓣',bg:'#FFFDF9',main:'#FFB4AE',secondary:'#CBEAC9'},
+  {id:12,name:'芭乐牛乳',family:'蜜桃与花瓣',bg:'#FFFDFC',main:'#FFD3D6',secondary:'#BFE7B9'},
+  {id:13,name:'薄荷奶糖',family:'果园与嫩叶',bg:'#FAFFFB',main:'#BCEED6',secondary:'#FFE3A5'},
+  {id:14,name:'青苹果',family:'果园与嫩叶',bg:'#FEFFF6',main:'#DCF19B',secondary:'#FFD399'},
+  {id:15,name:'开心果',family:'果园与嫩叶',bg:'#FEFFF8',main:'#D7EAB2',secondary:'#FFD2B3'},
+  {id:16,name:'蜜瓜冰沙',family:'果园与嫩叶',bg:'#F8FFFA',main:'#AEEBD0',secondary:'#FFDE91'},
+  {id:17,name:'青柠汽水',family:'果园与嫩叶',bg:'#FFFFF8',main:'#E7F7A3',secondary:'#BDE8D8'},
+  {id:18,name:'黄油抹茶',family:'果园与嫩叶',bg:'#FFFDF4',main:'#FFE28C',secondary:'#C6E2B3'},
+  {id:19,name:'晴空奶油',family:'天空与糖果',bg:'#FCFEFF',main:'#BDE2FF',secondary:'#FFE299'},
+  {id:20,name:'海盐汽水',family:'天空与糖果',bg:'#FAFFFF',main:'#BDEEF4',secondary:'#FFD2AE'},
+  {id:21,name:'薰衣草奶',family:'天空与糖果',bg:'#FFFCFF',main:'#DDD0FF',secondary:'#FFD3B8'},
+  {id:22,name:'蓝莓奶冻',family:'天空与糖果',bg:'#FCFDFF',main:'#CFD9FF',secondary:'#FFE4A6'},
+  {id:23,name:'紫丁香',family:'天空与糖果',bg:'#FFFAFF',main:'#EAC9F1',secondary:'#FFE3A3'},
+  {id:24,name:'彩虹棉花糖',family:'天空与糖果',bg:'#FFFCFB',main:'#FFD0DF',secondary:'#BCE2F4'}
+ ];
+ const defaultPaletteId=5;
+ let paletteId=defaultPaletteId;
+ const activePalette=()=>paletteCatalog.find(p=>p.id===paletteId)||paletteCatalog.find(p=>p.id===defaultPaletteId);
+ const mix=(a,b,t)=>'#'+[1,3,5].map(i=>Math.round(parseInt(a.slice(i,i+2),16)*(1-t)+parseInt(b.slice(i,i+2),16)*t).toString(16).padStart(2,'0')).join('');
+ function applyPalette(){
+  const p=activePalette();paletteId=p.id;
+  const tokens={background:p.bg,surface:'#FFFFFF',text:'#443D37','text-secondary':'#786C62',border:mix('#443D37',p.bg,.87),primary:p.main,'primary-text':'#443D37',secondary:p.secondary,tint:mix(p.main,'#FFFFFF',.67),reference:mix(p.secondary,'#FFFFFF',.58),danger:'#A74735'};
+  const phone=root.querySelector('.dp-phone');Object.entries(tokens).forEach(([name,value])=>phone.style.setProperty('--theme-'+name,value));
+  root.querySelectorAll('[data-current-palette]').forEach(label=>label.textContent=p.name);
+  root.querySelectorAll('[data-theme-id]').forEach(button=>button.setAttribute('aria-pressed',String(Number(button.dataset.themeId)===p.id)));
+ }
+ function rememberPalette(){
+  const p=activePalette();
+  if(window.openai?.setWidgetState)window.openai.setWidgetState({modelContent:{themeSystem:'one-record-v1',paletteId:p.id,palette:p.name,defaultPalette:'香草布丁',appearance:'light'},privateContent:null}).catch(()=>{});
+ }
+ function restorePalette(snapshot){const data=snapshot?.modelContent??snapshot;if(data?.themeSystem==='one-record-v1'){paletteId=paletteCatalog.some(p=>p.id===data.paletteId)?data.paletteId:defaultPaletteId;applyPalette();}}
+ const header=root.querySelector('.dp-header'),main=root.querySelector('.dp-main'),footer=root.querySelector('.dp-footer'),nav=root.querySelector('.dp-nav'),sheet=root.querySelector('.dp-sheet'),shade=root.querySelector('.dp-shade');
+ const esc=value=>String(value).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+ const icon=name=>'<i data-lucide="'+name+'" aria-hidden="true"></i>';
+ const avatar='<span aria-hidden="true"></span>';
+ const diaries=[
+  {id:1,date:'2026-10-10',time:'20:46',mood:'平静',audio:'04:32',ai:true,text:['今天下班比平时晚了一点。走出楼的时候天已经暗了，原本想直接打车，后来还是决定自己走一段。','路过花店，门口还有几束没卖完的花。我挑了一束淡黄色的。老板帮我包起来的时候，突然觉得今天也没有那么糟。','把手机收了起来。风有一点凉，街角有人在等朋友，旁边的小店正在准备打烊。那一会儿，我终于觉得自己下班了。','回家以后把花放在桌上，给自己煮了面。能安静地吃完一顿饭，也挺好的。'],extra:''},
+  {id:2,date:'2026-10-10',time:'12:35',mood:'疲惫',audio:null,ai:true,text:['中午找了个安静的角落坐了一会儿。今天不想边吃饭边看消息，想让脑子也休息一下。'],extra:''},
+  {id:3,date:'2026-10-09',time:'21:08',mood:'开心',audio:'01:26',ai:true,text:['和好久没见的朋友通了电话。我们没聊什么大事，说了最近吃的东西，还有一些无聊的小事。','挂电话以后心情很好。原来有人听我说这些，也会让一天变得不一样。'],extra:''},
+  {id:4,date:'2026-10-08',time:'22:10',mood:'焦虑',audio:'02:15',ai:false,text:['今天一直想着没做完的事，休息的时候也忍不住打开电脑。','希望明天能早点结束工作，给自己留一点完全不用赶时间的晚上。'],extra:''}
+ ];
+ const initialChat=[{role:'user',text:'最近下班以后总觉得很累，好像很难真正放松下来。'},{role:'assistant',text:'你提到过，休息的时候也会想着没做完的事情。今天那段慢慢走回家、把手机收起来的时间，却让你觉得终于下班了。\n\n当时是什么让你开始放松的？',refs:[1]}];
+ const chats=[{id:1,title:'下班后，怎样慢下来',date:'今天',scope:'最近一周',model:'日常模型',messages:initialChat},{id:2,title:'那些小小的好事',date:'昨天',scope:'最近一周',model:'日常模型',messages:[{role:'user',text:'想看看最近有什么开心的小事。'},{role:'assistant',text:'你写过和朋友通电话的晚上。那些很普通的话题，让你在挂电话以后心情很好。',refs:[3]}]}];
+ const state={page:'diary',diaryId:1,chatId:1,returnPage:'diary',saved:false,filter:'',playing:false,timer:null,started:0,generation:null,models:['日常模型','备用模型'],newScope:'',newModel:'日常模型',draft:'',opener:null};
+ const diary=()=>diaries.find(d=>d.id===state.diaryId);
+ const chat=()=>chats.find(c=>c.id===state.chatId);
+ const dateLabel=date=>Number(date.slice(5,7))+' 月 '+Number(date.slice(8,10))+' 日';
+ const dateNick=date=>date==='2026-10-10'?'今天':date==='2026-10-09'?'昨天':'星期四';
+ const icons=()=>{if(globalThis.lucide)lucide.createIcons({attrs:{width:19,height:19}});};
+ function stopGeneration(){if(state.generation){clearTimeout(state.generation);state.generation=null;const c=chat();if(c){const m=c.messages[c.messages.length-1];if(m.pending){m.pending=false;m.text='回答已停止。';}}}}
+ function closeSheet(){sheet.hidden=true;shade.hidden=true;if(state.opener&&state.opener.isConnected)state.opener.focus();}
+ function openSheet(title,body,opener){state.opener=opener||document.activeElement;sheet.innerHTML='<div class="dp-sheet-heading"><h3>'+esc(title)+'</h3><button class="dp-icon" data-action="close-sheet" aria-label="关闭">'+icon('x')+'</button></div>'+body;sheet.hidden=false;shade.hidden=false;icons();sheet.querySelector('[data-action="close-sheet"]').focus();}
+ function headerBack(title,back,more){header.innerHTML='<button class="dp-icon quiet" data-go="'+back+'" aria-label="返回">'+icon('chevron-left')+'</button><span class="dp-small-title">'+esc(title)+'</span>'+(more?'<button class="dp-icon quiet" data-action="'+more+'" aria-label="更多操作">'+icon('ellipsis')+'</button>':'<span style="width:42px"></span>');}
+ function draw(page){
+  if(state.page==='chat'&&page!=='chat')stopGeneration();
+  if(page!=='recording')clearInterval(state.timer);
+  state.page=page;state.playing=false;main.scrollTop=0;main.style.overflow='auto';footer.innerHTML='';
+  const top=['home','diary','threads'].includes(page);nav.hidden=!top;
+  nav.innerHTML=[['home','mic','记录'],['diary','book-open','日记'],['threads','messages-square','对话']].map(([p,i,t])=>'<button data-go="'+p+'" class="'+(p===page?'active':'')+'" '+(p===page?'aria-current="page"':'')+'>'+icon(i)+t+'</button>').join('');
+  if(top)header.innerHTML='<h2 class="'+(page==='home'?'dp-small-title':'')+'">'+({home:'OneRecord',diary:'日记',threads:'日记对话'}[page])+'</h2><button class="dp-avatar" data-go="more" aria-label="打开更多">'+avatar+'</button>';
+  if(page==='diary'){
+   main.innerHTML='<label class="dp-search">'+icon('search')+'<input type="search" aria-label="搜索日记" placeholder="搜索日记里的文字" value="'+esc(state.filter)+'"></label><div class="dp-diary-list"></div>';renderDiaryList();
+  }else if(page==='detail'){
+   const d=diary();if(!d){draw(state.returnPage);return;}
+   headerBack(state.saved?'这一段，收好了':'日记',state.returnPage,'entry-menu');main.style.overflow='hidden';
+   main.innerHTML='<div class="dp-detail"><div class="dp-detail-top"><div><h2>'+dateLabel(d.date)+'</h2><small>'+dateNick(d.date)+' · '+d.time+'</small></div>'+(state.saved?'<span class="dp-saved">'+icon('circle-check')+'已保存</span>':'')+'</div>'+(d.audio?'<div class="dp-player"><button class="dp-icon" data-action="play" aria-label="模拟播放原音">'+icon('play')+'</button><span>原始录音</span><span class="dp-duration">'+d.audio+'</span></div>':'')+'<div class="dp-reading-head"><span>'+(d.audio?'转写正文':'正文')+'</span><button class="dp-text-button" data-action="edit">'+icon('pencil-line')+'编辑</button></div><section class="dp-reading" aria-label="日记正文，可滚动阅读">'+d.text.map(t=>'<p>'+esc(t)+'</p>').join('')+(d.extra?'<div class="dp-addendum"><small>补充文字</small><p>'+esc(d.extra)+'</p></div>':'')+'</section></div>';
+   footer.innerHTML='<div class="dp-toolbar"><button data-action="mood">'+icon('smile')+esc(d.mood||'心情')+'</button><button data-action="supplement">'+icon('plus')+'补充文字</button>'+(state.saved?'<button class="dp-finish" data-go="home">完成</button>':'')+'</div>';
+  }else if(page==='threads'){
+   main.innerHTML='<button class="dp-primary dp-new-chat" data-action="new-chat">'+icon('plus')+'新对话</button><div class="dp-day">最近聊过</div>'+chats.map(c=>'<button class="dp-thread" data-chat="'+c.id+'"><span class="dp-thread-art">'+icon('message-circle')+'</span><span class="dp-thread-body"><span class="dp-thread-title"><strong>'+esc(c.title)+'</strong><small>'+esc(c.date)+'</small></span><p>'+esc(c.messages.filter(m=>m.role==='user').slice(-1)[0]?.text||'')+'</p></span></button>').join('');
+  }else if(page==='chat'){
+   const c=chat(),locked=!!c&&c.messages.length>0;headerBack(c?c.title:'新对话','threads',c?'chat-menu':null);main.style.overflow='hidden';
+   main.innerHTML='<div class="dp-chat"><div class="dp-chat-options"><button class="dp-chip" data-action="scope" '+(locked?'disabled':'')+'>'+icon('book-open')+esc(c?c.scope:state.newScope||'选择日记范围')+icon(locked?'lock-keyhole':'chevron-down')+'</button><button class="dp-chip" data-action="model" '+(locked?'disabled':'')+'>'+icon('sparkles')+esc(c?c.model:state.newModel)+icon(locked?'lock-keyhole':'chevron-down')+'</button></div><div class="dp-messages">'+(c?c.messages.map(messageHTML).join(''):'<div class="dp-start-chat"><span class="dp-avatar">'+avatar+'</span><h3>从一句话开始。</h3><p>先选一些日记，再聊聊你想到的。</p></div>')+'</div></div>';
+   footer.innerHTML='<div class="dp-compose"><textarea aria-label="对话内容" placeholder="有什么想聊聊的？">'+esc(state.draft)+'</textarea><button class="dp-send" data-action="'+(state.generation?'stop-reply':'send')+'" aria-label="'+(state.generation?'停止模拟回答':'发送演示消息')+'">'+icon(state.generation?'square':'arrow-up')+'</button></div><p class="dp-hint" aria-live="polite" hidden></p>';
+  }else if(page==='home'||page==='recording'){
+   if(page==='recording')header.innerHTML='<span class="dp-small-title">OneRecord</span>';
+   main.innerHTML='<div class="dp-home '+(page==='recording'?'recording':'')+'"><h2 class="'+(page==='recording'?'dp-timer':'')+'">'+(page==='recording'?'00:00':'留一点今天。')+'</h2><button class="dp-blob" data-action="'+(page==='recording'?'stop-record':'record')+'"><span class="dp-blob-label">'+icon(page==='recording'?'square':'mic')+(page==='recording'?'结束录音':'说说今天')+'</span></button>'+(page==='home'?'<button class="dp-type-link" data-action="write">'+icon('pencil-line')+'想打字</button>':'<p class="dp-hint" style="margin-top:25px">正在录音 · 模拟</p>')+'</div>';
+   if(page==='recording'){state.timer=setInterval(()=>{const elapsed=Math.floor((Date.now()-state.started)/1000);const t=main.querySelector('.dp-timer');if(t)t.textContent=Math.floor(elapsed/60).toString().padStart(2,'0')+':'+(elapsed%60).toString().padStart(2,'0');},500);}
+  }else if(page==='more'){
+   headerBack('更多','home');main.innerHTML='<button class="dp-row" data-go="appearance"><span>外观与配色</span><span class="dp-theme-summary"><span class="dp-theme-dot" aria-hidden="true"></span><span data-current-palette>'+esc(activePalette().name)+'</span>'+icon('chevron-right')+'</span></button><button class="dp-row" data-action="providers"><span>AI 服务商与模型<small>管理连接与默认模型</small></span>'+icon('chevron-right')+'</button><button class="dp-row" data-action="about"><span>关于 OneRecord</span>'+icon('chevron-right')+'</button>';
+  }else if(page==='appearance'){
+   headerBack('外观与配色','more');
+   main.innerHTML='<div class="dp-theme-preview"><span class="dp-theme-character" aria-hidden="true"></span><div><strong data-current-palette>'+esc(activePalette().name)+'</strong><small>留一点今天。</small></div></div>'+[...new Set(paletteCatalog.map(p=>p.family))].map(family=>'<section class="dp-theme-group"><h3>'+family+'</h3><div class="dp-theme-grid">'+paletteCatalog.filter(p=>p.family===family).map(p=>'<button class="dp-theme-option" data-theme-id="'+p.id+'" aria-pressed="'+(p.id===paletteId)+'" aria-label="'+p.name+'"><span class="dp-theme-swatches" aria-hidden="true"><span style="background:'+p.bg+'"></span><span style="background:'+p.main+'"></span><span style="background:'+p.secondary+'"></span></span><span class="dp-theme-option-label">'+p.name+icon('check')+'</span></button>').join('')+'</div></section>').join('')+'<button class="dp-theme-default" data-theme-id="5">恢复默认 · 香草布丁</button>';
+  }
+  icons();
+ }
+ function renderDiaryList(){
+  const list=main.querySelector('.dp-diary-list');if(!list)return;
+  const matches=diaries.filter(d=>[...d.text,d.extra].join(' ').includes(state.filter)).sort((a,b)=>(b.date+b.time).localeCompare(a.date+a.time));
+  list.innerHTML=[...new Set(matches.map(d=>d.date))].map(date=>'<section class="dp-group"><div class="dp-day"><strong>'+dateLabel(date)+'</strong><span>'+dateNick(date)+'</span></div>'+matches.filter(d=>d.date===date).map(d=>'<button class="dp-entry" data-diary="'+d.id+'"><span class="dp-meta"><span>'+d.time+(d.audio?icon('audio-lines'):'')+'</span>'+(d.mood?'<span class="dp-mood">'+esc(d.mood)+'</span>':'')+'</span><p>'+esc(d.text.join(' '))+'</p></button>').join('')+'</section>').join('')||'<div class="dp-empty">没有找到这段文字。</div>';icons();
+ }
+ function messageHTML(m){return '<div class="dp-message '+m.role+'">'+(m.role==='assistant'?'<div class="dp-assistant-label"><span class="dp-avatar">'+avatar+'</span>日记对话 · 示例回复</div>':'')+(m.pending?'<p>正在回复…</p>':m.text.split('\n\n').map(p=>'<p>'+esc(p)+'</p>').join(''))+(m.refs||[]).map(id=>{const d=diaries.find(x=>x.id===id);return '<button class="dp-citation" '+(d?'data-citation="'+id+'"':'disabled')+'>'+icon('book-open')+(d?dateLabel(d.date)+' · '+d.time:'日记已删除')+'</button>';}).join('')+'</div>';}
+ function showEditor(kind){const d=diary();openSheet(kind==='edit'?(d.audio?'修改转写':'编辑正文'):kind==='write'?'写下今天':'补充文字','<textarea class="dp-editor" aria-label="'+(kind==='edit'?'修改正文':kind==='write'?'日记正文':'补充文字')+'" placeholder="今天……">'+esc(kind==='edit'?d.text.join('\n\n'):kind==='supplement'?d.extra:'')+'</textarea><button class="dp-primary" data-save-editor="'+kind+'">完成</button>');}
+ function send(){
+  if(state.generation)return;const input=footer.querySelector('textarea');const value=input.value.trim();if(!value)return;
+  if(!chat()&&!state.newScope){const hint=footer.querySelector('.dp-hint');hint.textContent='请选择本次对话要参考的日记。';hint.hidden=false;main.querySelector('[data-action="scope"]').focus();return;}
+  let c=chat();if(!c){c={id:Date.now(),title:value.length>14?value.slice(0,14)+'…':value,date:'刚刚',scope:state.newScope,model:state.newModel,messages:[]};chats.unshift(c);state.chatId=c.id;}
+  c.messages.push({role:'user',text:value},{role:'assistant',text:'',pending:true});state.draft='';
+  state.generation=setTimeout(()=>{const m=c.messages[c.messages.length-1];m.pending=false;m.text='这里会结合你选择的日记继续交流。这个原型展示消息、输入和引用的布局，没有实际调用 AI。';const refs=c.scope==='今天'?[1]:c.scope==='最近一周'||c.scope==='全部'?[1,3]:[];m.refs=refs.filter(id=>diaries.some(d=>d.id===id&&d.ai));state.generation=null;if(state.page==='chat'){draw('chat');const list=main.querySelector('.dp-messages');list.scrollTop=list.scrollHeight;}},1400);
+  draw('chat');const list=main.querySelector('.dp-messages');list.scrollTop=list.scrollHeight;
+ }
+ root.addEventListener('input',event=>{if(event.target.matches('.dp-search input')){state.filter=event.target.value;renderDiaryList();}if(event.target.matches('.dp-compose textarea'))state.draft=event.target.value;});
+ root.addEventListener('change',event=>{if(event.target.matches('[data-ai]')){const d=diary();if(d)d.ai=event.target.checked;}});
+ root.addEventListener('click',event=>{
+  const b=event.target.closest('button');if(!b)return;
+  if(b.dataset.themeId){paletteId=Number(b.dataset.themeId);applyPalette();rememberPalette();return;}
+  if(b.dataset.go){closeSheet();if(b.dataset.go==='home')state.saved=false;draw(b.dataset.go);return;}
+  if(b.dataset.diary||b.dataset.citation){state.returnPage=b.dataset.citation?'chat':'diary';state.diaryId=Number(b.dataset.diary||b.dataset.citation);state.saved=false;draw('detail');return;}
+  if(b.dataset.chat){state.chatId=Number(b.dataset.chat);state.draft='';draw('chat');return;}
+  if(b.dataset.mood){const d=diary();d.mood=d.mood===b.dataset.mood?'':b.dataset.mood;closeSheet();draw('detail');return;}
+  if(b.dataset.scope){state.newScope=b.dataset.scope;closeSheet();draw('chat');return;}
+  if(b.dataset.model){state.newModel=b.dataset.model;closeSheet();draw('chat');return;}
+  if(b.dataset.saveEditor){const value=sheet.querySelector('textarea').value;const kind=b.dataset.saveEditor;if(kind==='write'){if(!value.trim()){closeSheet();return;}const d={id:Date.now(),date:'2026-10-10',time:'21:00',mood:'',audio:null,ai:true,text:value.split(/\n\n+/),extra:''};diaries.unshift(d);state.diaryId=d.id;state.returnPage='home';state.saved=true;}else if(kind==='edit')diary().text=value.split(/\n\n+/);else diary().extra=value;closeSheet();draw('detail');return;}
+  const action=b.dataset.action;
+  if(action==='close-sheet')closeSheet();
+  else if(action==='play'){state.playing=!state.playing;b.innerHTML=icon(state.playing?'pause':'play');b.setAttribute('aria-label',state.playing?'停止模拟播放':'模拟播放原音');icons();}
+  else if(['edit','supplement','write'].includes(action))showEditor(action);
+  else if(action==='mood')openSheet('此刻的心情','<div class="dp-mood-grid">'+['开心','平静','低落','焦虑','生气','疲惫'].map(m=>'<button data-mood="'+m+'" aria-pressed="'+(diary().mood===m)+'">'+m+'</button>').join('')+'</div><p>可以不选，再点一次已选心情即可取消。</p>',b);
+  else if(action==='entry-menu'){const d=diary();openSheet('这条日记','<button class="dp-row" data-action="date"><span>修改日期</span>'+icon('calendar-days')+'</button><label class="dp-row"><span>参与 AI<small>允许后续日记对话取用这条记录</small></span><input type="checkbox" data-ai '+(d.ai?'checked':'')+' aria-label="参与 AI"></label><p>关闭后，已有聊天中的引用仍然保留。</p><button class="dp-row dp-danger" data-action="delete-entry">删除日记'+icon('trash-2')+'</button>',b);}
+  else if(action==='date')openSheet('修改日期','<label class="dp-field">日记日期<input type="date" aria-label="日记日期" value="'+diary().date+'"></label><button class="dp-primary" data-action="save-date">完成</button>');
+  else if(action==='save-date'){const value=sheet.querySelector('input').value;if(value)diary().date=value;closeSheet();draw('detail');}
+  else if(action==='delete-entry')openSheet('删除这条日记？','<p>文字、转写和原始录音会一起删除，无法恢复。此处仅操作演示数据。</p><button class="dp-primary dp-danger" data-action="confirm-delete-entry">删除日记</button>');
+  else if(action==='confirm-delete-entry'){const index=diaries.findIndex(d=>d.id===state.diaryId);if(index>=0)diaries.splice(index,1);closeSheet();draw(state.returnPage==='chat'?'chat':'diary');}
+  else if(action==='new-chat'){state.chatId=null;state.newScope='';state.newModel='日常模型';state.draft='';draw('chat');}
+  else if(action==='scope')openSheet('选择日记范围',['全部','今天','最近一周'].map(s=>'<button class="dp-row" data-scope="'+s+'">'+s+icon('chevron-right')+'</button>').join('')+'<button class="dp-row" data-action="custom-range">自选日期'+icon('calendar-days')+'</button>',b);
+  else if(action==='custom-range')openSheet('自选日期','<label class="dp-field">开始<input type="date" name="start" value="2026-10-08"></label><label class="dp-field">结束<input type="date" name="end" value="2026-10-10"></label><p class="dp-range-error" aria-live="polite"></p><button class="dp-primary" data-action="save-range">使用这个范围</button>');
+  else if(action==='save-range'){const start=sheet.querySelector('[name="start"]').value,end=sheet.querySelector('[name="end"]').value;if(!start||!end||start>end){sheet.querySelector('.dp-range-error').textContent='请选择有效的起止日期。';return;}state.newScope=dateLabel(start)+' – '+dateLabel(end);closeSheet();draw('chat');}
+  else if(action==='model')openSheet('选择模型连接',state.models.map(m=>'<button class="dp-row" data-model="'+m+'">'+m+icon('chevron-right')+'</button>').join('')+'<p>这里展示已在「更多」中配置的模型连接。</p>',b);
+  else if(action==='send')send();
+  else if(action==='stop-reply'){stopGeneration();draw('chat');}
+  else if(action==='chat-menu')openSheet('这段对话','<button class="dp-row dp-danger" data-action="delete-chat">删除整段对话'+icon('trash-2')+'</button>',b);
+  else if(action==='delete-chat')openSheet('删除整段对话？','<p>聊天记录会被删除，日记仍然保留。此处仅操作演示数据。</p><button class="dp-primary dp-danger" data-action="confirm-delete-chat">删除对话</button>');
+  else if(action==='confirm-delete-chat'){stopGeneration();const index=chats.findIndex(c=>c.id===state.chatId);if(index>=0)chats.splice(index,1);closeSheet();draw('threads');}
+  else if(action==='record'){state.started=Date.now();draw('recording');}
+  else if(action==='stop-record'){const d={id:Date.now(),date:'2026-10-10',time:'21:00',mood:'',audio:'00:'+Math.min(59,Math.floor((Date.now()-state.started)/1000)).toString().padStart(2,'0'),ai:true,text:['这是录音结束后的页面示例。原音会先保存，转写完成后自动显示在这里。'],extra:''};diaries.unshift(d);state.diaryId=d.id;state.returnPage='home';state.saved=true;draw('detail');}
+  else if(action==='providers')openSheet('AI 服务商与模型',state.models.map((m,i)=>'<div class="dp-row"><span>'+m+'<small>'+(i===0?'默认连接':'备用连接')+'</small></span>'+icon('check')+'</div>').join('')+'<p>连接列表示例。实际配置包含名称、协议、服务地址、API Key 和模型名称。</p>',b);
+  else if(action==='about')openSheet('关于 OneRecord','<p>留一点今天。</p><p>一个记录与回顾日常的地方。</p>',b);
+ });
+ shade.addEventListener('click',closeSheet);
+ sheet.addEventListener('keydown',event=>{if(event.key==='Escape')closeSheet();if(event.key==='Tab'){const controls=[...sheet.querySelectorAll('button,input,textarea')];const first=controls[0],last=controls[controls.length-1];if(event.shiftKey&&document.activeElement===first){event.preventDefault();last.focus();}else if(!event.shiftKey&&document.activeElement===last){event.preventDefault();first.focus();}}});
+ applyPalette();restorePalette(window.openai?.widgetState);
+ window.addEventListener('openai:set_globals',event=>restorePalette(event.detail?.globals?.widgetState));
+ draw('home');
+})();
+</script>
+</div>

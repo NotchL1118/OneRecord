@@ -1,0 +1,224 @@
+{
+  "version": 1,
+  "defaultPaletteId": 5,
+  "appearance": "light",
+  "palettes": [
+    {
+      "id": 1,
+      "name": "向日葵奶白",
+      "family": "阳光与果实",
+      "background": "#FFFEF8",
+      "primary": "#FFDF58",
+      "secondary": "#FFCDA4"
+    },
+    {
+      "id": 2,
+      "name": "橘子汽水",
+      "family": "阳光与果实",
+      "background": "#FFFCF7",
+      "primary": "#FFBE68",
+      "secondary": "#FFEFA8"
+    },
+    {
+      "id": 3,
+      "name": "杏子果酱",
+      "family": "阳光与果实",
+      "background": "#FFF9F4",
+      "primary": "#FFAC78",
+      "secondary": "#FFE19F"
+    },
+    {
+      "id": 4,
+      "name": "柠檬奶油",
+      "family": "阳光与果实",
+      "background": "#FFFFF6",
+      "primary": "#F2ED78",
+      "secondary": "#FFD1A3"
+    },
+    {
+      "id": 5,
+      "name": "香草布丁",
+      "family": "阳光与果实",
+      "background": "#FFFDF3",
+      "primary": "#FFE39B",
+      "secondary": "#FFC9B0"
+    },
+    {
+      "id": 6,
+      "name": "菠萝雪糕",
+      "family": "阳光与果实",
+      "background": "#FFFEF1",
+      "primary": "#F6D85B",
+      "secondary": "#CCE7AE"
+    },
+    {
+      "id": 7,
+      "name": "白桃软糖",
+      "family": "蜜桃与花瓣",
+      "background": "#FFFAF8",
+      "primary": "#FFC2B0",
+      "secondary": "#FFDF9C"
+    },
+    {
+      "id": 8,
+      "name": "草莓牛奶",
+      "family": "蜜桃与花瓣",
+      "background": "#FFFAFC",
+      "primary": "#FFB5CF",
+      "secondary": "#FFE3A8"
+    },
+    {
+      "id": 9,
+      "name": "珊瑚雪糕",
+      "family": "蜜桃与花瓣",
+      "background": "#FFFCFA",
+      "primary": "#FFA18E",
+      "secondary": "#FFD9AD"
+    },
+    {
+      "id": 10,
+      "name": "樱花奶白",
+      "family": "蜜桃与花瓣",
+      "background": "#FFFBFD",
+      "primary": "#F7C4E1",
+      "secondary": "#D7D3FF"
+    },
+    {
+      "id": 11,
+      "name": "西瓜苏打",
+      "family": "蜜桃与花瓣",
+      "background": "#FFFDF9",
+      "primary": "#FFB4AE",
+      "secondary": "#CBEAC9"
+    },
+    {
+      "id": 12,
+      "name": "芭乐牛乳",
+      "family": "蜜桃与花瓣",
+      "background": "#FFFDFC",
+      "primary": "#FFD3D6",
+      "secondary": "#BFE7B9"
+    },
+    {
+      "id": 13,
+      "name": "薄荷奶糖",
+      "family": "果园与嫩叶",
+      "background": "#FAFFFB",
+      "primary": "#BCEED6",
+      "secondary": "#FFE3A5"
+    },
+    {
+      "id": 14,
+      "name": "青苹果",
+      "family": "果园与嫩叶",
+      "background": "#FEFFF6",
+      "primary": "#DCF19B",
+      "secondary": "#FFD399"
+    },
+    {
+      "id": 15,
+      "name": "开心果",
+      "family": "果园与嫩叶",
+      "background": "#FEFFF8",
+      "primary": "#D7EAB2",
+      "secondary": "#FFD2B3"
+    },
+    {
+      "id": 16,
+      "name": "蜜瓜冰沙",
+      "family": "果园与嫩叶",
+      "background": "#F8FFFA",
+      "primary": "#AEEBD0",
+      "secondary": "#FFDE91"
+    },
+    {
+      "id": 17,
+      "name": "青柠汽水",
+      "family": "果园与嫩叶",
+      "background": "#FFFFF8",
+      "primary": "#E7F7A3",
+      "secondary": "#BDE8D8"
+    },
+    {
+      "id": 18,
+      "name": "黄油抹茶",
+      "family": "果园与嫩叶",
+      "background": "#FFFDF4",
+      "primary": "#FFE28C",
+      "secondary": "#C6E2B3"
+    },
+    {
+      "id": 19,
+      "name": "晴空奶油",
+      "family": "天空与糖果",
+      "background": "#FCFEFF",
+      "primary": "#BDE2FF",
+      "secondary": "#FFE299"
+    },
+    {
+      "id": 20,
+      "name": "海盐汽水",
+      "family": "天空与糖果",
+      "background": "#FAFFFF",
+      "primary": "#BDEEF4",
+      "secondary": "#FFD2AE"
+    },
+    {
+      "id": 21,
+      "name": "薰衣草奶",
+      "family": "天空与糖果",
+      "background": "#FFFCFF",
+      "primary": "#DDD0FF",
+      "secondary": "#FFD3B8"
+    },
+    {
+      "id": 22,
+      "name": "蓝莓奶冻",
+      "family": "天空与糖果",
+      "background": "#FCFDFF",
+      "primary": "#CFD9FF",
+      "secondary": "#FFE4A6"
+    },
+    {
+      "id": 23,
+      "name": "紫丁香",
+      "family": "天空与糖果",
+      "background": "#FFFAFF",
+      "primary": "#EAC9F1",
+      "secondary": "#FFE3A3"
+    },
+    {
+      "id": 24,
+      "name": "彩虹棉花糖",
+      "family": "天空与糖果",
+      "background": "#FFFCFB",
+      "primary": "#FFD0DF",
+      "secondary": "#BCE2F4"
+    }
+  ],
+  "sharedTokens": {
+    "surface": "#FFFFFF",
+    "text": "#443D37",
+    "textSecondary": "#786C62",
+    "primaryText": "#443D37",
+    "danger": "#A74735"
+  },
+  "derivedTokens": {
+    "border": {
+      "from": "text",
+      "to": "background",
+      "mix": 0.87
+    },
+    "tint": {
+      "from": "primary",
+      "to": "#FFFFFF",
+      "mix": 0.67
+    },
+    "reference": {
+      "from": "secondary",
+      "to": "#FFFFFF",
+      "mix": 0.58
+    }
+  },
+  "mixDefinition": "Per sRGB RGB channel, round(from * (1 - mix) + to * mix)."
+}

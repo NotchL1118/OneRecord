@@ -1,0 +1,2886 @@
+<!doctype html>
+<html lang="en" data-visualize-standalone>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="referrer" content="no-referrer">
+<meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'unsafe-inline' 'unsafe-eval' 'wasm-unsafe-eval' blob: data: https://cdnjs.cloudflare.com https://cdn.jsdelivr.net https://esm.sh https://fonts.bunny.net https://fonts.googleapis.com https://fonts.gstatic.com https://unpkg.com; style-src 'unsafe-inline' blob: data: https://cdnjs.cloudflare.com https://cdn.jsdelivr.net https://esm.sh https://fonts.bunny.net https://fonts.googleapis.com https://fonts.gstatic.com https://unpkg.com; img-src blob: data: https://cdnjs.cloudflare.com https://cdn.jsdelivr.net https://esm.sh https://fonts.bunny.net https://fonts.googleapis.com https://fonts.gstatic.com https://unpkg.com; font-src blob: data: https://cdnjs.cloudflare.com https://cdn.jsdelivr.net https://esm.sh https://fonts.bunny.net https://fonts.googleapis.com https://fonts.gstatic.com https://unpkg.com; media-src blob: data: https://cdnjs.cloudflare.com https://cdn.jsdelivr.net https://esm.sh https://fonts.bunny.net https://fonts.googleapis.com https://fonts.gstatic.com https://unpkg.com; worker-src blob:; connect-src blob: data:; frame-src 'self'; object-src 'none'; base-uri 'none'; form-action 'none'">
+<title>Approved Prototype.fragment</title>
+<style>:root{color-scheme:light dark;background:light-dark(rgb(255 255 255), rgb(24 24 24))}html,body{margin:0}body{box-sizing:border-box;padding:1rem;background:inherit}iframe{display:block;width:100%;height:calc(100vh - 2rem);margin:0 auto;border:0}</style>
+
+</head>
+<body>
+<iframe id="codex-visualization" sandbox="allow-scripts" referrerpolicy="no-referrer" title="Approved Prototype.fragment" data-srcdoc="&lt;!doctype html&gt;
+&lt;html lang=&quot;en&quot; data-visualize-standalone&gt;
+&lt;head&gt;
+&lt;meta charset=&quot;utf-8&quot;&gt;
+&lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1&quot;&gt;
+&lt;meta name=&quot;referrer&quot; content=&quot;no-referrer&quot;&gt;
+&lt;meta http-equiv=&quot;Content-Security-Policy&quot; content=&quot;default-src &#x27;none&#x27;; script-src &#x27;unsafe-inline&#x27; &#x27;unsafe-eval&#x27; &#x27;wasm-unsafe-eval&#x27; blob: data: https://cdnjs.cloudflare.com https://cdn.jsdelivr.net https://esm.sh https://fonts.bunny.net https://fonts.googleapis.com https://fonts.gstatic.com https://unpkg.com; style-src &#x27;unsafe-inline&#x27; blob: data: https://cdnjs.cloudflare.com https://cdn.jsdelivr.net https://esm.sh https://fonts.bunny.net https://fonts.googleapis.com https://fonts.gstatic.com https://unpkg.com; img-src blob: data: https://cdnjs.cloudflare.com https://cdn.jsdelivr.net https://esm.sh https://fonts.bunny.net https://fonts.googleapis.com https://fonts.gstatic.com https://unpkg.com; font-src blob: data: https://cdnjs.cloudflare.com https://cdn.jsdelivr.net https://esm.sh https://fonts.bunny.net https://fonts.googleapis.com https://fonts.gstatic.com https://unpkg.com; media-src blob: data: https://cdnjs.cloudflare.com https://cdn.jsdelivr.net https://esm.sh https://fonts.bunny.net https://fonts.googleapis.com https://fonts.gstatic.com https://unpkg.com; worker-src blob:; connect-src blob: data:; frame-src &#x27;none&#x27;; object-src &#x27;none&#x27;; base-uri &#x27;none&#x27;; form-action &#x27;none&#x27;&quot;&gt;
+&lt;title&gt;Approved Prototype.fragment&lt;/title&gt;
+&lt;style&gt;:root {
+  color-scheme: light dark;
+  background-color: var(
+    --background,
+    var(--color-background-primary, light-dark(rgb(255 255 255), rgb(24 24 24)))
+  ) !important;
+
+  /* Agent-facing contract; keep in sync with SKILL.md. */
+  --background: var(
+    --color-background-primary,
+    light-dark(rgb(255 255 255), rgb(24 24 24))
+  );
+  --foreground: var(
+    --color-text-primary,
+    light-dark(rgb(26 28 31), rgb(255 255 255))
+  );
+  --card: color-mix(in oklab, var(--foreground) 5%, var(--background));
+  --card-foreground: var(
+    --color-text-primary,
+    light-dark(rgb(26 28 31), rgb(255 255 255))
+  );
+  --popover: var(
+    --color-background-secondary,
+    light-dark(rgb(255 255 255), rgb(45 45 45))
+  );
+  --popover-foreground: var(
+    --color-text-primary,
+    light-dark(rgb(26 28 31), rgb(255 255 255))
+  );
+  --primary: var(
+    --color-text-info,
+    light-dark(rgb(51 156 255), rgb(131 195 255))
+  );
+  --primary-foreground: var(
+    --color-text-inverse,
+    light-dark(rgb(255 255 255), rgb(13 13 13))
+  );
+  --secondary: var(
+    --color-background-secondary,
+    light-dark(rgb(255 255 255 / 96%), rgb(54 54 54 / 96%))
+  );
+  --secondary-foreground: var(
+    --color-text-primary,
+    light-dark(rgb(26 28 31), rgb(255 255 255))
+  );
+  --muted: color-mix(in srgb, var(--foreground) 10%, transparent);
+  --muted-foreground: var(
+    --color-text-secondary,
+    light-dark(rgb(26 28 31 / 49.4%), rgb(255 255 255 / 49.8%))
+  );
+  --accent: var(
+    --color-background-info,
+    light-dark(rgb(229 242 255), rgb(13 39 63))
+  );
+  --accent-foreground: var(
+    --color-text-info,
+    light-dark(rgb(51 156 255), rgb(131 195 255))
+  );
+  --destructive: var(
+    --color-text-warning,
+    light-dark(rgb(226 85 7), rgb(255 133 73))
+  );
+  --border: var(
+    --color-border-secondary,
+    light-dark(rgb(26 28 31 / 8%), rgb(255 255 255 / 8.2%))
+  );
+  --input: var(
+    --color-border-primary,
+    light-dark(
+      rgb(26 28 31 / 11.8%),
+      color-mix(in oklab, rgb(0 0 0) 10%, transparent)
+    )
+  );
+  --ring: var(
+    --color-ring-primary,
+    light-dark(rgb(51 156 255), rgb(131 195 255 / 76%))
+  );
+  --font-size-base: var(--font-text-md-size, 16px);
+  --blue: light-dark(rgb(51 156 255), rgb(51 156 255));
+  --orange: light-dark(rgb(226 85 7), rgb(251 106 34));
+  --green: light-dark(rgb(0 162 64), rgb(64 201 119));
+  --red: light-dark(rgb(224 46 42), rgb(255 103 100));
+  --purple: light-dark(rgb(146 79 247), rgb(173 123 249));
+  --yellow: light-dark(rgb(255 195 0), rgb(255 210 64));
+  --viz-series-1: var(--primary);
+  --viz-series-2: light-dark(rgb(243 136 59), rgb(245 154 86));
+  --viz-series-3: light-dark(rgb(93 201 119), rgb(116 213 139));
+  --viz-series-4: light-dark(rgb(235 119 177), rgb(240 143 192));
+  --viz-series-5: light-dark(rgb(155 121 236), rgb(170 145 239));
+  --viz-series-6: light-dark(rgb(58 185 177), rgb(90 203 194));
+
+  /* Internal implementation variables; not part of the agent contract. */
+  --font-sans:
+    -apple-system-body, ui-sans-serif, -apple-system, system-ui, &quot;Segoe UI&quot;,
+    Helvetica, &quot;Apple Color Emoji&quot;, Arial, sans-serif, &quot;Segoe UI Emoji&quot;,
+    &quot;Segoe UI Symbol&quot;;
+  --font-mono:
+    ui-monospace, SFMono-Regular, &quot;SF Mono&quot;, Menlo, Consolas, &quot;Liberation Mono&quot;,
+    monospace;
+  --font-size-normal: max(11px, var(--font-size-base));
+  --font-size-tooltip: calc(var(--font-size-base) - 1px);
+  --font-size-small: max(11px, calc(var(--font-size-base) - 2px));
+  --font-size-h1: calc(var(--font-size-normal) * 1.7142857143);
+  --font-size-h2: calc(var(--font-size-normal) * 1.4285714286);
+  --font-size-h3: calc(var(--font-size-normal) * 1.2857142857);
+  --font-weight-normal: 400;
+  --font-weight-medium: 500;
+  --icon-size: 16px;
+  --line-height-normal: calc(var(--font-size-normal) * 1.5);
+  --line-height-tooltip: calc(var(--font-size-tooltip) * 1.4285714286);
+  --line-height-small: calc(var(--font-size-small) + 4px);
+  --corner-shape: round;
+  --radius: var(--border-radius-lg, 8px);
+  --radius-sm: calc(var(--radius) * 0.5);
+  --radius-md: calc(var(--radius) * 0.75);
+  --radius-lg: var(--radius);
+  --radius-2xl: calc(var(--radius) * 2);
+  --radius-full: 9999px;
+  --shadow-sm: 0 1px 2px -1px rgb(0 0 0 / 8%);
+  --checkmark-image: url(&quot;data:image/svg+xml,%3Csvg xmlns=&#x27;http://www.w3.org/2000/svg&#x27; viewBox=&#x27;0 0 17 17&#x27;%3E%3Cpath d=&#x27;M12.8961 3.64101C13.1297 3.41418 13.4984 3.37523 13.7779 3.56581C14.0571 3.75635 14.1554 4.11331 14.0299 4.41347L13.9615 4.53847L7.71151 13.7045C7.59411 13.8767 7.4063 13.9877 7.19881 14.0072C6.99136 14.0267 6.78564 13.9533 6.63826 13.806L2.88826 10.056L2.79842 9.9457C2.6192 9.67407 2.64927 9.30496 2.88826 9.06581C3.12738 8.82669 3.49647 8.79676 3.76815 8.97597L3.8785 9.06581L7.03084 12.2182L12.8053 3.74941L12.8961 3.64101Z&#x27;/%3E%3C/svg%3E&quot;);
+
+  /* Legacy aliases; not part of the current agent contract. */
+  --viz-bg: transparent;
+  --viz-panel: var(--card);
+  --viz-border: var(--border);
+  --viz-text: var(--foreground);
+  --viz-muted: var(--muted-foreground);
+  --viz-accent: var(--primary);
+  --viz-accent-text: var(--primary-foreground);
+  --viz-accent-bg: var(--accent);
+  --viz-font-size: var(--font-size-base);
+  --viz-warning: var(--destructive);
+}
+
+:root[data-theme=&quot;light&quot;] {
+  color-scheme: light;
+}
+
+:root[data-theme=&quot;dark&quot;] {
+  color-scheme: dark;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html &gt; body {
+  /* Preserve MCP aliases for older inline renderers without creating :root cycles. */
+  --color-background-primary: var(
+    --background,
+    light-dark(rgb(255 255 255), rgb(24 24 24))
+  );
+  --color-text-primary: var(
+    --foreground,
+    light-dark(rgb(26 28 31), rgb(255 255 255))
+  );
+  --color-border-secondary: var(
+    --border,
+    light-dark(rgb(26 28 31 / 8%), rgb(255 255 255 / 8.2%))
+  );
+
+  margin: 0;
+  padding: var(--visualize-paint-gutter, 0px);
+  color: var(--foreground);
+  background: transparent !important;
+  font-family: var(--font-sans) !important;
+  -webkit-font-smoothing: antialiased;
+  font-size: var(--font-size-base);
+  line-height: calc(var(--font-size-base) * 1.625);
+  font-weight: var(--font-weight-normal);
+}
+
+.cursor-interaction {
+  cursor: var(--cursor-interaction, pointer);
+}
+
+a {
+  color: color-mix(in srgb, var(--viz-accent) 80%, var(--viz-text) 20%);
+  cursor: var(--cursor-interaction, pointer);
+  text-decoration: none;
+  text-underline-offset: 2px;
+  font-weight: inherit;
+}
+
+a:is(:hover, :focus-visible) {
+  text-decoration-line: underline;
+  text-decoration-style: dashed;
+  text-decoration-thickness: 0.5px;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  margin-block: 0;
+}
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+li,
+.table {
+  font-family: var(--font-sans);
+}
+
+h1 {
+  font-size: calc(var(--font-size-base) * 1.5);
+  line-height: 1.3333333333;
+}
+
+h2 {
+  font-size: calc(var(--font-size-base) * 1.25);
+  line-height: 1.4;
+}
+h3 {
+  font-size: calc(var(--font-size-base) * 1.125);
+  line-height: 1.5555555556;
+}
+h4 {
+  font-size: var(--font-size-base);
+  line-height: 1.5;
+}
+h5,
+h6 {
+  font-size: var(--font-size-base);
+  line-height: calc(var(--font-size-base) * 1.625);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+b,
+strong,
+th {
+  font-weight: 600;
+}
+
+code:not(pre code) {
+  display: inline;
+  padding: 1px 6px;
+  border-radius: var(--radius-sm);
+  corner-shape: var(--corner-shape);
+  background: var(--muted);
+  font-family: var(--font-mono);
+  font-size: 0.92em;
+  overflow-wrap: anywhere;
+  -webkit-box-decoration-break: clone;
+  box-decoration-break: clone;
+  word-break: break-word;
+}
+pre,
+pre code {
+  font-family: var(--font-mono);
+  font-size: 12px;
+  line-height: 20px;
+}
+
+.table-responsive {
+  width: 100%;
+  overflow-x: auto;
+  scrollbar-width: thin;
+}
+
+.table {
+  width: 100%;
+  color: var(--foreground);
+  font: inherit;
+  text-align: start;
+  border-collapse: separate;
+  border-spacing: 0;
+  font-size: calc(var(--font-size-base) * 0.875);
+  line-height: calc(var(--font-size-base) * 1.625);
+  font-family: var(--font-sans);
+}
+
+.table :is(th, td) {
+  padding-block: 10px;
+  padding-inline: 0 24px;
+  overflow-wrap: anywhere;
+  border-bottom: 1px solid var(--border);
+  text-align: start;
+  vertical-align: top;
+  border-bottom-color: color-mix(in srgb, var(--foreground) 5%, transparent);
+}
+.table :is(th, td):not(:last-child) {
+  padding-inline-end: calc(var(--font-size-base) * 1.5);
+}
+
+.table-responsive &gt; .table :is(th, td) {
+  overflow-wrap: break-word;
+}
+
+.table :is(th, td):last-child {
+  padding-inline-end: 0;
+}
+
+.table :is(caption, thead th) {
+  font-weight: 600;
+}
+
+.table thead :is(th, td) {
+  border-bottom-color: var(--border-strong, var(--input));
+  padding-block: calc(var(--font-size-base) / 2);
+  line-height: var(--font-size-base);
+}
+
+.table tbody tr:last-child :is(th, td) {
+  border-bottom: 0;
+}
+.table tbody :is(th, td) {
+  padding-block: calc(var(--font-size-base) * 0.625);
+}
+
+.table.table-sm :is(th, td) {
+  padding-block: 8px;
+}
+
+.table.table-sm :is(th, td):not(:last-child) {
+  padding-inline-end: 16px;
+}
+
+.table :is(.text-end, [align=&quot;right&quot;]) {
+  text-align: end;
+  font-variant-numeric: tabular-nums;
+}
+
+.table :is(.text-center, [align=&quot;center&quot;]) {
+  text-align: center;
+}
+
+.table .text-nowrap {
+  white-space: nowrap;
+}
+
+#widget {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  width: 100%;
+  padding: 0;
+  background: transparent !important;
+}
+
+.card {
+  min-width: 0;
+  padding: 12px;
+  overflow: hidden;
+  overflow-wrap: break-word;
+  border-radius: var(--radius-2xl);
+  corner-shape: var(--corner-shape);
+  color: var(--card-foreground);
+  background: var(--card);
+}
+
+.widget {
+  min-width: 0;
+  overflow: hidden;
+  border: 0;
+  border-radius: var(--radius-lg);
+  corner-shape: var(--corner-shape);
+  box-shadow: 0 0 0 0.5px var(--border-strong, var(--border));
+  color: var(--foreground);
+  background: var(--background);
+}
+
+#widget &gt; :not(.card, .widget, .progress) {
+  width: 100% !important;
+  max-width: none !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  border: 0 !important;
+  border-radius: 0 !important;
+  background: transparent !important;
+  box-shadow: none !important;
+}
+
+.tooltip {
+  position: fixed;
+  z-index: 50;
+  top: 0;
+  left: 0;
+  width: max-content;
+  max-width: min(
+    20rem,
+    var(--tooltip-available-width, calc(100vw - 10px)),
+    calc(100vw - 10px)
+  );
+  max-height: min(
+    var(--tooltip-available-height, calc(100vh - 10px)),
+    calc(100vh - 10px)
+  );
+  border: 1px solid var(--border);
+  corner-shape: var(--corner-shape);
+  overflow-wrap: break-word;
+  white-space: normal;
+  pointer-events: none;
+  user-select: none;
+  font-family: var(--font-sans);
+  padding: 5px 12px;
+  border-color: color-mix(
+    in oklab,
+    light-dark(var(--primary-foreground), var(--foreground)) 5%,
+    transparent
+  );
+  border-radius: var(--radius-2xl);
+  color: light-dark(var(--primary-foreground), var(--foreground));
+  background: light-dark(var(--foreground), var(--popover));
+  box-shadow: 0 8px 18px rgb(15 23 42 / 20%);
+  letter-spacing: -0.15px;
+  font-size: calc(var(--font-size-base) * 14 / 16);
+  font-size: round(nearest, calc(var(--font-size-base) * 14 / 16), 1px);
+  font-weight: 600;
+  line-height: 18px;
+  text-align: center;
+}
+
+.viz-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(max(180px, 24%), 1fr));
+  gap: 10px;
+}
+
+.viz-stat {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.viz-stat-value {
+  font-size: var(--font-size-h2);
+  font-weight: var(--font-weight-medium);
+  line-height: 1.25;
+}
+
+.viz-row {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 10px;
+}
+
+hr {
+  width: 100%;
+  height: 1px;
+  margin-block: 6px;
+  border: 0;
+  background: var(--border);
+}
+
+.nav {
+  display: flex;
+  min-width: 0;
+  align-items: center;
+  gap: 4px;
+}
+
+.progress {
+  display: flex;
+  height: 8px;
+  margin-block: calc((var(--line-height-normal, 1.5em) - 8px) / 2);
+  overflow: hidden;
+  border: 0;
+  border-radius: var(--radius-full);
+  background: var(--muted);
+}
+
+.progress-bar:only-child {
+  border-radius: var(--radius-full);
+}
+
+.progress-bar {
+  height: 100%;
+  flex-shrink: 0;
+  border: 0;
+  background: var(--viz-series-1);
+}
+
+.viz-badge {
+  display: inline-flex;
+  align-items: center;
+  padding: 4px 8px;
+  border-radius: var(--radius-sm);
+  color: color-mix(in srgb, var(--foreground) 40%, var(--muted-foreground));
+  background: color-mix(in srgb, var(--foreground) 5%, transparent);
+  font-family: var(--font-sans);
+  font-size: calc(var(--font-size-base) * 14 / 16);
+  font-size: round(nearest, calc(var(--font-size-base) * 14 / 16), 1px);
+  font-weight: var(--font-weight-normal);
+  line-height: 1;
+}
+
+small,
+.text-small {
+  font-size: var(--font-size-small);
+  line-height: var(--line-height-small);
+}
+
+.text-muted {
+  color: var(--muted-foreground);
+}
+
+.tabular-nums {
+  font-variant-numeric: tabular-nums;
+}
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+.viz-controls {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 8px;
+}
+
+.viz-controls &gt; .form-label {
+  display: grid;
+  min-width: min(100%, 260px);
+  flex: 1 1 280px;
+  grid-template-columns: minmax(0, 1fr) auto;
+  align-items: baseline;
+  gap: 2px 12px;
+  margin-bottom: 0;
+}
+
+.viz-controls &gt; .form-label &gt; :is(.form-control, .form-range, .form-select) {
+  grid-column: 1 / -1;
+}
+
+.btn,
+.nav-link,
+.form-check-input,
+.form-control,
+.form-range,
+.form-select {
+  font: inherit;
+}
+
+/* Match inline alignment without overriding a containing flex or grid layout. */
+.btn,
+.nav-link,
+.form-control,
+.form-select,
+.form-range,
+.form-check {
+  vertical-align: middle;
+}
+
+.btn,
+.nav-link {
+  appearance: button;
+  display: inline-flex;
+  inline-size: fit-content;
+  max-inline-size: 100%;
+  align-items: center;
+  justify-content: center;
+  gap: 4px;
+  margin: 0;
+  padding: 0 8px;
+  -webkit-app-region: no-drag;
+  border: 1px solid var(--input);
+  corner-shape: var(--corner-shape);
+  cursor: var(--cursor-interaction, pointer);
+  text-align: center;
+  text-decoration: none;
+  white-space: nowrap;
+  user-select: none;
+  -webkit-font-smoothing: inherit;
+  font-family: var(--font-sans);
+  height: fit-content;
+  min-height: calc(12px + 2 * var(--control-spacing, 12px));
+  padding-inline: var(--control-spacing, 12px);
+  border-color: transparent;
+  border-radius: var(--radius-full);
+  color: var(--foreground);
+  background: color-mix(in srgb, var(--foreground) 5%, transparent);
+  font-size: calc(var(--font-size-base) * 14 / 16);
+  font-size: round(nearest, calc(var(--font-size-base) * 14 / 16), 1px);
+  font-weight: var(--font-weight-normal);
+  line-height: 18px;
+}
+
+.btn {
+  border-color: var(--border);
+  color: var(--secondary-foreground);
+  background: var(--secondary);
+}
+
+.btn:is(.btn-block, .viz-tile) {
+  inline-size: 100%;
+}
+
+.btn.viz-tile {
+  min-width: 0;
+  overflow-wrap: anywhere;
+  white-space: normal;
+}
+
+a.btn {
+  cursor: var(--cursor-interaction, pointer);
+  text-decoration: none;
+}
+
+.btn:not(:disabled):hover {
+  background: light-dark(
+    color-mix(in srgb, var(--foreground) 5.5%, transparent),
+    color-mix(in srgb, var(--foreground) 8%, transparent)
+  );
+}
+
+.nav-link:not(:disabled):not([aria-disabled=&quot;true&quot;]):hover {
+  background: color-mix(in srgb, var(--foreground) 10%, transparent);
+}
+
+.btn-primary {
+  border-color: var(--border);
+  color: var(--primary-foreground);
+  background: var(--foreground);
+  background-clip: border-box;
+}
+
+.btn-primary .text-muted {
+  color: color-mix(in srgb, var(--primary-foreground) 50%, transparent);
+}
+
+.btn-primary:not(:disabled):hover {
+  background: color-mix(in srgb, var(--foreground) 80%, transparent);
+  background-clip: border-box;
+}
+
+.btn-ghost {
+  border-color: transparent;
+  color: var(--muted-foreground);
+  background: transparent;
+}
+
+.btn-ghost:not(:disabled):hover {
+  color: var(--muted-foreground);
+  background: light-dark(
+    color-mix(in srgb, var(--foreground) 5.5%, transparent),
+    color-mix(in srgb, var(--foreground) 8%, transparent)
+  );
+}
+
+.nav-pills .nav-link {
+  min-width: 0;
+  border-color: transparent;
+  color: var(--muted-foreground);
+  background: transparent;
+}
+
+.nav-justified .nav-link {
+  flex: 1 1 0;
+  overflow-wrap: anywhere;
+  white-space: normal;
+}
+
+.nav-pills .nav-link.active {
+  color: var(--foreground);
+  background: var(--muted);
+}
+
+/* Shared preview chrome; product styles stay inside each variant. */
+.viz-dotted-background {
+  background-image: radial-gradient(
+    circle,
+    color-mix(in srgb, var(--foreground) 14%, transparent) 0.8px,
+    transparent 0.8px
+  );
+  background-position: center;
+  background-size: 16px 16px;
+}
+
+.viz-carousel {
+  position: relative;
+  min-width: 0;
+}
+
+.viz-carousel:has(&gt; .viz-carousel-controls) {
+  min-height: calc(60px + var(--viz-carousel-picker-height, 0px));
+  padding-bottom: 60px;
+}
+
+.viz-carousel &gt; [data-variant][hidden] {
+  display: none !important;
+}
+
+.viz-carousel &gt; [data-variant] {
+  isolation: isolate;
+}
+
+.viz-carousel-controls {
+  --viz-carousel-hover: light-dark(
+    color-mix(in srgb, var(--foreground) 5.4%, transparent),
+    color-mix(in srgb, var(--foreground) 7.8%, transparent)
+  );
+  position: absolute;
+  z-index: 2;
+  bottom: 8px;
+  left: 50%;
+  display: flex;
+  width: max-content;
+  /* Leave room for the host&#x27;s design-controls launcher at the trailing edge. */
+  max-width: calc(100% - 96px);
+  align-items: center;
+  gap: 0;
+  padding: 0;
+  border: 1px solid var(--border);
+  border-radius: 16px;
+  color: var(--foreground);
+  background: var(--background);
+  font-family: var(--font-sans);
+  /* Match the settings dropdown chrome independently of the content font size. */
+  font-size: 13px;
+  font-weight: var(--font-weight-normal);
+  line-height: 18px;
+  transform: translateX(-50%);
+  user-select: none;
+}
+
+/* Keep authored mockup button styles out of the shared carousel chrome. */
+.viz-carousel-controls button,
+.viz-carousel-picker &gt; summary {
+  display: flex !important;
+  height: auto !important;
+  min-height: 30px;
+  align-items: center !important;
+  justify-content: center !important;
+  gap: 4px;
+  padding: 0 6px !important;
+  -webkit-app-region: no-drag;
+  border: 0 !important;
+  border-radius: 14px !important;
+  color: inherit !important;
+  background: transparent !important;
+  font: inherit !important;
+  -webkit-tap-highlight-color: transparent;
+}
+
+.viz-carousel-controls &gt; button,
+.viz-carousel-picker &gt; summary {
+  position: relative;
+  isolation: isolate;
+}
+
+.viz-carousel-controls &gt; button {
+  --icon-size: 16px;
+  width: 30px !important;
+  padding: 0 !important;
+}
+
+.viz-carousel-picker &gt; summary {
+  padding-inline: 12px !important;
+}
+
+.viz-carousel-controls .viz-carousel-caret {
+  width: 14px;
+  height: 14px;
+  flex: none;
+  margin: 0;
+  color: inherit;
+  transform: rotate(180deg);
+}
+
+.viz-carousel-controls &gt; button &gt; svg,
+.viz-carousel-controls .viz-carousel-caret,
+.viz-carousel-count {
+  opacity: 0.5;
+}
+
+.viz-carousel-controls &gt; button::before,
+.viz-carousel-picker &gt; summary::before {
+  position: absolute;
+  z-index: -1;
+  inset: 3px;
+  border-radius: 12px;
+  content: &quot;&quot;;
+  pointer-events: none;
+}
+
+.viz-carousel-controls &gt; button:hover::before,
+.viz-carousel-picker &gt; summary:hover::before {
+  background: var(--viz-carousel-hover);
+}
+
+.viz-carousel-controls &gt; button,
+.viz-carousel-controls [data-lucide],
+.viz-carousel-controls .lucide {
+  flex-shrink: 0;
+}
+
+.viz-carousel-picker {
+  min-width: 0;
+}
+
+.viz-carousel-picker &gt; summary {
+  min-width: 0;
+  list-style: none;
+}
+
+.viz-carousel-picker &gt; summary::-webkit-details-marker {
+  display: none;
+}
+
+.viz-carousel-count {
+  flex-shrink: 0;
+  white-space: nowrap;
+}
+
+.viz-carousel-name {
+  min-width: 0;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.viz-carousel-options {
+  position: absolute;
+  right: 0;
+  bottom: calc(100% + 4px);
+  left: 0;
+  display: flex;
+  max-height: 240px;
+  flex-direction: column;
+  gap: 2px;
+  overflow: auto;
+  padding: 4px;
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  background: var(--background);
+  box-shadow: 0 4px 12px light-dark(rgb(0 0 0 / 6%), rgb(0 0 0 / 25%));
+}
+
+.viz-carousel-options &gt; button {
+  border-radius: max(0px, calc(var(--radius-lg) - 5px)) !important;
+  width: 100% !important;
+  min-height: 28px;
+  justify-content: flex-start !important;
+  padding: 4px 8px !important;
+  font-size: var(--font-size-small) !important;
+  text-align: start;
+  white-space: normal;
+  overflow-wrap: anywhere;
+}
+
+.viz-carousel-options &gt; [aria-current=&quot;true&quot;],
+.viz-carousel-options &gt; button:hover {
+  background: var(--viz-carousel-hover) !important;
+}
+
+.btn:disabled,
+.nav-link:disabled,
+.nav-link[aria-disabled=&quot;true&quot;] {
+  cursor: not-allowed;
+  opacity: 0.4;
+}
+
+[data-lucide] {
+  stroke-width: 1.6;
+}
+
+.form-label {
+  display: block;
+  margin-bottom: 6px;
+  color: var(--foreground);
+}
+
+.form-control {
+  display: block;
+  width: 100%;
+  padding: 0 8px;
+  outline: none;
+  border: 1px solid var(--input);
+  corner-shape: var(--corner-shape);
+  color: var(--foreground);
+  font-family: var(--font-sans);
+  height: calc(12px + 2 * var(--control-spacing, 12px));
+  min-height: calc(12px + 2 * var(--control-spacing, 12px));
+  padding-inline: calc(4px + var(--control-spacing, 12px) / 2);
+  border-color: var(--input);
+  border-radius: var(--radius-md);
+  background: color-mix(in srgb, var(--popover) 96%, transparent);
+  font-size: calc(var(--font-size-base) * 14 / 16);
+  font-size: round(nearest, calc(var(--font-size-base) * 14 / 16), 1px);
+  font-weight: var(--font-weight-normal);
+  line-height: 1.4285714286;
+}
+.form-control:is(
+  [type=&quot;file&quot;],
+  [type=&quot;date&quot;],
+  [type=&quot;datetime-local&quot;],
+  [type=&quot;month&quot;],
+  [type=&quot;week&quot;],
+  [type=&quot;color&quot;]
+) {
+  height: calc(12px + 2 * var(--control-spacing, 12px));
+  min-height: calc(12px + 2 * var(--control-spacing, 12px));
+  line-height: 18px;
+}
+.form-control:is(
+  [type=&quot;date&quot;],
+  [type=&quot;datetime-local&quot;],
+  [type=&quot;month&quot;],
+  [type=&quot;week&quot;]
+) {
+  padding-inline: var(--control-spacing, 12px);
+}
+
+.form-control::placeholder {
+  color: var(--muted-foreground);
+}
+
+.form-control[type=&quot;file&quot;] {
+  overflow: hidden;
+  cursor: var(--cursor-interaction, pointer);
+  padding: 0;
+}
+
+.form-control[type=&quot;file&quot;]::file-selector-button {
+  padding: 0 8px;
+  border: 0;
+  border-right: 1px solid var(--input);
+  color: var(--secondary-foreground);
+  background: var(--secondary);
+  cursor: inherit;
+  font: inherit;
+  min-height: calc(10px + 2 * var(--control-spacing, 12px));
+  padding-inline: var(--control-spacing, 12px);
+  margin-inline-end: var(--control-spacing, 12px);
+}
+
+.form-control[type=&quot;file&quot;]:not(:disabled):hover::file-selector-button {
+  background: color-mix(in srgb, var(--foreground) 6%, var(--secondary));
+}
+
+.form-control-color[type=&quot;color&quot;] {
+  width: 40px;
+  height: calc(12px + 2 * var(--control-spacing, 12px));
+  padding: 3px;
+  cursor: var(--cursor-interaction, pointer);
+}
+
+.form-control-color[type=&quot;color&quot;]::-webkit-color-swatch-wrapper {
+  padding: 0;
+}
+
+.form-control-color[type=&quot;color&quot;]::-webkit-color-swatch {
+  border: 0;
+  border-radius: calc(var(--radius-lg) - 4px);
+  corner-shape: var(--corner-shape);
+}
+
+textarea.form-control {
+  height: auto;
+  resize: vertical;
+  min-height: 96px;
+  padding: 8px 10px;
+}
+
+.form-control:focus-visible {
+  border-color: var(--ring);
+  box-shadow: none;
+}
+.form-control:disabled {
+  color: var(--muted-foreground);
+  background: color-mix(in srgb, var(--foreground) 5%, transparent);
+  opacity: 1;
+}
+.form-control[aria-invalid=&quot;true&quot;] {
+  border-color: var(--red);
+  box-shadow: 0 0 0 2px color-mix(in srgb, var(--red) 20%, transparent);
+}
+
+.form-control:disabled,
+.form-select:disabled {
+  cursor: not-allowed;
+}
+
+.form-select {
+  appearance: none;
+  display: block;
+  width: 100%;
+  height: fit-content;
+  min-height: calc(12px + 2 * var(--control-spacing, 12px));
+  margin: 0;
+  /* The secondary icon role is 14px at compact density and 16px at web density. */
+  --icon-size: calc(10px + var(--control-spacing, 12px) / 2);
+  /* Settings dropdowns retain a 12px inset and a 4px text-to-chevron gap. */
+  padding: 0 calc(16px + var(--icon-size)) 0 12px;
+  outline: none;
+  border: 1px solid var(--border);
+  border-radius: var(--radius-full);
+  corner-shape: var(--corner-shape);
+  color: var(--foreground);
+  background-color: var(--secondary);
+  background-image:
+    linear-gradient(
+      45deg,
+      transparent calc(50% - 0.6px),
+      var(--muted-foreground) calc(50% - 0.6px) calc(50% + 0.6px),
+      transparent calc(50% + 0.6px)
+    ),
+    linear-gradient(
+      135deg,
+      transparent calc(50% - 0.6px),
+      var(--muted-foreground) calc(50% - 0.6px) calc(50% + 0.6px),
+      transparent calc(50% + 0.6px)
+    );
+  background-position:
+    calc(100% - 12px - var(--icon-size) / 2) 50%,
+    calc(100% - 12px - var(--icon-size) * 0.18) 50%;
+  background-repeat: no-repeat;
+  background-size: calc(var(--icon-size) * 0.32) calc(var(--icon-size) * 0.32);
+  cursor: var(--cursor-interaction, default);
+  font-size: calc(var(--font-size-base) * 14 / 16);
+  font-size: round(nearest, calc(var(--font-size-base) * 14 / 16), 1px);
+  font-weight: var(--font-weight-normal);
+  line-height: 18px;
+}
+
+.form-select option {
+  color: var(--popover-foreground);
+  background-color: var(--popover);
+}
+
+.form-select:not(:disabled):hover {
+  background-color: light-dark(
+    color-mix(in srgb, var(--foreground) 5.5%, transparent),
+    color-mix(in srgb, var(--foreground) 8%, transparent)
+  );
+}
+
+.form-select:focus-visible {
+  box-shadow: 0 0 0 2px var(--ring);
+}
+.form-select:disabled {
+  opacity: 0.4;
+}
+
+.form-check {
+  display: flex;
+  min-height: calc(12px + 2 * var(--control-spacing, 12px));
+  align-items: center;
+  gap: 6px;
+}
+
+.form-check-input {
+  appearance: none;
+  width: 14px;
+  height: 14px;
+  flex: 0 0 auto;
+  margin: 0;
+  border: 1px solid var(--input);
+  color: var(--primary-foreground);
+  background-color: transparent;
+  cursor: var(--cursor-interaction, default);
+  transition:
+    background-color 150ms,
+    border-color 150ms,
+    box-shadow 150ms;
+}
+
+.form-check:not(.form-switch) .form-check-input[type=&quot;checkbox&quot;] {
+  corner-shape: round;
+  box-shadow: var(--shadow-sm);
+  position: relative;
+  width: calc(10px + var(--control-spacing, 12px) / 2);
+  height: calc(10px + var(--control-spacing, 12px) / 2);
+  border-color: var(--border-strong, var(--input));
+  border-radius: calc(var(--radius-sm) / 2);
+  background-color: transparent;
+  color: var(--foreground);
+}
+
+.form-check:not(.form-switch)
+  .form-check-input:not(:disabled):not(:checked):hover {
+  background-color: var(--card);
+}
+
+.form-check:not(.form-switch)
+  .form-check-input[type=&quot;checkbox&quot;]:is(:checked, :indeterminate) {
+  border-color: var(--border-strong, var(--input));
+  background-color: color-mix(in srgb, var(--popover) 96%, transparent);
+}
+
+.form-check:not(.form-switch)
+  .form-check-input[type=&quot;checkbox&quot;]:checked::before {
+  display: block;
+  width: 100%;
+  height: 100%;
+  background: var(--primary-foreground);
+  content: &quot;&quot;;
+  mask: var(--checkmark-image) center / 12px 12px no-repeat;
+  background-color: var(--foreground);
+}
+.form-check:not(.form-switch)
+  .form-check-input[type=&quot;checkbox&quot;]:indeterminate::before {
+  position: absolute;
+  inset: 0;
+  display: block;
+  width: 65%;
+  height: 6.65%;
+  margin: auto;
+  border-radius: var(--radius-full);
+  background: var(--foreground);
+  mask: none;
+  content: &quot;&quot;;
+}
+
+.form-check-input[type=&quot;radio&quot;] {
+  border-radius: var(--radius-full);
+  width: 16px;
+  height: 16px;
+  border: 0;
+  box-shadow: inset 0 0 0 1px var(--input);
+}
+
+.form-check-input[type=&quot;radio&quot;]:checked {
+  border: 0;
+  background: radial-gradient(
+    circle,
+    var(--primary-foreground) 0 3px,
+    var(--foreground) 3px
+  );
+  box-shadow: none;
+}
+
+.form-check:not(.form-switch) .form-check-input:focus-visible {
+  outline: 2px solid var(--ring);
+  outline-offset: 2px;
+}
+.form-check:not(.form-switch) .form-check-input[type=&quot;checkbox&quot;]:focus-visible {
+  border-color: var(--ring);
+  outline: none;
+  box-shadow: 0 0 0 2px var(--ring);
+}
+
+.form-check:not(.form-switch) .form-check-input:disabled {
+  cursor: not-allowed;
+  pointer-events: none;
+}
+
+.form-check:not(.form-switch) .form-check-input:disabled + .form-check-label {
+  cursor: not-allowed;
+}
+.form-check:not(.form-switch) .form-check-input[type=&quot;radio&quot;]:disabled,
+.form-check:not(.form-switch)
+  .form-check-input[type=&quot;radio&quot;]:disabled
+  + .form-check-label {
+  opacity: 0.5;
+}
+
+.form-switch .form-check-input:disabled,
+.form-switch .form-check-input:disabled + .form-check-label {
+  cursor: not-allowed;
+  opacity: 0.6;
+}
+
+.form-check-label {
+  color: var(--foreground);
+  cursor: var(--cursor-interaction, default);
+}
+
+.form-switch .form-check-input {
+  position: relative;
+  width: 32px;
+  height: 20px;
+  border: 0;
+  border-radius: var(--radius-full);
+  background: var(--muted);
+  box-shadow: none;
+  transition: background-color 200ms cubic-bezier(0, 0, 0.2, 1);
+}
+
+.form-switch .form-check-input::before {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  width: 16px;
+  height: 16px;
+  box-sizing: border-box;
+  border: 1px solid light-dark(var(--primary-foreground), var(--foreground));
+  border-radius: var(--radius-full);
+  box-shadow: var(--shadow-sm);
+  content: &quot;&quot;;
+  transform: translate(2px, -50%);
+  transition: transform 200ms cubic-bezier(0, 0, 0.2, 1);
+  border-color: #fff;
+  background: #fff;
+}
+
+.form-switch .form-check-input:checked {
+  background: var(--blue);
+}
+
+.form-switch .form-check-input:checked::before {
+  transform: translate(14px, -50%);
+}
+
+.form-switch .form-check-input:focus-visible {
+  box-shadow: 0 0 0 2px var(--ring);
+  outline: none;
+}
+
+.form-range {
+  appearance: none;
+  display: block;
+  width: 100%;
+  flex: 1;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  accent-color: var(--primary);
+  height: calc(12px + 2 * var(--control-spacing, 12px));
+  min-height: calc(12px + 2 * var(--control-spacing, 12px));
+  outline: none;
+  border-radius: var(--radius-full);
+  color: var(--foreground);
+  background: transparent;
+}
+
+.form-range::-webkit-slider-runnable-track {
+  background: var(--form-range-track, var(--border));
+  height: 2px;
+  border-radius: var(--radius-full);
+}
+
+.form-range::-webkit-slider-thumb {
+  appearance: none;
+  width: 20px;
+  height: 20px;
+  border: 1px solid var(--border);
+  border-radius: var(--radius-full);
+  margin-top: -9px;
+  border-color: transparent;
+  background: currentColor;
+  box-shadow: var(--shadow-sm);
+}
+
+/* Outline the native track and thumb, preserving the larger input hit area. */
+.form-range:focus-visible::-webkit-slider-runnable-track {
+  outline: 2px auto Highlight;
+  outline-color: -webkit-focus-ring-color;
+}
+
+.form-range::-moz-range-track {
+  background: var(--form-range-track, var(--border));
+  height: 2px;
+  border-radius: var(--radius-full);
+}
+
+.form-range::-moz-range-thumb {
+  width: 20px;
+  height: 20px;
+  border: 1px solid var(--border);
+  border-radius: var(--radius-full);
+  border-color: transparent;
+  background: currentColor;
+  box-shadow: var(--shadow-sm);
+}
+
+.form-range:focus-visible::-moz-range-thumb {
+  outline: 2px solid Highlight;
+  outline-offset: 2px;
+}
+
+.form-range:disabled {
+  opacity: 1;
+  cursor: default;
+}
+
+.btn:not(.btn-primary, .viz-tile):is(
+  [aria-pressed=&quot;true&quot;],
+  [aria-selected=&quot;true&quot;],
+  .is-selected
+) {
+  border-color: transparent;
+  color: var(--primary-foreground);
+  background: var(--blue);
+}
+
+.btn.viz-tile:is([aria-pressed=&quot;true&quot;], [aria-selected=&quot;true&quot;], .is-selected) {
+  border-color: var(--primary);
+  box-shadow: inset 0 0 0 1px var(--primary);
+}
+
+.btn:focus-visible,
+.nav-link:focus-visible {
+  outline-offset: 2px;
+  outline: none;
+  box-shadow: 0 0 0 2px var(--ring);
+}
+
+.viz-carousel-controls :is(button, summary):focus-visible {
+  outline: 2px solid var(--ring) !important;
+  outline-offset: 2px !important;
+}
+
+/* Web recipes are the default, including on renderers without inline style queries. */
+@supports (border-radius: if(style(--corner-shape: round): 1px; else: 2px)) {
+  /* Match the host&#x27;s proportional text-sm scale at every text preference. */
+  .tooltip,
+  .viz-badge,
+  .btn,
+  .nav-link,
+  .form-control,
+  .form-select {
+    font-size: if(
+      style(--corner-shape: round): round(
+          nearest,
+          calc(var(--font-size-base) * 14 / 16),
+          1px
+        );
+        else: round(nearest, calc(var(--font-size-base) * 13 / 14), 1px)
+    );
+  }
+
+  .btn,
+  .nav-link,
+  .form-select {
+    border-radius: if(
+      style(--corner-shape: round): var(--radius-full); else: var(--radius-lg)
+    );
+  }
+
+  .form-check:not(.form-switch) .form-check-input[type=&quot;checkbox&quot;] {
+    border-radius: if(
+      style(--corner-shape: round): calc(var(--radius-sm) / 2);
+        else: calc(var(--radius-lg) * 0.4)
+    );
+  }
+
+  .tooltip {
+    font-weight: if(
+      style(--corner-shape: round): 600; else: var(--font-weight-normal)
+    );
+  }
+}
+
+@media (pointer: coarse) {
+  .viz-carousel:has(&gt; .viz-carousel-controls) {
+    min-height: calc(76px + var(--viz-carousel-picker-height, 0px));
+    padding-bottom: 76px;
+  }
+
+  .btn,
+  .nav-link,
+  .viz-carousel-controls button,
+  .viz-carousel-picker &gt; summary,
+  .form-control,
+  .form-select {
+    min-width: 44px;
+    min-height: 44px;
+  }
+
+  /* Keep small-screen WebKit from zooming when a text field receives focus. */
+  .form-control,
+  .form-select {
+    font-size: max(16px, calc(var(--font-size-base) * 14 / 16));
+    font-size: max(
+      16px,
+      round(nearest, calc(var(--font-size-base) * 14 / 16), 1px)
+    );
+  }
+  .form-control:is(
+    [type=&quot;file&quot;],
+    [type=&quot;date&quot;],
+    [type=&quot;datetime-local&quot;],
+    [type=&quot;month&quot;],
+    [type=&quot;week&quot;],
+    [type=&quot;time&quot;],
+    [type=&quot;color&quot;]
+  ) {
+    height: 44px;
+    min-height: 44px;
+    font-size: max(16px, calc(var(--font-size-base) * 14 / 16));
+    font-size: max(
+      16px,
+      round(nearest, calc(var(--font-size-base) * 14 / 16), 1px)
+    );
+  }
+
+  .form-control[type=&quot;file&quot;]::file-selector-button {
+    min-width: 44px;
+    min-height: 44px;
+  }
+
+  .form-control-color[type=&quot;color&quot;] {
+    width: 44px;
+    height: 44px;
+  }
+
+  .form-control:is(
+    [type=&quot;date&quot;],
+    [type=&quot;datetime-local&quot;],
+    [type=&quot;month&quot;],
+    [type=&quot;time&quot;],
+    [type=&quot;week&quot;]
+  ) {
+    min-width: 0;
+    max-width: 100%;
+    padding-block: 8px;
+  }
+
+  .form-check {
+    min-height: 44px;
+    padding-inline: 15px;
+  }
+
+  .form-check-input {
+    position: relative;
+  }
+
+  .form-check-input::after {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 44px;
+    height: 44px;
+    content: &quot;&quot;;
+    transform: translate(-50%, -50%);
+  }
+
+  .form-check-label {
+    display: inline-flex;
+    min-width: 44px;
+    min-height: 44px;
+    align-items: center;
+  }
+
+  .form-range {
+    height: 44px;
+    touch-action: pan-y;
+  }
+}
+
+svg {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+#widget &gt; svg {
+  width: 100%;
+}
+
+/* Model-authored chart rules can otherwise stretch icons after these styles load. */
+svg.lucide {
+  display: block;
+  width: var(--icon-size) !important;
+  height: var(--icon-size) !important;
+  flex: none;
+  margin: 0 !important;
+  stroke-width: 1.6;
+}
+
+.text-warning,
+.text-destructive {
+  color: var(--destructive);
+}
+
+html&gt;body{padding:0}&lt;/style&gt;
+&lt;/head&gt;
+&lt;body&gt;
+&lt;script type=&quot;application/json&quot; id=&quot;codex-visualization-widget-state&quot;&gt;__CODEX_VISUALIZATION_WIDGET_STATE__&lt;/script&gt;
+&lt;script&gt;(() =&gt; {
+  const root = document.documentElement;
+  const mediaQuery = globalThis.matchMedia(&quot;(prefers-color-scheme: dark)&quot;);
+  const apply = Reflect.apply;
+  const isArray = Array.isArray;
+  const hasOwn = Object.hasOwn;
+  const parentWindow = globalThis.parent;
+  const stringify = JSON.stringify;
+  const parse = JSON.parse;
+  const encode = TextEncoder.prototype.encode.bind(new TextEncoder());
+  const initialStateElement = document.getElementById(
+    &quot;codex-visualization-widget-state&quot;,
+  );
+  const initialGlobals = parse(initialStateElement?.textContent ?? &quot;{}&quot;);
+  initialStateElement?.remove();
+  /** @type {Record&lt;string, unknown&gt; | null} */
+  let state = initialGlobals.widgetState ?? null;
+  const statePersistence = initialGlobals.statePersistence ?? &quot;none&quot;;
+  let nextStateRequestId = 0;
+  /** @type {Map&lt;number, { resolve: () =&gt; void; reject: (error: Error) =&gt; void; timeout: ReturnType&lt;typeof globalThis.setTimeout&gt;; serializedState: string }&gt;} */
+  const pendingStateWrites = new Map();
+  const persistenceError = () =&gt;
+    Object.assign(
+      new Error(&quot;The host could not persist the widget state update&quot;),
+      {
+        code: -32000,
+        data: { code: &quot;widget_state_persistence_failed&quot;, retryable: false },
+      },
+    );
+  /**
+   * @param {object} prototype
+   * @param {string} property
+   */
+  const getPrototypeGetter = (prototype, property) =&gt; {
+    // oxlint-disable-next-line typescript/unbound-method -- invoked through captured Reflect.apply
+    const getter = Object.getOwnPropertyDescriptor(prototype, property)?.get;
+    if (getter == null) {
+      throw new Error(`Missing ${property} getter`);
+    }
+    return getter;
+  };
+  const getMessageData = getPrototypeGetter(MessageEvent.prototype, &quot;data&quot;);
+  const getMessagePorts = getPrototypeGetter(MessageEvent.prototype, &quot;ports&quot;);
+  const getMessageSource = getPrototypeGetter(MessageEvent.prototype, &quot;source&quot;);
+  // oxlint-disable-next-line typescript/unbound-method -- captured before the untrusted fragment runs
+  const addHostMessageListener = MessagePort.prototype.addEventListener;
+  // oxlint-disable-next-line typescript/unbound-method -- captured before the untrusted fragment runs
+  const postHostMessage = MessagePort.prototype.postMessage;
+  // oxlint-disable-next-line typescript/unbound-method -- captured before the untrusted fragment runs
+  const startHostPort = MessagePort.prototype.start;
+  // oxlint-disable-next-line typescript/unbound-method -- captured before the untrusted fragment runs
+  const stopMessagePropagation = Event.prototype.stopImmediatePropagation;
+  /** @type {MessagePort | null} */
+  let hostPort = null;
+  const postToHost = (type, payload) =&gt; {
+    if (hostPort != null) {
+      apply(postHostMessage, hostPort, [{ type, ...payload }]);
+    }
+  };
+  const openExternal = ({ href }) =&gt; {
+    if (globalThis.navigator.userActivation?.isActive === true) {
+      postToHost(&quot;open-external&quot;, { href });
+    }
+  };
+  const sendFollowUpMessage = ({ context, prompt, title }) =&gt; {
+    if (globalThis.navigator.userActivation?.isActive === true) {
+      postToHost(&quot;follow-up&quot;, { context, prompt, title });
+    }
+    return Promise.resolve();
+  };
+  /**
+   * @param {Record&lt;string, unknown&gt; | ((previous: Record&lt;string, unknown&gt; | null) =&gt; Record&lt;string, unknown&gt;)} next
+   * @returns {Promise&lt;void&gt;}
+   */
+  const setWidgetState = async (next) =&gt; {
+    const nextState = typeof next === &quot;function&quot; ? next(state) : next;
+    if (
+      nextState == null ||
+      typeof nextState !== &quot;object&quot; ||
+      isArray(nextState)
+    ) {
+      throw new TypeError(&quot;Widget state must be a JSON object&quot;);
+    }
+    const inputState = stringify(
+      nextState,
+      (_key, /** @type {unknown} */ value) =&gt; {
+        if (
+          typeof value === &quot;undefined&quot; ||
+          typeof value === &quot;function&quot; ||
+          typeof value === &quot;symbol&quot; ||
+          (typeof value === &quot;number&quot; &amp;&amp; !Number.isFinite(value))
+        ) {
+          throw new TypeError(&quot;Widget state must be a JSON object&quot;);
+        }
+        return value;
+      },
+    );
+    const parsedState = parse(inputState);
+    if (
+      parsedState == null ||
+      typeof parsedState !== &quot;object&quot; ||
+      isArray(parsedState)
+    ) {
+      throw new TypeError(&quot;Widget state must be a JSON object&quot;);
+    }
+    const storedState = {
+      modelContent: null,
+      privateContent: null,
+      ...parsedState,
+    };
+    const serializedState = stringify(storedState);
+    if (encode(serializedState).length &gt; 16 * 1024) {
+      throw new TypeError(
+        &quot;Widget state must be a JSON object of at most 16 KiB&quot;,
+      );
+    }
+    if (
+      hasOwn(storedState, &quot;imageIds&quot;) &amp;&amp;
+      (!isArray(storedState.imageIds) ||
+        storedState.imageIds.some(
+          (/** @type {unknown} */ id) =&gt; typeof id !== &quot;string&quot;,
+        ))
+    ) {
+      throw new TypeError(&quot;Widget state imageIds must be an array of strings&quot;);
+    }
+    if (storedState.imageIds?.length &gt; 0) {
+      throw Object.assign(
+        new TypeError(&quot;Visualization state does not support image attachments&quot;),
+        { code: -32602, data: { code: &quot;images_unsupported&quot; } },
+      );
+    }
+    state = storedState;
+    globalThis.openai.widgetState = state;
+    globalThis.dispatchEvent(
+      new CustomEvent(&quot;openai:set_globals&quot;, {
+        detail: { globals: { widgetState: state } },
+      }),
+    );
+    if (statePersistence === &quot;none&quot;) {
+      throw persistenceError();
+    }
+    const id = ++nextStateRequestId;
+    return new Promise((resolve, reject) =&gt; {
+      const timeout = globalThis.setTimeout(() =&gt; {
+        pendingStateWrites.delete(id);
+        reject(persistenceError());
+      }, 30_000);
+      pendingStateWrites.set(id, { resolve, reject, timeout, serializedState });
+      postToHost(&quot;widget-state-write&quot;, { id, state: serializedState });
+    });
+  };
+  const syncTheme = () =&gt; {
+    const theme = mediaQuery.matches ? &quot;dark&quot; : &quot;light&quot;;
+    root.dataset.theme = theme;
+    globalThis.openai = {
+      ...globalThis.openai,
+      openExternal,
+      sendFollowUpMessage,
+      setWidgetState,
+      theme,
+      visualizationStyleVariables: {},
+      visualizationTheme: theme,
+      widgetState: state,
+      statePersistence,
+      stateModelContext: &quot;none&quot;,
+    };
+    globalThis.dispatchEvent(
+      new CustomEvent(&quot;openai:set_globals&quot;, {
+        detail: { globals: globalThis.openai },
+      }),
+    );
+  };
+  const sendHeight = () =&gt; {
+    postToHost(&quot;height&quot;, {
+      height: Math.ceil(
+        Math.max(
+          document.body.scrollHeight,
+          document.body.getBoundingClientRect().height,
+        ),
+      ),
+    });
+  };
+
+  globalThis.addEventListener(
+    &quot;message&quot;,
+    (event) =&gt; {
+      const data = apply(getMessageData, event, []);
+      const ports = apply(getMessagePorts, event, []);
+      const source = apply(getMessageSource, event, []);
+      if (
+        hostPort != null ||
+        source !== parentWindow ||
+        typeof data !== &quot;object&quot; ||
+        data?.type !== &quot;codex-visualization-initialize&quot; ||
+        !isArray(ports) ||
+        ports.length !== 1
+      ) {
+        return;
+      }
+      apply(stopMessagePropagation, event, []);
+      const nextHostPort = ports[0];
+      try {
+        apply(addHostMessageListener, nextHostPort, [
+          &quot;message&quot;,
+          (event) =&gt; {
+            const data = apply(getMessageData, event, []);
+            if (typeof data === &quot;object&quot; &amp;&amp; data?.type === &quot;measure&quot;) {
+              sendHeight();
+            } else if (
+              typeof data === &quot;object&quot; &amp;&amp;
+              data?.type === &quot;widget-state-result&quot;
+            ) {
+              /** @type {unknown} */
+              const id = data.id;
+              if (typeof id !== &quot;number&quot;) {
+                return;
+              }
+              const pending = pendingStateWrites.get(id);
+              if (pending != null) {
+                pendingStateWrites.delete(id);
+                globalThis.clearTimeout(pending.timeout);
+                if (data.ok === true) {
+                  pending.resolve();
+                } else {
+                  pending.reject(persistenceError());
+                }
+              }
+            }
+          },
+        ]);
+        apply(startHostPort, nextHostPort, []);
+      } catch {
+        return;
+      }
+      hostPort = nextHostPort;
+      for (const [id, { serializedState }] of pendingStateWrites) {
+        postToHost(&quot;widget-state-write&quot;, { id, state: serializedState });
+      }
+      sendHeight();
+    },
+    { capture: true },
+  );
+  document.currentScript?.remove();
+  mediaQuery.addEventListener(&quot;change&quot;, syncTheme);
+  globalThis.addEventListener(&quot;click&quot;, (event) =&gt; {
+    if (event.defaultPrevented) {
+      return;
+    }
+    let element = null;
+    if (event.target instanceof globalThis.Element) {
+      element = event.target;
+    } else if (event.target instanceof globalThis.Node) {
+      element = event.target.parentElement;
+    }
+    const link = element?.closest(&quot;a[href]&quot;);
+    const href = link?.getAttribute(&quot;href&quot;);
+    if (href == null) {
+      return;
+    }
+    if (href.startsWith(&quot;#&quot;)) {
+      let id;
+      try {
+        id = decodeURIComponent(href.slice(1));
+      } catch {
+        return;
+      }
+      const target = id.length === 0 ? root : document.getElementById(id);
+      if (
+        target == null ||
+        globalThis.navigator.userActivation?.isActive !== true
+      ) {
+        return;
+      }
+      event.preventDefault();
+      postToHost(&quot;scroll-to&quot;, {
+        top: target.getBoundingClientRect().top + globalThis.scrollY,
+      });
+      return;
+    }
+    event.preventDefault();
+    openExternal({ href });
+  });
+  new ResizeObserver(sendHeight).observe(document.body);
+  syncTheme();
+})();
+&lt;/script&gt;
+&lt;!-- Throwaway discussion prototype. Sample diaries, chats, playback, recording and saves are local simulations only. --&gt;
+&lt;div id=&quot;diary-theme-system-demo&quot;&gt;
+&lt;div class=&quot;viz-dotted-background dp-stage&quot;&gt;
+&lt;div class=&quot;dp-phone&quot; aria-label=&quot;OneRecord 页面体验原型&quot;&gt;
+&lt;div class=&quot;dp-status&quot;&gt;&lt;span&gt;9:41&lt;/span&gt;&lt;span&gt;••• ▰&lt;/span&gt;&lt;/div&gt;
+&lt;header class=&quot;dp-header&quot;&gt;&lt;/header&gt;
+&lt;main class=&quot;dp-main&quot;&gt;&lt;/main&gt;
+&lt;footer class=&quot;dp-footer&quot;&gt;&lt;/footer&gt;
+&lt;nav class=&quot;dp-nav&quot; aria-label=&quot;主要导航&quot;&gt;&lt;/nav&gt;
+&lt;div class=&quot;dp-homebar&quot;&gt;&lt;/div&gt;
+&lt;div class=&quot;dp-shade&quot; hidden&gt;&lt;/div&gt;&lt;section class=&quot;dp-sheet&quot; aria-label=&quot;页面操作&quot; hidden&gt;&lt;/section&gt;
+&lt;/div&gt;&lt;/div&gt;
+&lt;style&gt;
+#diary-theme-system-demo .dp-stage{padding:24px 0}
+#diary-theme-system-demo .dp-phone{--theme-background:light-dark(#fffaf2,#2d2822);--theme-text:light-dark(#514233,#f2e7d7);--theme-text-secondary:light-dark(#887461,#c6b19b);--theme-border:light-dark(#e9dfd0,#564a3b);--theme-surface:light-dark(#fffdf8,#382f27);--theme-tint:light-dark(#f3e7d4,#45392a);--theme-primary:light-dark(#edc49d,#946a44);--theme-primary-text:light-dark(#634329,#fff1df);--theme-reference:light-dark(#e9ebd8,#3e4430);--theme-danger:light-dark(#a74735,#f1b4a5);max-width:398px;width:100%;height:752px;margin:auto;padding:20px 23px 12px;display:flex;flex-direction:column;border:1px solid var(--theme-border);border-radius:38px;background:var(--theme-background);color:var(--theme-text);font:15px/1.65 ui-rounded,-apple-system,BlinkMacSystemFont,&quot;PingFang SC&quot;,sans-serif;box-sizing:border-box;overflow:hidden;position:relative;box-shadow:0 12px 32px #00000009}
+#diary-theme-system-demo .dp-phone *{box-sizing:border-box}
+#diary-theme-system-demo .dp-phone{color-scheme:light;--theme-background:#fffdf3;--theme-text:#443d37;--theme-text-secondary:#786c62;--theme-border:#e7e1d7;--theme-surface:#ffffff;--theme-tint:#fff6de;--theme-primary:#ffe39b;--theme-primary-text:#443d37;--theme-secondary:#ffc9b0;--theme-reference:#ffecdf;--theme-danger:#a74735}
+#diary-theme-system-demo .dp-phone button,#diary-theme-system-demo .dp-phone input,#diary-theme-system-demo .dp-phone select,#diary-theme-system-demo .dp-phone textarea{font:inherit;color:inherit}
+#diary-theme-system-demo .dp-phone button{cursor:var(--cursor-interaction,pointer);-webkit-tap-highlight-color:transparent}
+#diary-theme-system-demo .dp-phone button:focus-visible{outline:2px solid var(--theme-primary-text);outline-offset:3px}
+#diary-theme-system-demo .dp-phone button:disabled{opacity:.5;cursor:default}
+#diary-theme-system-demo .dp-phone [hidden]{display:none!important}
+#diary-theme-system-demo .dp-status{display:flex;justify-content:space-between;font-weight:600;font-size:12px;margin:0 3px 22px;flex:none}
+#diary-theme-system-demo .dp-status span:last-child{letter-spacing:2px}
+#diary-theme-system-demo .dp-header{flex:none;display:flex;align-items:center;justify-content:space-between;gap:10px;min-height:46px;margin-bottom:15px}
+#diary-theme-system-demo .dp-header h2{font-size:29px;font-weight:650;letter-spacing:-1px;line-height:1.35;margin:0;color:var(--theme-text)}
+#diary-theme-system-demo .dp-header .dp-small-title{font-size:18px;font-weight:600;letter-spacing:0}
+#diary-theme-system-demo .dp-avatar,#diary-theme-system-demo .dp-icon{width:42px;height:42px;border:0;border-radius:50%;background:var(--theme-tint);display:grid;place-items:center;flex:none}
+#diary-theme-system-demo .dp-icon.quiet{background:none}
+#diary-theme-system-demo .dp-avatar span{display:block;width:25px;height:22px;background:var(--theme-primary);border-radius:47% 50% 42% 45%;position:relative}
+#diary-theme-system-demo .dp-avatar span:before{content:&quot;&quot;;position:absolute;left:6px;top:8px;width:3px;height:3px;border-radius:50%;background:var(--theme-primary-text);box-shadow:9px 0 0 var(--theme-primary-text)}
+#diary-theme-system-demo .dp-avatar span:after{content:&quot;&quot;;position:absolute;left:10px;top:13px;width:5px;height:3px;border:1px solid var(--theme-primary-text);border-top:0;border-radius:0 0 5px 5px}
+#diary-theme-system-demo .dp-main{flex:1;min-height:0;overflow:auto;overscroll-behavior:contain;scrollbar-width:thin;scrollbar-color:var(--theme-border) transparent;overflow-wrap:anywhere}
+#diary-theme-system-demo .dp-search{display:flex;align-items:center;gap:9px;border-radius:15px;background:var(--theme-tint);padding:10px 13px;margin:1px 0 24px;color:var(--theme-text-secondary)}
+#diary-theme-system-demo .dp-search input{width:100%;min-width:0;border:0;background:none;outline-offset:5px;font-size:14px}
+#diary-theme-system-demo .dp-search input::placeholder{color:var(--theme-text-secondary);opacity:1}
+#diary-theme-system-demo .dp-group{margin:0 0 26px}
+#diary-theme-system-demo .dp-day{display:flex;justify-content:space-between;align-items:baseline;color:var(--theme-text-secondary);font-size:12px;letter-spacing:.2px;margin-bottom:6px}
+#diary-theme-system-demo .dp-day strong{font-size:14px;font-weight:600;color:var(--theme-text)}
+#diary-theme-system-demo .dp-entry{width:100%;display:block;text-align:left;border:0;border-bottom:1px solid var(--theme-border);background:none;padding:14px 0 16px}
+#diary-theme-system-demo .dp-entry:last-child{border-bottom:0}
+#diary-theme-system-demo .dp-meta{display:flex;align-items:center;justify-content:space-between;gap:8px;color:var(--theme-text-secondary);font-size:12px;margin-bottom:7px}
+#diary-theme-system-demo .dp-meta&gt;span{display:flex;gap:6px;align-items:center}
+#diary-theme-system-demo .dp-meta svg{width:13px;height:13px}
+#diary-theme-system-demo .dp-entry p{margin:0;font-size:15px;line-height:1.85;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden}
+#diary-theme-system-demo .dp-mood{background:var(--theme-tint);border-radius:9px;padding:1px 7px;font-size:11px;color:var(--theme-text-secondary)}
+#diary-theme-system-demo .dp-nav{display:flex;justify-content:space-around;border-top:1px solid var(--theme-border);padding-top:10px;margin-top:10px;flex:none}
+#diary-theme-system-demo .dp-nav button{display:flex;align-items:center;flex-direction:column;gap:4px;min-width:70px;min-height:47px;padding:5px 14px;border:0;border-radius:16px;background:none;color:var(--theme-text-secondary);font-size:11px}
+#diary-theme-system-demo .dp-nav button.active{background:var(--theme-tint);color:var(--theme-text)}
+#diary-theme-system-demo .dp-homebar{height:4px;width:103px;margin:16px auto 0;border-radius:5px;background:var(--theme-text);opacity:.5;flex:none}
+#diary-theme-system-demo .dp-footer{flex:none}
+#diary-theme-system-demo .dp-empty{padding:55px 12px;text-align:center;color:var(--theme-text-secondary);font-size:14px}
+#diary-theme-system-demo .dp-detail{min-height:0;display:flex;flex-direction:column;height:100%}
+#diary-theme-system-demo .dp-detail-top{display:flex;align-items:center;justify-content:space-between;gap:8px;margin-bottom:15px;flex:none}
+#diary-theme-system-demo .dp-detail-top h2{margin:0;font-size:25px;line-height:1.4;color:var(--theme-text);font-weight:600;letter-spacing:-.5px}
+#diary-theme-system-demo .dp-detail-top small{display:block;color:var(--theme-text-secondary);font-size:12px;margin-top:4px}
+#diary-theme-system-demo .dp-saved{display:flex;gap:4px;align-items:center;color:var(--theme-text-secondary);font-size:12px}
+#diary-theme-system-demo .dp-saved svg{width:15px;height:15px}
+#diary-theme-system-demo .dp-player{display:flex;align-items:center;gap:10px;background:var(--theme-tint);border-radius:16px;padding:7px 10px 7px 7px;margin-bottom:15px;flex:none;font-size:13px}
+#diary-theme-system-demo .dp-player .dp-icon{background:var(--theme-surface);height:36px;width:36px}
+#diary-theme-system-demo .dp-duration{font-size:12px;margin-left:auto;color:var(--theme-text-secondary);font-variant-numeric:tabular-nums}
+#diary-theme-system-demo .dp-reading-head{display:flex;align-items:center;justify-content:space-between;color:var(--theme-text-secondary);font-size:12px;flex:none;margin-bottom:9px}
+#diary-theme-system-demo .dp-text-button{border:0;background:none;display:flex;align-items:center;gap:5px;padding:6px 0 6px 10px;min-height:36px;color:var(--theme-text-secondary);font-size:12px}
+#diary-theme-system-demo .dp-reading{overflow:auto;min-height:0;flex:1;scrollbar-width:thin;scrollbar-color:var(--theme-border) transparent;padding-right:5px}
+#diary-theme-system-demo .dp-reading p{font-size:16px;line-height:1.95;margin:0 0 18px}
+#diary-theme-system-demo .dp-reading .dp-addendum{border-top:1px solid var(--theme-border);padding-top:15px;margin-top:23px}
+#diary-theme-system-demo .dp-reading small{color:var(--theme-text-secondary);font-size:12px}
+#diary-theme-system-demo .dp-toolbar{display:flex;align-items:center;gap:8px;justify-content:space-between;border-top:1px solid var(--theme-border);margin-top:12px;padding-top:10px}
+#diary-theme-system-demo .dp-toolbar button{border:0;background:none;display:flex;align-items:center;justify-content:center;gap:7px;padding:9px 7px;min-height:44px;font-size:13px;color:var(--theme-text-secondary)}
+#diary-theme-system-demo .dp-toolbar .dp-finish{background:var(--theme-primary);color:var(--theme-primary-text);border-radius:15px;padding:10px 17px;font-weight:600}
+#diary-theme-system-demo .dp-primary{width:100%;background:var(--theme-primary);color:var(--theme-primary-text)!important;border:0;border-radius:18px;min-height:47px;padding:11px 17px;font-weight:600;display:flex;align-items:center;justify-content:center;gap:7px}
+#diary-theme-system-demo .dp-new-chat{margin:4px 0 24px}
+#diary-theme-system-demo .dp-thread{display:flex;align-items:flex-start;gap:13px;width:100%;padding:20px 0;border:0;border-bottom:1px solid var(--theme-border);background:none;text-align:left}
+#diary-theme-system-demo .dp-thread-art{width:37px;height:37px;background:var(--theme-tint);border-radius:14px;display:grid;place-items:center;flex:none;margin-top:1px}
+#diary-theme-system-demo .dp-thread-body{flex:1;min-width:0}
+#diary-theme-system-demo .dp-thread-title{display:flex;align-items:baseline;justify-content:space-between;gap:8px}
+#diary-theme-system-demo .dp-thread-title strong{font-size:15px;font-weight:600}
+#diary-theme-system-demo .dp-thread-title small{font-size:11px;color:var(--theme-text-secondary);white-space:nowrap}
+#diary-theme-system-demo .dp-thread p{font-size:13px;color:var(--theme-text-secondary);margin:7px 0 0;line-height:1.7;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden}
+#diary-theme-system-demo .dp-chat{display:flex;flex-direction:column;min-height:0;height:100%}
+#diary-theme-system-demo .dp-chat-options{display:flex;flex-wrap:wrap;gap:7px;padding:0 0 12px;flex:none;border-bottom:1px solid var(--theme-border)}
+#diary-theme-system-demo .dp-chip{display:flex;align-items:center;gap:6px;background:var(--theme-tint);border:0;border-radius:13px;padding:7px 10px;min-height:36px;font-size:12px}
+#diary-theme-system-demo .dp-chip svg{width:14px;height:14px}
+#diary-theme-system-demo .dp-chip:disabled{opacity:1;color:var(--theme-text-secondary)}
+#diary-theme-system-demo .dp-messages{overflow:auto;min-height:0;flex:1;padding:19px 0 6px;scrollbar-width:thin;scrollbar-color:var(--theme-border) transparent}
+#diary-theme-system-demo .dp-message{margin:0 0 23px;max-width:100%}
+#diary-theme-system-demo .dp-message.user{margin-left:35px;background:var(--theme-tint);padding:12px 15px;border-radius:19px 19px 6px 19px}
+#diary-theme-system-demo .dp-message p{font-size:15px;line-height:1.9;margin:0 0 11px}
+#diary-theme-system-demo .dp-message p:last-child{margin-bottom:0}
+#diary-theme-system-demo .dp-assistant-label{display:flex;align-items:center;gap:7px;margin-bottom:9px;font-size:11px;color:var(--theme-text-secondary)}
+#diary-theme-system-demo .dp-assistant-label .dp-avatar{width:25px;height:25px;background:none}
+#diary-theme-system-demo .dp-citation{display:inline-flex;align-items:center;gap:5px;font-size:11px;background:var(--theme-reference);border:0;border-radius:8px;padding:5px 8px;margin:4px 6px 0 0;min-height:32px}
+#diary-theme-system-demo .dp-citation svg{width:13px;height:13px}
+#diary-theme-system-demo .dp-compose{display:flex;align-items:flex-end;gap:9px;padding:11px 0 0;border-top:1px solid var(--theme-border)}
+#diary-theme-system-demo .dp-compose textarea{resize:none;min-height:49px;height:69px;max-height:130px;flex:1;min-width:0;border:1px solid var(--theme-border);border-radius:17px;background:var(--theme-surface);padding:11px 12px;font-size:16px;line-height:1.5}
+#diary-theme-system-demo .dp-send{border:0;border-radius:15px;background:var(--theme-primary);color:var(--theme-primary-text);height:43px;width:43px;display:grid;place-items:center;flex:none;margin-bottom:3px}
+#diary-theme-system-demo .dp-hint{font-size:11px;color:var(--theme-text-secondary);margin:7px 0 0;min-height:18px}
+#diary-theme-system-demo .dp-start-chat{padding:80px 5px 10px;text-align:center}
+#diary-theme-system-demo .dp-start-chat .dp-avatar{margin:auto auto 18px;width:48px;height:48px}
+#diary-theme-system-demo .dp-start-chat h3{font-size:20px;font-weight:600;line-height:1.6;margin:0;color:var(--theme-text)}
+#diary-theme-system-demo .dp-start-chat p{font-size:13px;color:var(--theme-text-secondary);margin:11px 0}
+#diary-theme-system-demo .dp-shade{position:absolute;inset:0;background:#00000022;z-index:5}
+#diary-theme-system-demo .dp-sheet{position:absolute;bottom:0;left:0;right:0;z-index:6;max-height:90%;overflow:auto;border-radius:28px 28px 0 0;border-top:1px solid var(--theme-border);padding:22px 23px 28px;background:var(--theme-surface);box-shadow:0 -10px 30px #00000008}
+#diary-theme-system-demo .dp-sheet-heading{display:flex;align-items:center;justify-content:space-between;gap:10px;margin-bottom:17px}
+#diary-theme-system-demo .dp-sheet-heading h3{margin:0;font-size:19px;font-weight:600;color:var(--theme-text)}
+#diary-theme-system-demo .dp-sheet p{font-size:13px;color:var(--theme-text-secondary);line-height:1.85}
+#diary-theme-system-demo .dp-row{display:flex;align-items:center;justify-content:space-between;gap:12px;width:100%;border:0;border-bottom:1px solid var(--theme-border);background:none;text-align:left;padding:14px 0;min-height:52px;font-size:14px}
+#diary-theme-system-demo .dp-row small{display:block;color:var(--theme-text-secondary);font-size:11px}
+#diary-theme-system-demo .dp-danger{color:var(--theme-danger)!important}
+#diary-theme-system-demo .dp-editor{width:100%;min-height:260px;border:1px solid var(--theme-border);border-radius:17px;background:var(--theme-background);padding:14px;resize:vertical;font-size:16px;line-height:1.9;margin-bottom:15px}
+#diary-theme-system-demo .dp-mood-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px;margin-bottom:10px}
+#diary-theme-system-demo .dp-mood-grid button{background:var(--theme-background);border:1px solid var(--theme-border);border-radius:15px;min-height:55px;font-size:15px}
+#diary-theme-system-demo .dp-mood-grid button[aria-pressed=&quot;true&quot;]{background:var(--theme-tint);border-color:var(--theme-primary-text)}
+#diary-theme-system-demo .dp-field{display:flex;flex-direction:column;gap:6px;font-size:13px;margin:13px 0}
+#diary-theme-system-demo .dp-field input{width:100%;min-width:0;padding:10px;border:1px solid var(--theme-border);border-radius:12px;background:var(--theme-background);font-size:16px}
+#diary-theme-system-demo .dp-home{text-align:center;padding-top:60px}
+#diary-theme-system-demo .dp-home h2{font-size:26px;font-weight:600;letter-spacing:-.5px;margin:0 0 35px;color:var(--theme-text)}
+#diary-theme-system-demo .dp-blob{position:relative;width:212px;height:186px;margin:auto;border:0;border-radius:47% 49% 40% 42%;background:var(--theme-tint);display:grid;place-items:center;box-shadow:inset 0 -8px 0 #af88610c}
+#diary-theme-system-demo .dp-blob:before{content:&quot;&quot;;position:absolute;width:7px;height:10px;left:70px;top:46px;border-radius:5px;background:var(--theme-text);box-shadow:65px 0 0 var(--theme-text)}
+#diary-theme-system-demo .dp-blob:after{content:&quot;&quot;;position:absolute;left:100px;top:60px;width:17px;height:9px;border:2px solid var(--theme-text);border-top:0;border-radius:0 0 14px 14px}
+#diary-theme-system-demo .dp-blob-label{display:flex;align-items:center;gap:7px;margin-top:54px;padding:10px 15px;border-radius:23px;background:var(--theme-surface);font-size:15px;font-weight:600}
+#diary-theme-system-demo .dp-type-link{margin:25px auto 0;border:0;background:none;display:flex;align-items:center;justify-content:center;gap:7px;min-height:44px;color:var(--theme-text-secondary);font-size:13px}
+#diary-theme-system-demo .dp-home.recording .dp-blob:before,#diary-theme-system-demo .dp-home.recording .dp-blob:after{display:none}
+#diary-theme-system-demo .dp-home.recording .dp-blob-label{margin:0;background:none;flex-direction:column;gap:16px}
+#diary-theme-system-demo .dp-timer{font-variant-numeric:tabular-nums}
+#diary-theme-system-demo .dp-blob{background:var(--theme-primary)}
+#diary-theme-system-demo .dp-avatar{background:var(--theme-secondary)}
+#diary-theme-system-demo .dp-theme-summary{display:flex;align-items:center;gap:9px;color:var(--theme-text-secondary);font-size:12px}
+#diary-theme-system-demo .dp-theme-dot{height:16px;width:16px;border-radius:50%;background:var(--theme-primary);box-shadow:inset 0 0 0 1px #00000009;flex:none}
+#diary-theme-system-demo .dp-theme-preview{display:flex;align-items:center;gap:18px;padding:21px 17px;margin:2px 0 26px;background:var(--theme-surface);border:1px solid var(--theme-border);border-radius:23px}
+#diary-theme-system-demo .dp-theme-character{width:75px;height:65px;background:var(--theme-primary);border-radius:47% 49% 41% 43%;flex:none;position:relative}
+#diary-theme-system-demo .dp-theme-character:before{content:&quot;&quot;;position:absolute;left:23px;top:22px;width:4px;height:6px;border-radius:4px;background:var(--theme-text);box-shadow:24px 0 0 var(--theme-text)}
+#diary-theme-system-demo .dp-theme-character:after{content:&quot;&quot;;position:absolute;left:32px;top:31px;width:10px;height:6px;border:1.5px solid var(--theme-text);border-top:0;border-radius:0 0 9px 9px}
+#diary-theme-system-demo .dp-theme-preview strong{display:block;font-size:19px;font-weight:600}
+#diary-theme-system-demo .dp-theme-preview small{font-size:12px;color:var(--theme-text-secondary);display:block;margin-top:4px}
+#diary-theme-system-demo .dp-theme-group{margin-bottom:27px}
+#diary-theme-system-demo .dp-theme-group h3{font-size:13px;font-weight:500;color:var(--theme-text-secondary);margin:0 0 11px}
+#diary-theme-system-demo .dp-theme-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}
+#diary-theme-system-demo .dp-theme-option{display:block;min-width:0;overflow:hidden;border:1.5px solid var(--theme-border);border-radius:16px;padding:0;background:var(--theme-surface);text-align:left;color:var(--theme-text)}
+#diary-theme-system-demo .dp-theme-option[aria-pressed=&quot;true&quot;]{border-color:var(--theme-text);box-shadow:0 0 0 1px var(--theme-text)}
+#diary-theme-system-demo .dp-theme-swatches{display:flex;height:42px}
+#diary-theme-system-demo .dp-theme-swatches span:first-child{flex:1.1}#diary-theme-system-demo .dp-theme-swatches span:nth-child(2){flex:1.7}#diary-theme-system-demo .dp-theme-swatches span:last-child{flex:1}
+#diary-theme-system-demo .dp-theme-option-label{display:flex;align-items:center;justify-content:space-between;gap:4px;padding:10px 10px;font-size:12px;min-height:40px}
+#diary-theme-system-demo .dp-theme-option-label svg{height:15px;width:15px;flex:none;visibility:hidden}
+#diary-theme-system-demo .dp-theme-option[aria-pressed=&quot;true&quot;] .dp-theme-option-label svg{visibility:visible}
+#diary-theme-system-demo .dp-theme-default{border:0;background:none;color:var(--theme-text-secondary);min-height:44px;font-size:12px;padding:8px 0;display:block;margin:0 auto}
+@media(max-width:360px){#diary-theme-system-demo .dp-phone{padding:18px 17px 12px}#diary-theme-system-demo .dp-chip{font-size:11px;padding:7px 8px}#diary-theme-system-demo .dp-header h2{font-size:26px}}
+&lt;/style&gt;
+&lt;script&gt;
+(()=&gt;{
+ const root=document.getElementById(&#x27;diary-theme-system-demo&#x27;);
+ const paletteCatalog=[
+  {id:1,name:&#x27;向日葵奶白&#x27;,family:&#x27;阳光与果实&#x27;,bg:&#x27;#FFFEF8&#x27;,main:&#x27;#FFDF58&#x27;,secondary:&#x27;#FFCDA4&#x27;},
+  {id:2,name:&#x27;橘子汽水&#x27;,family:&#x27;阳光与果实&#x27;,bg:&#x27;#FFFCF7&#x27;,main:&#x27;#FFBE68&#x27;,secondary:&#x27;#FFEFA8&#x27;},
+  {id:3,name:&#x27;杏子果酱&#x27;,family:&#x27;阳光与果实&#x27;,bg:&#x27;#FFF9F4&#x27;,main:&#x27;#FFAC78&#x27;,secondary:&#x27;#FFE19F&#x27;},
+  {id:4,name:&#x27;柠檬奶油&#x27;,family:&#x27;阳光与果实&#x27;,bg:&#x27;#FFFFF6&#x27;,main:&#x27;#F2ED78&#x27;,secondary:&#x27;#FFD1A3&#x27;},
+  {id:5,name:&#x27;香草布丁&#x27;,family:&#x27;阳光与果实&#x27;,bg:&#x27;#FFFDF3&#x27;,main:&#x27;#FFE39B&#x27;,secondary:&#x27;#FFC9B0&#x27;},
+  {id:6,name:&#x27;菠萝雪糕&#x27;,family:&#x27;阳光与果实&#x27;,bg:&#x27;#FFFEF1&#x27;,main:&#x27;#F6D85B&#x27;,secondary:&#x27;#CCE7AE&#x27;},
+  {id:7,name:&#x27;白桃软糖&#x27;,family:&#x27;蜜桃与花瓣&#x27;,bg:&#x27;#FFFAF8&#x27;,main:&#x27;#FFC2B0&#x27;,secondary:&#x27;#FFDF9C&#x27;},
+  {id:8,name:&#x27;草莓牛奶&#x27;,family:&#x27;蜜桃与花瓣&#x27;,bg:&#x27;#FFFAFC&#x27;,main:&#x27;#FFB5CF&#x27;,secondary:&#x27;#FFE3A8&#x27;},
+  {id:9,name:&#x27;珊瑚雪糕&#x27;,family:&#x27;蜜桃与花瓣&#x27;,bg:&#x27;#FFFCFA&#x27;,main:&#x27;#FFA18E&#x27;,secondary:&#x27;#FFD9AD&#x27;},
+  {id:10,name:&#x27;樱花奶白&#x27;,family:&#x27;蜜桃与花瓣&#x27;,bg:&#x27;#FFFBFD&#x27;,main:&#x27;#F7C4E1&#x27;,secondary:&#x27;#D7D3FF&#x27;},
+  {id:11,name:&#x27;西瓜苏打&#x27;,family:&#x27;蜜桃与花瓣&#x27;,bg:&#x27;#FFFDF9&#x27;,main:&#x27;#FFB4AE&#x27;,secondary:&#x27;#CBEAC9&#x27;},
+  {id:12,name:&#x27;芭乐牛乳&#x27;,family:&#x27;蜜桃与花瓣&#x27;,bg:&#x27;#FFFDFC&#x27;,main:&#x27;#FFD3D6&#x27;,secondary:&#x27;#BFE7B9&#x27;},
+  {id:13,name:&#x27;薄荷奶糖&#x27;,family:&#x27;果园与嫩叶&#x27;,bg:&#x27;#FAFFFB&#x27;,main:&#x27;#BCEED6&#x27;,secondary:&#x27;#FFE3A5&#x27;},
+  {id:14,name:&#x27;青苹果&#x27;,family:&#x27;果园与嫩叶&#x27;,bg:&#x27;#FEFFF6&#x27;,main:&#x27;#DCF19B&#x27;,secondary:&#x27;#FFD399&#x27;},
+  {id:15,name:&#x27;开心果&#x27;,family:&#x27;果园与嫩叶&#x27;,bg:&#x27;#FEFFF8&#x27;,main:&#x27;#D7EAB2&#x27;,secondary:&#x27;#FFD2B3&#x27;},
+  {id:16,name:&#x27;蜜瓜冰沙&#x27;,family:&#x27;果园与嫩叶&#x27;,bg:&#x27;#F8FFFA&#x27;,main:&#x27;#AEEBD0&#x27;,secondary:&#x27;#FFDE91&#x27;},
+  {id:17,name:&#x27;青柠汽水&#x27;,family:&#x27;果园与嫩叶&#x27;,bg:&#x27;#FFFFF8&#x27;,main:&#x27;#E7F7A3&#x27;,secondary:&#x27;#BDE8D8&#x27;},
+  {id:18,name:&#x27;黄油抹茶&#x27;,family:&#x27;果园与嫩叶&#x27;,bg:&#x27;#FFFDF4&#x27;,main:&#x27;#FFE28C&#x27;,secondary:&#x27;#C6E2B3&#x27;},
+  {id:19,name:&#x27;晴空奶油&#x27;,family:&#x27;天空与糖果&#x27;,bg:&#x27;#FCFEFF&#x27;,main:&#x27;#BDE2FF&#x27;,secondary:&#x27;#FFE299&#x27;},
+  {id:20,name:&#x27;海盐汽水&#x27;,family:&#x27;天空与糖果&#x27;,bg:&#x27;#FAFFFF&#x27;,main:&#x27;#BDEEF4&#x27;,secondary:&#x27;#FFD2AE&#x27;},
+  {id:21,name:&#x27;薰衣草奶&#x27;,family:&#x27;天空与糖果&#x27;,bg:&#x27;#FFFCFF&#x27;,main:&#x27;#DDD0FF&#x27;,secondary:&#x27;#FFD3B8&#x27;},
+  {id:22,name:&#x27;蓝莓奶冻&#x27;,family:&#x27;天空与糖果&#x27;,bg:&#x27;#FCFDFF&#x27;,main:&#x27;#CFD9FF&#x27;,secondary:&#x27;#FFE4A6&#x27;},
+  {id:23,name:&#x27;紫丁香&#x27;,family:&#x27;天空与糖果&#x27;,bg:&#x27;#FFFAFF&#x27;,main:&#x27;#EAC9F1&#x27;,secondary:&#x27;#FFE3A3&#x27;},
+  {id:24,name:&#x27;彩虹棉花糖&#x27;,family:&#x27;天空与糖果&#x27;,bg:&#x27;#FFFCFB&#x27;,main:&#x27;#FFD0DF&#x27;,secondary:&#x27;#BCE2F4&#x27;}
+ ];
+ const defaultPaletteId=5;
+ let paletteId=defaultPaletteId;
+ const activePalette=()=&gt;paletteCatalog.find(p=&gt;p.id===paletteId)||paletteCatalog.find(p=&gt;p.id===defaultPaletteId);
+ const mix=(a,b,t)=&gt;&#x27;#&#x27;+[1,3,5].map(i=&gt;Math.round(parseInt(a.slice(i,i+2),16)*(1-t)+parseInt(b.slice(i,i+2),16)*t).toString(16).padStart(2,&#x27;0&#x27;)).join(&#x27;&#x27;);
+ function applyPalette(){
+  const p=activePalette();paletteId=p.id;
+  const tokens={background:p.bg,surface:&#x27;#FFFFFF&#x27;,text:&#x27;#443D37&#x27;,&#x27;text-secondary&#x27;:&#x27;#786C62&#x27;,border:mix(&#x27;#443D37&#x27;,p.bg,.87),primary:p.main,&#x27;primary-text&#x27;:&#x27;#443D37&#x27;,secondary:p.secondary,tint:mix(p.main,&#x27;#FFFFFF&#x27;,.67),reference:mix(p.secondary,&#x27;#FFFFFF&#x27;,.58),danger:&#x27;#A74735&#x27;};
+  const phone=root.querySelector(&#x27;.dp-phone&#x27;);Object.entries(tokens).forEach(([name,value])=&gt;phone.style.setProperty(&#x27;--theme-&#x27;+name,value));
+  root.querySelectorAll(&#x27;[data-current-palette]&#x27;).forEach(label=&gt;label.textContent=p.name);
+  root.querySelectorAll(&#x27;[data-theme-id]&#x27;).forEach(button=&gt;button.setAttribute(&#x27;aria-pressed&#x27;,String(Number(button.dataset.themeId)===p.id)));
+ }
+ function rememberPalette(){
+  const p=activePalette();
+  if(window.openai?.setWidgetState)window.openai.setWidgetState({modelContent:{themeSystem:&#x27;one-record-v1&#x27;,paletteId:p.id,palette:p.name,defaultPalette:&#x27;香草布丁&#x27;,appearance:&#x27;light&#x27;},privateContent:null}).catch(()=&gt;{});
+ }
+ function restorePalette(snapshot){const data=snapshot?.modelContent??snapshot;if(data?.themeSystem===&#x27;one-record-v1&#x27;){paletteId=paletteCatalog.some(p=&gt;p.id===data.paletteId)?data.paletteId:defaultPaletteId;applyPalette();}}
+ const header=root.querySelector(&#x27;.dp-header&#x27;),main=root.querySelector(&#x27;.dp-main&#x27;),footer=root.querySelector(&#x27;.dp-footer&#x27;),nav=root.querySelector(&#x27;.dp-nav&#x27;),sheet=root.querySelector(&#x27;.dp-sheet&#x27;),shade=root.querySelector(&#x27;.dp-shade&#x27;);
+ const esc=value=&gt;String(value).replace(/[&amp;&lt;&gt;&quot;&#x27;]/g,c=&gt;({&#x27;&amp;&#x27;:&#x27;&amp;amp;&#x27;,&#x27;&lt;&#x27;:&#x27;&amp;lt;&#x27;,&#x27;&gt;&#x27;:&#x27;&amp;gt;&#x27;,&#x27;&quot;&#x27;:&#x27;&amp;quot;&#x27;,&quot;&#x27;&quot;:&#x27;&amp;#39;&#x27;}[c]));
+ const icon=name=&gt;&#x27;&lt;i data-lucide=&quot;&#x27;+name+&#x27;&quot; aria-hidden=&quot;true&quot;&gt;&lt;/i&gt;&#x27;;
+ const avatar=&#x27;&lt;span aria-hidden=&quot;true&quot;&gt;&lt;/span&gt;&#x27;;
+ const diaries=[
+  {id:1,date:&#x27;2026-10-10&#x27;,time:&#x27;20:46&#x27;,mood:&#x27;平静&#x27;,audio:&#x27;04:32&#x27;,ai:true,text:[&#x27;今天下班比平时晚了一点。走出楼的时候天已经暗了，原本想直接打车，后来还是决定自己走一段。&#x27;,&#x27;路过花店，门口还有几束没卖完的花。我挑了一束淡黄色的。老板帮我包起来的时候，突然觉得今天也没有那么糟。&#x27;,&#x27;把手机收了起来。风有一点凉，街角有人在等朋友，旁边的小店正在准备打烊。那一会儿，我终于觉得自己下班了。&#x27;,&#x27;回家以后把花放在桌上，给自己煮了面。能安静地吃完一顿饭，也挺好的。&#x27;],extra:&#x27;&#x27;},
+  {id:2,date:&#x27;2026-10-10&#x27;,time:&#x27;12:35&#x27;,mood:&#x27;疲惫&#x27;,audio:null,ai:true,text:[&#x27;中午找了个安静的角落坐了一会儿。今天不想边吃饭边看消息，想让脑子也休息一下。&#x27;],extra:&#x27;&#x27;},
+  {id:3,date:&#x27;2026-10-09&#x27;,time:&#x27;21:08&#x27;,mood:&#x27;开心&#x27;,audio:&#x27;01:26&#x27;,ai:true,text:[&#x27;和好久没见的朋友通了电话。我们没聊什么大事，说了最近吃的东西，还有一些无聊的小事。&#x27;,&#x27;挂电话以后心情很好。原来有人听我说这些，也会让一天变得不一样。&#x27;],extra:&#x27;&#x27;},
+  {id:4,date:&#x27;2026-10-08&#x27;,time:&#x27;22:10&#x27;,mood:&#x27;焦虑&#x27;,audio:&#x27;02:15&#x27;,ai:false,text:[&#x27;今天一直想着没做完的事，休息的时候也忍不住打开电脑。&#x27;,&#x27;希望明天能早点结束工作，给自己留一点完全不用赶时间的晚上。&#x27;],extra:&#x27;&#x27;}
+ ];
+ const initialChat=[{role:&#x27;user&#x27;,text:&#x27;最近下班以后总觉得很累，好像很难真正放松下来。&#x27;},{role:&#x27;assistant&#x27;,text:&#x27;你提到过，休息的时候也会想着没做完的事情。今天那段慢慢走回家、把手机收起来的时间，却让你觉得终于下班了。\n\n当时是什么让你开始放松的？&#x27;,refs:[1]}];
+ const chats=[{id:1,title:&#x27;下班后，怎样慢下来&#x27;,date:&#x27;今天&#x27;,scope:&#x27;最近一周&#x27;,model:&#x27;日常模型&#x27;,messages:initialChat},{id:2,title:&#x27;那些小小的好事&#x27;,date:&#x27;昨天&#x27;,scope:&#x27;最近一周&#x27;,model:&#x27;日常模型&#x27;,messages:[{role:&#x27;user&#x27;,text:&#x27;想看看最近有什么开心的小事。&#x27;},{role:&#x27;assistant&#x27;,text:&#x27;你写过和朋友通电话的晚上。那些很普通的话题，让你在挂电话以后心情很好。&#x27;,refs:[3]}]}];
+ const state={page:&#x27;diary&#x27;,diaryId:1,chatId:1,returnPage:&#x27;diary&#x27;,saved:false,filter:&#x27;&#x27;,playing:false,timer:null,started:0,generation:null,models:[&#x27;日常模型&#x27;,&#x27;备用模型&#x27;],newScope:&#x27;&#x27;,newModel:&#x27;日常模型&#x27;,draft:&#x27;&#x27;,opener:null};
+ const diary=()=&gt;diaries.find(d=&gt;d.id===state.diaryId);
+ const chat=()=&gt;chats.find(c=&gt;c.id===state.chatId);
+ const dateLabel=date=&gt;Number(date.slice(5,7))+&#x27; 月 &#x27;+Number(date.slice(8,10))+&#x27; 日&#x27;;
+ const dateNick=date=&gt;date===&#x27;2026-10-10&#x27;?&#x27;今天&#x27;:date===&#x27;2026-10-09&#x27;?&#x27;昨天&#x27;:&#x27;星期四&#x27;;
+ const icons=()=&gt;{if(globalThis.lucide)lucide.createIcons({attrs:{width:19,height:19}});};
+ function stopGeneration(){if(state.generation){clearTimeout(state.generation);state.generation=null;const c=chat();if(c){const m=c.messages[c.messages.length-1];if(m.pending){m.pending=false;m.text=&#x27;回答已停止。&#x27;;}}}}
+ function closeSheet(){sheet.hidden=true;shade.hidden=true;if(state.opener&amp;&amp;state.opener.isConnected)state.opener.focus();}
+ function openSheet(title,body,opener){state.opener=opener||document.activeElement;sheet.innerHTML=&#x27;&lt;div class=&quot;dp-sheet-heading&quot;&gt;&lt;h3&gt;&#x27;+esc(title)+&#x27;&lt;/h3&gt;&lt;button class=&quot;dp-icon&quot; data-action=&quot;close-sheet&quot; aria-label=&quot;关闭&quot;&gt;&#x27;+icon(&#x27;x&#x27;)+&#x27;&lt;/button&gt;&lt;/div&gt;&#x27;+body;sheet.hidden=false;shade.hidden=false;icons();sheet.querySelector(&#x27;[data-action=&quot;close-sheet&quot;]&#x27;).focus();}
+ function headerBack(title,back,more){header.innerHTML=&#x27;&lt;button class=&quot;dp-icon quiet&quot; data-go=&quot;&#x27;+back+&#x27;&quot; aria-label=&quot;返回&quot;&gt;&#x27;+icon(&#x27;chevron-left&#x27;)+&#x27;&lt;/button&gt;&lt;span class=&quot;dp-small-title&quot;&gt;&#x27;+esc(title)+&#x27;&lt;/span&gt;&#x27;+(more?&#x27;&lt;button class=&quot;dp-icon quiet&quot; data-action=&quot;&#x27;+more+&#x27;&quot; aria-label=&quot;更多操作&quot;&gt;&#x27;+icon(&#x27;ellipsis&#x27;)+&#x27;&lt;/button&gt;&#x27;:&#x27;&lt;span style=&quot;width:42px&quot;&gt;&lt;/span&gt;&#x27;);}
+ function draw(page){
+  if(state.page===&#x27;chat&#x27;&amp;&amp;page!==&#x27;chat&#x27;)stopGeneration();
+  if(page!==&#x27;recording&#x27;)clearInterval(state.timer);
+  state.page=page;state.playing=false;main.scrollTop=0;main.style.overflow=&#x27;auto&#x27;;footer.innerHTML=&#x27;&#x27;;
+  const top=[&#x27;home&#x27;,&#x27;diary&#x27;,&#x27;threads&#x27;].includes(page);nav.hidden=!top;
+  nav.innerHTML=[[&#x27;home&#x27;,&#x27;mic&#x27;,&#x27;记录&#x27;],[&#x27;diary&#x27;,&#x27;book-open&#x27;,&#x27;日记&#x27;],[&#x27;threads&#x27;,&#x27;messages-square&#x27;,&#x27;对话&#x27;]].map(([p,i,t])=&gt;&#x27;&lt;button data-go=&quot;&#x27;+p+&#x27;&quot; class=&quot;&#x27;+(p===page?&#x27;active&#x27;:&#x27;&#x27;)+&#x27;&quot; &#x27;+(p===page?&#x27;aria-current=&quot;page&quot;&#x27;:&#x27;&#x27;)+&#x27;&gt;&#x27;+icon(i)+t+&#x27;&lt;/button&gt;&#x27;).join(&#x27;&#x27;);
+  if(top)header.innerHTML=&#x27;&lt;h2 class=&quot;&#x27;+(page===&#x27;home&#x27;?&#x27;dp-small-title&#x27;:&#x27;&#x27;)+&#x27;&quot;&gt;&#x27;+({home:&#x27;OneRecord&#x27;,diary:&#x27;日记&#x27;,threads:&#x27;日记对话&#x27;}[page])+&#x27;&lt;/h2&gt;&lt;button class=&quot;dp-avatar&quot; data-go=&quot;more&quot; aria-label=&quot;打开更多&quot;&gt;&#x27;+avatar+&#x27;&lt;/button&gt;&#x27;;
+  if(page===&#x27;diary&#x27;){
+   main.innerHTML=&#x27;&lt;label class=&quot;dp-search&quot;&gt;&#x27;+icon(&#x27;search&#x27;)+&#x27;&lt;input type=&quot;search&quot; aria-label=&quot;搜索日记&quot; placeholder=&quot;搜索日记里的文字&quot; value=&quot;&#x27;+esc(state.filter)+&#x27;&quot;&gt;&lt;/label&gt;&lt;div class=&quot;dp-diary-list&quot;&gt;&lt;/div&gt;&#x27;;renderDiaryList();
+  }else if(page===&#x27;detail&#x27;){
+   const d=diary();if(!d){draw(state.returnPage);return;}
+   headerBack(state.saved?&#x27;这一段，收好了&#x27;:&#x27;日记&#x27;,state.returnPage,&#x27;entry-menu&#x27;);main.style.overflow=&#x27;hidden&#x27;;
+   main.innerHTML=&#x27;&lt;div class=&quot;dp-detail&quot;&gt;&lt;div class=&quot;dp-detail-top&quot;&gt;&lt;div&gt;&lt;h2&gt;&#x27;+dateLabel(d.date)+&#x27;&lt;/h2&gt;&lt;small&gt;&#x27;+dateNick(d.date)+&#x27; · &#x27;+d.time+&#x27;&lt;/small&gt;&lt;/div&gt;&#x27;+(state.saved?&#x27;&lt;span class=&quot;dp-saved&quot;&gt;&#x27;+icon(&#x27;circle-check&#x27;)+&#x27;已保存&lt;/span&gt;&#x27;:&#x27;&#x27;)+&#x27;&lt;/div&gt;&#x27;+(d.audio?&#x27;&lt;div class=&quot;dp-player&quot;&gt;&lt;button class=&quot;dp-icon&quot; data-action=&quot;play&quot; aria-label=&quot;模拟播放原音&quot;&gt;&#x27;+icon(&#x27;play&#x27;)+&#x27;&lt;/button&gt;&lt;span&gt;原始录音&lt;/span&gt;&lt;span class=&quot;dp-duration&quot;&gt;&#x27;+d.audio+&#x27;&lt;/span&gt;&lt;/div&gt;&#x27;:&#x27;&#x27;)+&#x27;&lt;div class=&quot;dp-reading-head&quot;&gt;&lt;span&gt;&#x27;+(d.audio?&#x27;转写正文&#x27;:&#x27;正文&#x27;)+&#x27;&lt;/span&gt;&lt;button class=&quot;dp-text-button&quot; data-action=&quot;edit&quot;&gt;&#x27;+icon(&#x27;pencil-line&#x27;)+&#x27;编辑&lt;/button&gt;&lt;/div&gt;&lt;section class=&quot;dp-reading&quot; aria-label=&quot;日记正文，可滚动阅读&quot;&gt;&#x27;+d.text.map(t=&gt;&#x27;&lt;p&gt;&#x27;+esc(t)+&#x27;&lt;/p&gt;&#x27;).join(&#x27;&#x27;)+(d.extra?&#x27;&lt;div class=&quot;dp-addendum&quot;&gt;&lt;small&gt;补充文字&lt;/small&gt;&lt;p&gt;&#x27;+esc(d.extra)+&#x27;&lt;/p&gt;&lt;/div&gt;&#x27;:&#x27;&#x27;)+&#x27;&lt;/section&gt;&lt;/div&gt;&#x27;;
+   footer.innerHTML=&#x27;&lt;div class=&quot;dp-toolbar&quot;&gt;&lt;button data-action=&quot;mood&quot;&gt;&#x27;+icon(&#x27;smile&#x27;)+esc(d.mood||&#x27;心情&#x27;)+&#x27;&lt;/button&gt;&lt;button data-action=&quot;supplement&quot;&gt;&#x27;+icon(&#x27;plus&#x27;)+&#x27;补充文字&lt;/button&gt;&#x27;+(state.saved?&#x27;&lt;button class=&quot;dp-finish&quot; data-go=&quot;home&quot;&gt;完成&lt;/button&gt;&#x27;:&#x27;&#x27;)+&#x27;&lt;/div&gt;&#x27;;
+  }else if(page===&#x27;threads&#x27;){
+   main.innerHTML=&#x27;&lt;button class=&quot;dp-primary dp-new-chat&quot; data-action=&quot;new-chat&quot;&gt;&#x27;+icon(&#x27;plus&#x27;)+&#x27;新对话&lt;/button&gt;&lt;div class=&quot;dp-day&quot;&gt;最近聊过&lt;/div&gt;&#x27;+chats.map(c=&gt;&#x27;&lt;button class=&quot;dp-thread&quot; data-chat=&quot;&#x27;+c.id+&#x27;&quot;&gt;&lt;span class=&quot;dp-thread-art&quot;&gt;&#x27;+icon(&#x27;message-circle&#x27;)+&#x27;&lt;/span&gt;&lt;span class=&quot;dp-thread-body&quot;&gt;&lt;span class=&quot;dp-thread-title&quot;&gt;&lt;strong&gt;&#x27;+esc(c.title)+&#x27;&lt;/strong&gt;&lt;small&gt;&#x27;+esc(c.date)+&#x27;&lt;/small&gt;&lt;/span&gt;&lt;p&gt;&#x27;+esc(c.messages.filter(m=&gt;m.role===&#x27;user&#x27;).slice(-1)[0]?.text||&#x27;&#x27;)+&#x27;&lt;/p&gt;&lt;/span&gt;&lt;/button&gt;&#x27;).join(&#x27;&#x27;);
+  }else if(page===&#x27;chat&#x27;){
+   const c=chat(),locked=!!c&amp;&amp;c.messages.length&gt;0;headerBack(c?c.title:&#x27;新对话&#x27;,&#x27;threads&#x27;,c?&#x27;chat-menu&#x27;:null);main.style.overflow=&#x27;hidden&#x27;;
+   main.innerHTML=&#x27;&lt;div class=&quot;dp-chat&quot;&gt;&lt;div class=&quot;dp-chat-options&quot;&gt;&lt;button class=&quot;dp-chip&quot; data-action=&quot;scope&quot; &#x27;+(locked?&#x27;disabled&#x27;:&#x27;&#x27;)+&#x27;&gt;&#x27;+icon(&#x27;book-open&#x27;)+esc(c?c.scope:state.newScope||&#x27;选择日记范围&#x27;)+icon(locked?&#x27;lock-keyhole&#x27;:&#x27;chevron-down&#x27;)+&#x27;&lt;/button&gt;&lt;button class=&quot;dp-chip&quot; data-action=&quot;model&quot; &#x27;+(locked?&#x27;disabled&#x27;:&#x27;&#x27;)+&#x27;&gt;&#x27;+icon(&#x27;sparkles&#x27;)+esc(c?c.model:state.newModel)+icon(locked?&#x27;lock-keyhole&#x27;:&#x27;chevron-down&#x27;)+&#x27;&lt;/button&gt;&lt;/div&gt;&lt;div class=&quot;dp-messages&quot;&gt;&#x27;+(c?c.messages.map(messageHTML).join(&#x27;&#x27;):&#x27;&lt;div class=&quot;dp-start-chat&quot;&gt;&lt;span class=&quot;dp-avatar&quot;&gt;&#x27;+avatar+&#x27;&lt;/span&gt;&lt;h3&gt;从一句话开始。&lt;/h3&gt;&lt;p&gt;先选一些日记，再聊聊你想到的。&lt;/p&gt;&lt;/div&gt;&#x27;)+&#x27;&lt;/div&gt;&lt;/div&gt;&#x27;;
+   footer.innerHTML=&#x27;&lt;div class=&quot;dp-compose&quot;&gt;&lt;textarea aria-label=&quot;对话内容&quot; placeholder=&quot;有什么想聊聊的？&quot;&gt;&#x27;+esc(state.draft)+&#x27;&lt;/textarea&gt;&lt;button class=&quot;dp-send&quot; data-action=&quot;&#x27;+(state.generation?&#x27;stop-reply&#x27;:&#x27;send&#x27;)+&#x27;&quot; aria-label=&quot;&#x27;+(state.generation?&#x27;停止模拟回答&#x27;:&#x27;发送演示消息&#x27;)+&#x27;&quot;&gt;&#x27;+icon(state.generation?&#x27;square&#x27;:&#x27;arrow-up&#x27;)+&#x27;&lt;/button&gt;&lt;/div&gt;&lt;p class=&quot;dp-hint&quot; aria-live=&quot;polite&quot; hidden&gt;&lt;/p&gt;&#x27;;
+  }else if(page===&#x27;home&#x27;||page===&#x27;recording&#x27;){
+   if(page===&#x27;recording&#x27;)header.innerHTML=&#x27;&lt;span class=&quot;dp-small-title&quot;&gt;OneRecord&lt;/span&gt;&#x27;;
+   main.innerHTML=&#x27;&lt;div class=&quot;dp-home &#x27;+(page===&#x27;recording&#x27;?&#x27;recording&#x27;:&#x27;&#x27;)+&#x27;&quot;&gt;&lt;h2 class=&quot;&#x27;+(page===&#x27;recording&#x27;?&#x27;dp-timer&#x27;:&#x27;&#x27;)+&#x27;&quot;&gt;&#x27;+(page===&#x27;recording&#x27;?&#x27;00:00&#x27;:&#x27;留一点今天。&#x27;)+&#x27;&lt;/h2&gt;&lt;button class=&quot;dp-blob&quot; data-action=&quot;&#x27;+(page===&#x27;recording&#x27;?&#x27;stop-record&#x27;:&#x27;record&#x27;)+&#x27;&quot;&gt;&lt;span class=&quot;dp-blob-label&quot;&gt;&#x27;+icon(page===&#x27;recording&#x27;?&#x27;square&#x27;:&#x27;mic&#x27;)+(page===&#x27;recording&#x27;?&#x27;结束录音&#x27;:&#x27;说说今天&#x27;)+&#x27;&lt;/span&gt;&lt;/button&gt;&#x27;+(page===&#x27;home&#x27;?&#x27;&lt;button class=&quot;dp-type-link&quot; data-action=&quot;write&quot;&gt;&#x27;+icon(&#x27;pencil-line&#x27;)+&#x27;想打字&lt;/button&gt;&#x27;:&#x27;&lt;p class=&quot;dp-hint&quot; style=&quot;margin-top:25px&quot;&gt;正在录音 · 模拟&lt;/p&gt;&#x27;)+&#x27;&lt;/div&gt;&#x27;;
+   if(page===&#x27;recording&#x27;){state.timer=setInterval(()=&gt;{const elapsed=Math.floor((Date.now()-state.started)/1000);const t=main.querySelector(&#x27;.dp-timer&#x27;);if(t)t.textContent=Math.floor(elapsed/60).toString().padStart(2,&#x27;0&#x27;)+&#x27;:&#x27;+(elapsed%60).toString().padStart(2,&#x27;0&#x27;);},500);}
+  }else if(page===&#x27;more&#x27;){
+   headerBack(&#x27;更多&#x27;,&#x27;home&#x27;);main.innerHTML=&#x27;&lt;button class=&quot;dp-row&quot; data-go=&quot;appearance&quot;&gt;&lt;span&gt;外观与配色&lt;/span&gt;&lt;span class=&quot;dp-theme-summary&quot;&gt;&lt;span class=&quot;dp-theme-dot&quot; aria-hidden=&quot;true&quot;&gt;&lt;/span&gt;&lt;span data-current-palette&gt;&#x27;+esc(activePalette().name)+&#x27;&lt;/span&gt;&#x27;+icon(&#x27;chevron-right&#x27;)+&#x27;&lt;/span&gt;&lt;/button&gt;&lt;button class=&quot;dp-row&quot; data-action=&quot;providers&quot;&gt;&lt;span&gt;AI 服务商与模型&lt;small&gt;管理连接与默认模型&lt;/small&gt;&lt;/span&gt;&#x27;+icon(&#x27;chevron-right&#x27;)+&#x27;&lt;/button&gt;&lt;button class=&quot;dp-row&quot; data-action=&quot;about&quot;&gt;&lt;span&gt;关于 OneRecord&lt;/span&gt;&#x27;+icon(&#x27;chevron-right&#x27;)+&#x27;&lt;/button&gt;&#x27;;
+  }else if(page===&#x27;appearance&#x27;){
+   headerBack(&#x27;外观与配色&#x27;,&#x27;more&#x27;);
+   main.innerHTML=&#x27;&lt;div class=&quot;dp-theme-preview&quot;&gt;&lt;span class=&quot;dp-theme-character&quot; aria-hidden=&quot;true&quot;&gt;&lt;/span&gt;&lt;div&gt;&lt;strong data-current-palette&gt;&#x27;+esc(activePalette().name)+&#x27;&lt;/strong&gt;&lt;small&gt;留一点今天。&lt;/small&gt;&lt;/div&gt;&lt;/div&gt;&#x27;+[...new Set(paletteCatalog.map(p=&gt;p.family))].map(family=&gt;&#x27;&lt;section class=&quot;dp-theme-group&quot;&gt;&lt;h3&gt;&#x27;+family+&#x27;&lt;/h3&gt;&lt;div class=&quot;dp-theme-grid&quot;&gt;&#x27;+paletteCatalog.filter(p=&gt;p.family===family).map(p=&gt;&#x27;&lt;button class=&quot;dp-theme-option&quot; data-theme-id=&quot;&#x27;+p.id+&#x27;&quot; aria-pressed=&quot;&#x27;+(p.id===paletteId)+&#x27;&quot; aria-label=&quot;&#x27;+p.name+&#x27;&quot;&gt;&lt;span class=&quot;dp-theme-swatches&quot; aria-hidden=&quot;true&quot;&gt;&lt;span style=&quot;background:&#x27;+p.bg+&#x27;&quot;&gt;&lt;/span&gt;&lt;span style=&quot;background:&#x27;+p.main+&#x27;&quot;&gt;&lt;/span&gt;&lt;span style=&quot;background:&#x27;+p.secondary+&#x27;&quot;&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&quot;dp-theme-option-label&quot;&gt;&#x27;+p.name+icon(&#x27;check&#x27;)+&#x27;&lt;/span&gt;&lt;/button&gt;&#x27;).join(&#x27;&#x27;)+&#x27;&lt;/div&gt;&lt;/section&gt;&#x27;).join(&#x27;&#x27;)+&#x27;&lt;button class=&quot;dp-theme-default&quot; data-theme-id=&quot;5&quot;&gt;恢复默认 · 香草布丁&lt;/button&gt;&#x27;;
+  }
+  icons();
+ }
+ function renderDiaryList(){
+  const list=main.querySelector(&#x27;.dp-diary-list&#x27;);if(!list)return;
+  const matches=diaries.filter(d=&gt;[...d.text,d.extra].join(&#x27; &#x27;).includes(state.filter)).sort((a,b)=&gt;(b.date+b.time).localeCompare(a.date+a.time));
+  list.innerHTML=[...new Set(matches.map(d=&gt;d.date))].map(date=&gt;&#x27;&lt;section class=&quot;dp-group&quot;&gt;&lt;div class=&quot;dp-day&quot;&gt;&lt;strong&gt;&#x27;+dateLabel(date)+&#x27;&lt;/strong&gt;&lt;span&gt;&#x27;+dateNick(date)+&#x27;&lt;/span&gt;&lt;/div&gt;&#x27;+matches.filter(d=&gt;d.date===date).map(d=&gt;&#x27;&lt;button class=&quot;dp-entry&quot; data-diary=&quot;&#x27;+d.id+&#x27;&quot;&gt;&lt;span class=&quot;dp-meta&quot;&gt;&lt;span&gt;&#x27;+d.time+(d.audio?icon(&#x27;audio-lines&#x27;):&#x27;&#x27;)+&#x27;&lt;/span&gt;&#x27;+(d.mood?&#x27;&lt;span class=&quot;dp-mood&quot;&gt;&#x27;+esc(d.mood)+&#x27;&lt;/span&gt;&#x27;:&#x27;&#x27;)+&#x27;&lt;/span&gt;&lt;p&gt;&#x27;+esc(d.text.join(&#x27; &#x27;))+&#x27;&lt;/p&gt;&lt;/button&gt;&#x27;).join(&#x27;&#x27;)+&#x27;&lt;/section&gt;&#x27;).join(&#x27;&#x27;)||&#x27;&lt;div class=&quot;dp-empty&quot;&gt;没有找到这段文字。&lt;/div&gt;&#x27;;icons();
+ }
+ function messageHTML(m){return &#x27;&lt;div class=&quot;dp-message &#x27;+m.role+&#x27;&quot;&gt;&#x27;+(m.role===&#x27;assistant&#x27;?&#x27;&lt;div class=&quot;dp-assistant-label&quot;&gt;&lt;span class=&quot;dp-avatar&quot;&gt;&#x27;+avatar+&#x27;&lt;/span&gt;日记对话 · 示例回复&lt;/div&gt;&#x27;:&#x27;&#x27;)+(m.pending?&#x27;&lt;p&gt;正在回复…&lt;/p&gt;&#x27;:m.text.split(&#x27;\n\n&#x27;).map(p=&gt;&#x27;&lt;p&gt;&#x27;+esc(p)+&#x27;&lt;/p&gt;&#x27;).join(&#x27;&#x27;))+(m.refs||[]).map(id=&gt;{const d=diaries.find(x=&gt;x.id===id);return &#x27;&lt;button class=&quot;dp-citation&quot; &#x27;+(d?&#x27;data-citation=&quot;&#x27;+id+&#x27;&quot;&#x27;:&#x27;disabled&#x27;)+&#x27;&gt;&#x27;+icon(&#x27;book-open&#x27;)+(d?dateLabel(d.date)+&#x27; · &#x27;+d.time:&#x27;日记已删除&#x27;)+&#x27;&lt;/button&gt;&#x27;;}).join(&#x27;&#x27;)+&#x27;&lt;/div&gt;&#x27;;}
+ function showEditor(kind){const d=diary();openSheet(kind===&#x27;edit&#x27;?(d.audio?&#x27;修改转写&#x27;:&#x27;编辑正文&#x27;):kind===&#x27;write&#x27;?&#x27;写下今天&#x27;:&#x27;补充文字&#x27;,&#x27;&lt;textarea class=&quot;dp-editor&quot; aria-label=&quot;&#x27;+(kind===&#x27;edit&#x27;?&#x27;修改正文&#x27;:kind===&#x27;write&#x27;?&#x27;日记正文&#x27;:&#x27;补充文字&#x27;)+&#x27;&quot; placeholder=&quot;今天……&quot;&gt;&#x27;+esc(kind===&#x27;edit&#x27;?d.text.join(&#x27;\n\n&#x27;):kind===&#x27;supplement&#x27;?d.extra:&#x27;&#x27;)+&#x27;&lt;/textarea&gt;&lt;button class=&quot;dp-primary&quot; data-save-editor=&quot;&#x27;+kind+&#x27;&quot;&gt;完成&lt;/button&gt;&#x27;);}
+ function send(){
+  if(state.generation)return;const input=footer.querySelector(&#x27;textarea&#x27;);const value=input.value.trim();if(!value)return;
+  if(!chat()&amp;&amp;!state.newScope){const hint=footer.querySelector(&#x27;.dp-hint&#x27;);hint.textContent=&#x27;请选择本次对话要参考的日记。&#x27;;hint.hidden=false;main.querySelector(&#x27;[data-action=&quot;scope&quot;]&#x27;).focus();return;}
+  let c=chat();if(!c){c={id:Date.now(),title:value.length&gt;14?value.slice(0,14)+&#x27;…&#x27;:value,date:&#x27;刚刚&#x27;,scope:state.newScope,model:state.newModel,messages:[]};chats.unshift(c);state.chatId=c.id;}
+  c.messages.push({role:&#x27;user&#x27;,text:value},{role:&#x27;assistant&#x27;,text:&#x27;&#x27;,pending:true});state.draft=&#x27;&#x27;;
+  state.generation=setTimeout(()=&gt;{const m=c.messages[c.messages.length-1];m.pending=false;m.text=&#x27;这里会结合你选择的日记继续交流。这个原型展示消息、输入和引用的布局，没有实际调用 AI。&#x27;;const refs=c.scope===&#x27;今天&#x27;?[1]:c.scope===&#x27;最近一周&#x27;||c.scope===&#x27;全部&#x27;?[1,3]:[];m.refs=refs.filter(id=&gt;diaries.some(d=&gt;d.id===id&amp;&amp;d.ai));state.generation=null;if(state.page===&#x27;chat&#x27;){draw(&#x27;chat&#x27;);const list=main.querySelector(&#x27;.dp-messages&#x27;);list.scrollTop=list.scrollHeight;}},1400);
+  draw(&#x27;chat&#x27;);const list=main.querySelector(&#x27;.dp-messages&#x27;);list.scrollTop=list.scrollHeight;
+ }
+ root.addEventListener(&#x27;input&#x27;,event=&gt;{if(event.target.matches(&#x27;.dp-search input&#x27;)){state.filter=event.target.value;renderDiaryList();}if(event.target.matches(&#x27;.dp-compose textarea&#x27;))state.draft=event.target.value;});
+ root.addEventListener(&#x27;change&#x27;,event=&gt;{if(event.target.matches(&#x27;[data-ai]&#x27;)){const d=diary();if(d)d.ai=event.target.checked;}});
+ root.addEventListener(&#x27;click&#x27;,event=&gt;{
+  const b=event.target.closest(&#x27;button&#x27;);if(!b)return;
+  if(b.dataset.themeId){paletteId=Number(b.dataset.themeId);applyPalette();rememberPalette();return;}
+  if(b.dataset.go){closeSheet();if(b.dataset.go===&#x27;home&#x27;)state.saved=false;draw(b.dataset.go);return;}
+  if(b.dataset.diary||b.dataset.citation){state.returnPage=b.dataset.citation?&#x27;chat&#x27;:&#x27;diary&#x27;;state.diaryId=Number(b.dataset.diary||b.dataset.citation);state.saved=false;draw(&#x27;detail&#x27;);return;}
+  if(b.dataset.chat){state.chatId=Number(b.dataset.chat);state.draft=&#x27;&#x27;;draw(&#x27;chat&#x27;);return;}
+  if(b.dataset.mood){const d=diary();d.mood=d.mood===b.dataset.mood?&#x27;&#x27;:b.dataset.mood;closeSheet();draw(&#x27;detail&#x27;);return;}
+  if(b.dataset.scope){state.newScope=b.dataset.scope;closeSheet();draw(&#x27;chat&#x27;);return;}
+  if(b.dataset.model){state.newModel=b.dataset.model;closeSheet();draw(&#x27;chat&#x27;);return;}
+  if(b.dataset.saveEditor){const value=sheet.querySelector(&#x27;textarea&#x27;).value;const kind=b.dataset.saveEditor;if(kind===&#x27;write&#x27;){if(!value.trim()){closeSheet();return;}const d={id:Date.now(),date:&#x27;2026-10-10&#x27;,time:&#x27;21:00&#x27;,mood:&#x27;&#x27;,audio:null,ai:true,text:value.split(/\n\n+/),extra:&#x27;&#x27;};diaries.unshift(d);state.diaryId=d.id;state.returnPage=&#x27;home&#x27;;state.saved=true;}else if(kind===&#x27;edit&#x27;)diary().text=value.split(/\n\n+/);else diary().extra=value;closeSheet();draw(&#x27;detail&#x27;);return;}
+  const action=b.dataset.action;
+  if(action===&#x27;close-sheet&#x27;)closeSheet();
+  else if(action===&#x27;play&#x27;){state.playing=!state.playing;b.innerHTML=icon(state.playing?&#x27;pause&#x27;:&#x27;play&#x27;);b.setAttribute(&#x27;aria-label&#x27;,state.playing?&#x27;停止模拟播放&#x27;:&#x27;模拟播放原音&#x27;);icons();}
+  else if([&#x27;edit&#x27;,&#x27;supplement&#x27;,&#x27;write&#x27;].includes(action))showEditor(action);
+  else if(action===&#x27;mood&#x27;)openSheet(&#x27;此刻的心情&#x27;,&#x27;&lt;div class=&quot;dp-mood-grid&quot;&gt;&#x27;+[&#x27;开心&#x27;,&#x27;平静&#x27;,&#x27;低落&#x27;,&#x27;焦虑&#x27;,&#x27;生气&#x27;,&#x27;疲惫&#x27;].map(m=&gt;&#x27;&lt;button data-mood=&quot;&#x27;+m+&#x27;&quot; aria-pressed=&quot;&#x27;+(diary().mood===m)+&#x27;&quot;&gt;&#x27;+m+&#x27;&lt;/button&gt;&#x27;).join(&#x27;&#x27;)+&#x27;&lt;/div&gt;&lt;p&gt;可以不选，再点一次已选心情即可取消。&lt;/p&gt;&#x27;,b);
+  else if(action===&#x27;entry-menu&#x27;){const d=diary();openSheet(&#x27;这条日记&#x27;,&#x27;&lt;button class=&quot;dp-row&quot; data-action=&quot;date&quot;&gt;&lt;span&gt;修改日期&lt;/span&gt;&#x27;+icon(&#x27;calendar-days&#x27;)+&#x27;&lt;/button&gt;&lt;label class=&quot;dp-row&quot;&gt;&lt;span&gt;参与 AI&lt;small&gt;允许后续日记对话取用这条记录&lt;/small&gt;&lt;/span&gt;&lt;input type=&quot;checkbox&quot; data-ai &#x27;+(d.ai?&#x27;checked&#x27;:&#x27;&#x27;)+&#x27; aria-label=&quot;参与 AI&quot;&gt;&lt;/label&gt;&lt;p&gt;关闭后，已有聊天中的引用仍然保留。&lt;/p&gt;&lt;button class=&quot;dp-row dp-danger&quot; data-action=&quot;delete-entry&quot;&gt;删除日记&#x27;+icon(&#x27;trash-2&#x27;)+&#x27;&lt;/button&gt;&#x27;,b);}
+  else if(action===&#x27;date&#x27;)openSheet(&#x27;修改日期&#x27;,&#x27;&lt;label class=&quot;dp-field&quot;&gt;日记日期&lt;input type=&quot;date&quot; aria-label=&quot;日记日期&quot; value=&quot;&#x27;+diary().date+&#x27;&quot;&gt;&lt;/label&gt;&lt;button class=&quot;dp-primary&quot; data-action=&quot;save-date&quot;&gt;完成&lt;/button&gt;&#x27;);
+  else if(action===&#x27;save-date&#x27;){const value=sheet.querySelector(&#x27;input&#x27;).value;if(value)diary().date=value;closeSheet();draw(&#x27;detail&#x27;);}
+  else if(action===&#x27;delete-entry&#x27;)openSheet(&#x27;删除这条日记？&#x27;,&#x27;&lt;p&gt;文字、转写和原始录音会一起删除，无法恢复。此处仅操作演示数据。&lt;/p&gt;&lt;button class=&quot;dp-primary dp-danger&quot; data-action=&quot;confirm-delete-entry&quot;&gt;删除日记&lt;/button&gt;&#x27;);
+  else if(action===&#x27;confirm-delete-entry&#x27;){const index=diaries.findIndex(d=&gt;d.id===state.diaryId);if(index&gt;=0)diaries.splice(index,1);closeSheet();draw(state.returnPage===&#x27;chat&#x27;?&#x27;chat&#x27;:&#x27;diary&#x27;);}
+  else if(action===&#x27;new-chat&#x27;){state.chatId=null;state.newScope=&#x27;&#x27;;state.newModel=&#x27;日常模型&#x27;;state.draft=&#x27;&#x27;;draw(&#x27;chat&#x27;);}
+  else if(action===&#x27;scope&#x27;)openSheet(&#x27;选择日记范围&#x27;,[&#x27;全部&#x27;,&#x27;今天&#x27;,&#x27;最近一周&#x27;].map(s=&gt;&#x27;&lt;button class=&quot;dp-row&quot; data-scope=&quot;&#x27;+s+&#x27;&quot;&gt;&#x27;+s+icon(&#x27;chevron-right&#x27;)+&#x27;&lt;/button&gt;&#x27;).join(&#x27;&#x27;)+&#x27;&lt;button class=&quot;dp-row&quot; data-action=&quot;custom-range&quot;&gt;自选日期&#x27;+icon(&#x27;calendar-days&#x27;)+&#x27;&lt;/button&gt;&#x27;,b);
+  else if(action===&#x27;custom-range&#x27;)openSheet(&#x27;自选日期&#x27;,&#x27;&lt;label class=&quot;dp-field&quot;&gt;开始&lt;input type=&quot;date&quot; name=&quot;start&quot; value=&quot;2026-10-08&quot;&gt;&lt;/label&gt;&lt;label class=&quot;dp-field&quot;&gt;结束&lt;input type=&quot;date&quot; name=&quot;end&quot; value=&quot;2026-10-10&quot;&gt;&lt;/label&gt;&lt;p class=&quot;dp-range-error&quot; aria-live=&quot;polite&quot;&gt;&lt;/p&gt;&lt;button class=&quot;dp-primary&quot; data-action=&quot;save-range&quot;&gt;使用这个范围&lt;/button&gt;&#x27;);
+  else if(action===&#x27;save-range&#x27;){const start=sheet.querySelector(&#x27;[name=&quot;start&quot;]&#x27;).value,end=sheet.querySelector(&#x27;[name=&quot;end&quot;]&#x27;).value;if(!start||!end||start&gt;end){sheet.querySelector(&#x27;.dp-range-error&#x27;).textContent=&#x27;请选择有效的起止日期。&#x27;;return;}state.newScope=dateLabel(start)+&#x27; – &#x27;+dateLabel(end);closeSheet();draw(&#x27;chat&#x27;);}
+  else if(action===&#x27;model&#x27;)openSheet(&#x27;选择模型连接&#x27;,state.models.map(m=&gt;&#x27;&lt;button class=&quot;dp-row&quot; data-model=&quot;&#x27;+m+&#x27;&quot;&gt;&#x27;+m+icon(&#x27;chevron-right&#x27;)+&#x27;&lt;/button&gt;&#x27;).join(&#x27;&#x27;)+&#x27;&lt;p&gt;这里展示已在「更多」中配置的模型连接。&lt;/p&gt;&#x27;,b);
+  else if(action===&#x27;send&#x27;)send();
+  else if(action===&#x27;stop-reply&#x27;){stopGeneration();draw(&#x27;chat&#x27;);}
+  else if(action===&#x27;chat-menu&#x27;)openSheet(&#x27;这段对话&#x27;,&#x27;&lt;button class=&quot;dp-row dp-danger&quot; data-action=&quot;delete-chat&quot;&gt;删除整段对话&#x27;+icon(&#x27;trash-2&#x27;)+&#x27;&lt;/button&gt;&#x27;,b);
+  else if(action===&#x27;delete-chat&#x27;)openSheet(&#x27;删除整段对话？&#x27;,&#x27;&lt;p&gt;聊天记录会被删除，日记仍然保留。此处仅操作演示数据。&lt;/p&gt;&lt;button class=&quot;dp-primary dp-danger&quot; data-action=&quot;confirm-delete-chat&quot;&gt;删除对话&lt;/button&gt;&#x27;);
+  else if(action===&#x27;confirm-delete-chat&#x27;){stopGeneration();const index=chats.findIndex(c=&gt;c.id===state.chatId);if(index&gt;=0)chats.splice(index,1);closeSheet();draw(&#x27;threads&#x27;);}
+  else if(action===&#x27;record&#x27;){state.started=Date.now();draw(&#x27;recording&#x27;);}
+  else if(action===&#x27;stop-record&#x27;){const d={id:Date.now(),date:&#x27;2026-10-10&#x27;,time:&#x27;21:00&#x27;,mood:&#x27;&#x27;,audio:&#x27;00:&#x27;+Math.min(59,Math.floor((Date.now()-state.started)/1000)).toString().padStart(2,&#x27;0&#x27;),ai:true,text:[&#x27;这是录音结束后的页面示例。原音会先保存，转写完成后自动显示在这里。&#x27;],extra:&#x27;&#x27;};diaries.unshift(d);state.diaryId=d.id;state.returnPage=&#x27;home&#x27;;state.saved=true;draw(&#x27;detail&#x27;);}
+  else if(action===&#x27;providers&#x27;)openSheet(&#x27;AI 服务商与模型&#x27;,state.models.map((m,i)=&gt;&#x27;&lt;div class=&quot;dp-row&quot;&gt;&lt;span&gt;&#x27;+m+&#x27;&lt;small&gt;&#x27;+(i===0?&#x27;默认连接&#x27;:&#x27;备用连接&#x27;)+&#x27;&lt;/small&gt;&lt;/span&gt;&#x27;+icon(&#x27;check&#x27;)+&#x27;&lt;/div&gt;&#x27;).join(&#x27;&#x27;)+&#x27;&lt;p&gt;连接列表示例。实际配置包含名称、协议、服务地址、API Key 和模型名称。&lt;/p&gt;&#x27;,b);
+  else if(action===&#x27;about&#x27;)openSheet(&#x27;关于 OneRecord&#x27;,&#x27;&lt;p&gt;留一点今天。&lt;/p&gt;&lt;p&gt;一个记录与回顾日常的地方。&lt;/p&gt;&#x27;,b);
+ });
+ shade.addEventListener(&#x27;click&#x27;,closeSheet);
+ sheet.addEventListener(&#x27;keydown&#x27;,event=&gt;{if(event.key===&#x27;Escape&#x27;)closeSheet();if(event.key===&#x27;Tab&#x27;){const controls=[...sheet.querySelectorAll(&#x27;button,input,textarea&#x27;)];const first=controls[0],last=controls[controls.length-1];if(event.shiftKey&amp;&amp;document.activeElement===first){event.preventDefault();last.focus();}else if(!event.shiftKey&amp;&amp;document.activeElement===last){event.preventDefault();first.focus();}}});
+ applyPalette();restorePalette(window.openai?.widgetState);
+ window.addEventListener(&#x27;openai:set_globals&#x27;,event=&gt;restorePalette(event.detail?.globals?.widgetState));
+ draw(&#x27;home&#x27;);
+})();
+&lt;/script&gt;
+&lt;/div&gt;
+
+&lt;script src=&quot;https://unpkg.com/@floating-ui/core@1.7.3/dist/floating-ui.core.umd.min.js&quot;&gt;&lt;/script&gt;
+&lt;script src=&quot;https://unpkg.com/@floating-ui/dom@1.7.4/dist/floating-ui.dom.umd.min.js&quot;&gt;&lt;/script&gt;
+&lt;script&gt;
+(() =&gt; {
+  if (window.FloatingUIDOM == null) {
+    return;
+  }
+  const { autoUpdate, computePosition, flip, offset, shift, size } =
+    window.FloatingUIDOM;
+  const tooltipPlacements = new Set([&quot;top&quot;, &quot;right&quot;, &quot;bottom&quot;, &quot;left&quot;]);
+  const tooltipId = `codex-visualization-tooltip-${
+    window.crypto?.randomUUID?.() ?? Date.now().toString(36)
+  }`;
+  const tooltipGap = 5;
+  const hoverDelay = 700;
+  const skipDelay = 300;
+  let activeTrigger = null;
+  let pendingTrigger = null;
+  let tooltip = null;
+  let openTimeout = null;
+  let autoUpdateCleanup = null;
+  let positionRequest = 0;
+  let skipDelayUntil = 0;
+  let lastPointerWasTouch = false;
+  let pinnedByTouch = false;
+
+  const getTrigger = (event) =&gt; {
+    for (const target of event.composedPath()) {
+      if (target?.nodeType === Node.ELEMENT_NODE) {
+        const trigger = target.closest(&quot;[data-tooltip]&quot;);
+        if (trigger) return trigger;
+      }
+    }
+    return null;
+  };
+  const containsTarget = (trigger, target) =&gt;
+    target?.nodeType != null &amp;&amp; trigger.contains(target);
+  const getContent = (trigger) =&gt;
+    trigger.getAttribute(&quot;data-tooltip&quot;)?.trim() ?? &quot;&quot;;
+  const getPlacement = (trigger) =&gt; {
+    const placement = trigger.getAttribute(&quot;data-tooltip-placement&quot;);
+    return tooltipPlacements.has(placement) ? placement : &quot;top&quot;;
+  };
+  const getTooltip = () =&gt; {
+    if (tooltip == null) {
+      tooltip = document.createElement(&quot;div&quot;);
+      tooltip.id = tooltipId;
+      tooltip.className = &quot;tooltip&quot;;
+      tooltip.setAttribute(&quot;role&quot;, &quot;tooltip&quot;);
+    }
+    return tooltip;
+  };
+  const setDescribedBy = (trigger, described) =&gt; {
+    const ids = new Set(
+      (trigger.getAttribute(&quot;aria-describedby&quot;) ?? &quot;&quot;)
+        .split(/\s+/)
+        .filter(Boolean),
+    );
+    if (described) {
+      ids.add(tooltipId);
+    } else {
+      ids.delete(tooltipId);
+    }
+    if (ids.size === 0) {
+      trigger.removeAttribute(&quot;aria-describedby&quot;);
+    } else {
+      trigger.setAttribute(&quot;aria-describedby&quot;, [...ids].join(&quot; &quot;));
+    }
+  };
+  const clearOpenTimeout = () =&gt; {
+    if (openTimeout != null) {
+      window.clearTimeout(openTimeout);
+      openTimeout = null;
+    }
+    pendingTrigger = null;
+  };
+  const closeTooltip = (activateSkipDelay = true) =&gt; {
+    clearOpenTimeout();
+    pinnedByTouch = false;
+    positionRequest += 1;
+    autoUpdateCleanup?.();
+    autoUpdateCleanup = null;
+    if (activeTrigger == null) {
+      return;
+    }
+    setDescribedBy(activeTrigger, false);
+    activeTrigger = null;
+    tooltip?.remove();
+    if (activateSkipDelay) {
+      skipDelayUntil = Date.now() + skipDelay;
+    }
+  };
+  const updatePosition = (trigger, floating) =&gt; {
+    const request = ++positionRequest;
+    void computePosition(trigger, floating, {
+      middleware: [
+        offset(tooltipGap),
+        flip({ padding: tooltipGap }),
+        shift({ padding: tooltipGap }),
+        size({
+          padding: tooltipGap,
+          apply({ availableHeight, availableWidth, elements }) {
+            elements.floating.style.setProperty(
+              &quot;--tooltip-available-width&quot;,
+              `${Math.max(0, availableWidth)}px`,
+            );
+            elements.floating.style.setProperty(
+              &quot;--tooltip-available-height&quot;,
+              `${Math.max(0, availableHeight)}px`,
+            );
+          },
+        }),
+      ],
+      placement: getPlacement(trigger),
+      strategy: &quot;fixed&quot;,
+    })
+      .then(({ x, y }) =&gt; {
+        if (activeTrigger !== trigger || request !== positionRequest) {
+          return;
+        }
+        const scale = window.devicePixelRatio || 1;
+        floating.style.transform = `translate(${Math.round(x * scale) / scale}px, ${Math.round(y * scale) / scale}px)`;
+        floating.style.visibility = &quot;visible&quot;;
+      })
+      .catch(() =&gt; {
+        if (activeTrigger === trigger &amp;&amp; request === positionRequest) {
+          closeTooltip(false);
+        }
+      });
+  };
+  const openTooltip = (trigger) =&gt; {
+    const content = getContent(trigger);
+    if (!trigger.isConnected || content.length === 0) {
+      return;
+    }
+    clearOpenTimeout();
+    if (activeTrigger === trigger) {
+      return;
+    }
+    closeTooltip();
+    const floating = getTooltip();
+    floating.textContent = content;
+    floating.style.visibility = &quot;hidden&quot;;
+    floating.style.transform = &quot;translate(0, 0)&quot;;
+    document.body.appendChild(floating);
+    activeTrigger = trigger;
+    setDescribedBy(trigger, true);
+    autoUpdateCleanup = autoUpdate(trigger, floating, () =&gt; {
+      updatePosition(trigger, floating);
+    });
+  };
+  const requestOpen = (trigger, immediate = false) =&gt; {
+    if (
+      getContent(trigger).length === 0 ||
+      activeTrigger === trigger ||
+      pendingTrigger === trigger
+    ) {
+      return;
+    }
+    clearOpenTimeout();
+    pendingTrigger = trigger;
+    const delay =
+      immediate || activeTrigger != null || Date.now() &lt; skipDelayUntil
+        ? 0
+        : hoverDelay;
+    if (delay === 0) {
+      openTooltip(trigger);
+      return;
+    }
+    openTimeout = window.setTimeout(() =&gt; {
+      openTimeout = null;
+      pendingTrigger = null;
+      openTooltip(trigger);
+    }, delay);
+  };
+  const handlePointerOpen = (event) =&gt; {
+    if (event.pointerType === &quot;touch&quot;) {
+      return;
+    }
+    const trigger = getTrigger(event);
+    if (trigger == null || containsTarget(trigger, event.relatedTarget)) {
+      return;
+    }
+    requestOpen(trigger);
+  };
+  const handlePointer = (event) =&gt; {
+    lastPointerWasTouch =
+      event.type === &quot;pointerdown&quot; &amp;&amp; event.pointerType === &quot;touch&quot;;
+  };
+  const handleTouchClick = (event) =&gt; {
+    const isTouch = event.pointerType === &quot;touch&quot; || lastPointerWasTouch;
+    lastPointerWasTouch = false;
+    if (!isTouch || event.detail === 0) {
+      return;
+    }
+    const trigger = getTrigger(event);
+    if (
+      trigger == null ||
+      !trigger.isConnected ||
+      getContent(trigger).length === 0 ||
+      (pinnedByTouch &amp;&amp; activeTrigger === trigger)
+    ) {
+      if (pinnedByTouch) {
+        closeTooltip();
+      }
+      return;
+    }
+    openTooltip(trigger);
+    pinnedByTouch = activeTrigger === trigger;
+    window.setTimeout(() =&gt; {
+      if (activeTrigger === trigger &amp;&amp; !trigger.isConnected) {
+        closeTooltip(false);
+      }
+    }, 0);
+  };
+  const handleLeave = (event) =&gt; {
+    if (pinnedByTouch) {
+      return;
+    }
+    const trigger = getTrigger(event);
+    if (trigger == null || containsTarget(trigger, event.relatedTarget)) {
+      return;
+    }
+    if (activeTrigger === trigger || pendingTrigger === trigger) {
+      closeTooltip();
+    }
+  };
+  const handleFocusIn = (event) =&gt; {
+    const trigger = getTrigger(event);
+    if (trigger?.matches(&quot;:focus-visible&quot;)) {
+      requestOpen(trigger, true);
+    }
+  };
+  const handleKeyDown = (event) =&gt; {
+    if (event.key === &quot;Escape&quot;) {
+      closeTooltip();
+    }
+  };
+  const handleContextMenu = (event) =&gt; {
+    lastPointerWasTouch = false;
+    const trigger = getTrigger(event);
+    if (activeTrigger === trigger || pendingTrigger === trigger) {
+      closeTooltip();
+    }
+  };
+  const handlers = {
+    pointerover: handlePointerOpen,
+    pointerdown: handlePointer,
+    pointercancel: handlePointer,
+    click: handleTouchClick,
+    pointerout: handleLeave,
+    focusin: handleFocusIn,
+    focusout: handleLeave,
+    keydown: handleKeyDown,
+    contextmenu: handleContextMenu,
+  };
+  const roots = new Map();
+  const handledEvents = new WeakSet();
+  const handleEvent = (event) =&gt; {
+    if (handledEvents.has(event)) return;
+    handledEvents.add(event);
+    handlers[event.type](event);
+  };
+  const discoverRoots = (node) =&gt; {
+    if (node.shadowRoot) listen(node.shadowRoot);
+    for (const element of node.querySelectorAll(&quot;*&quot;)) {
+      if (element.shadowRoot) listen(element.shadowRoot);
+    }
+  };
+  const listen = (root) =&gt; {
+    if (roots.has(root)) return;
+    for (const type of Object.keys(handlers)) root.addEventListener(type, handleEvent);
+    const observer = new window.MutationObserver((records) =&gt; {
+      for (const { addedNodes } of records) {
+        for (const node of addedNodes) {
+          if (node.nodeType === Node.ELEMENT_NODE) discoverRoots(node);
+        }
+      }
+      for (const [root, cleanup] of roots) {
+        if (root.host &amp;&amp; !root.host.isConnected) {
+          cleanup();
+          roots.delete(root);
+        }
+      }
+      if (activeTrigger &amp;&amp; !activeTrigger.isConnected) closeTooltip(false);
+    });
+    observer.observe(root, { childList: true, subtree: true });
+    roots.set(root, () =&gt; {
+      observer.disconnect();
+      for (const type of Object.keys(handlers)) root.removeEventListener(type, handleEvent);
+    });
+    discoverRoots(root);
+  };
+  const destroy = () =&gt; {
+    closeTooltip(false);
+    lastPointerWasTouch = false;
+    for (const cleanup of roots.values()) cleanup();
+    roots.clear();
+    tooltip = null;
+  };
+
+  // Events between children of one shadow root never reach the document.
+  listen(document);
+  window.addEventListener(&quot;pagehide&quot;, destroy, { once: true });
+})();
+&lt;/script&gt;
+&lt;script id=&quot;codex-visualization-tabs&quot;&gt;
+(() =&gt; {
+  const selector = &#x27;.nav[role=&quot;tablist&quot;] [role=&quot;tab&quot;]&#x27;;
+  const disabled = &#x27;:disabled,[aria-disabled=&quot;true&quot;]&#x27;;
+  const selectTab = (selected) =&gt; {
+    const panelId = selected.getAttribute(&quot;aria-controls&quot;);
+    for (const tab of selected.closest(&#x27;[role=&quot;tablist&quot;]&#x27;).querySelectorAll(&#x27;[role=&quot;tab&quot;]&#x27;)) {
+      const active = tab === selected;
+      tab.classList.toggle(&quot;active&quot;, active);
+      tab.setAttribute(&quot;aria-selected&quot;, String(active));
+      const id = tab.getAttribute(&quot;aria-controls&quot;);
+      const panel = id &amp;&amp; document.getElementById(id);
+      if (panel != null) {
+        panel.hidden = id !== panelId;
+        if (!panel.hidden &amp;&amp; selected.id) {
+          panel.setAttribute(&quot;aria-labelledby&quot;, selected.id);
+        }
+      }
+    }
+  };
+  const interact = (event) =&gt; {
+    const tab = event.target?.closest?.(selector);
+    if (event.defaultPrevented || tab == null || tab.matches(disabled)) {
+      return;
+    }
+    if (event.type === &quot;click&quot;) {
+      selectTab(tab);
+      return;
+    }
+    const tabs = Array.from(
+      tab.closest(&#x27;[role=&quot;tablist&quot;]&#x27;).querySelectorAll(&#x27;[role=&quot;tab&quot;]&#x27;),
+    ).filter((candidate) =&gt; !candidate.matches(disabled));
+    const current = tabs.indexOf(tab);
+    let next;
+    if (event.key === &quot;ArrowRight&quot; || event.key === &quot;ArrowDown&quot;) {
+      next = (current + 1) % tabs.length;
+    } else if (event.key === &quot;ArrowLeft&quot; || event.key === &quot;ArrowUp&quot;) {
+      next = (current + tabs.length - 1) % tabs.length;
+    } else if (event.key === &quot;Home&quot;) {
+      next = 0;
+    } else if (event.key === &quot;End&quot;) {
+      next = tabs.length - 1;
+    } else {
+      return;
+    }
+    event.preventDefault();
+    tabs[next].focus();
+    selectTab(tabs[next]);
+  };
+
+  for (const list of document.querySelectorAll(&#x27;.nav[role=&quot;tablist&quot;]&#x27;)) {
+    const selected =
+      list.querySelector(&#x27;[role=&quot;tab&quot;][aria-selected=&quot;true&quot;]&#x27;) ??
+      list.querySelector(&#x27;[role=&quot;tab&quot;].active&#x27;) ??
+      list.querySelector(&#x27;[role=&quot;tab&quot;]&#x27;);
+    if (selected != null) {
+      selectTab(selected);
+    }
+  }
+  document.addEventListener(&quot;click&quot;, interact);
+  document.addEventListener(&quot;keydown&quot;, interact);
+  window.addEventListener(&quot;pagehide&quot;, () =&gt; {
+    document.removeEventListener(&quot;click&quot;, interact);
+    document.removeEventListener(&quot;keydown&quot;, interact);
+  }, { once: true });
+})();
+&lt;/script&gt;
+&lt;script id=&quot;codex-visualization-carousel&quot;&gt;
+  (() =&gt; {
+    for (const root of document.querySelectorAll(&quot;.viz-carousel&quot;)) {
+      const panels = Array.from(
+        root.querySelectorAll(&quot;:scope &gt; [data-variant]&quot;),
+      );
+      if (panels.length === 0) {
+        continue;
+      }
+      root.setAttribute(&quot;role&quot;, &quot;group&quot;);
+      panels.forEach((panel, index) =&gt; {
+        panel.hidden = index !== 0;
+        panel.setAttribute(&quot;role&quot;, &quot;group&quot;);
+        if (!panel.hasAttribute(&quot;aria-label&quot;)) {
+          panel.setAttribute(&quot;aria-label&quot;, panel.dataset.variant);
+        }
+      });
+      root.dataset.activeVariant = panels[0].dataset.variant;
+      if (panels.length === 1) {
+        continue;
+      }
+
+      const controls = document.createElement(&quot;div&quot;);
+      controls.className = &quot;viz-carousel-controls&quot;;
+      // Portable copy of the settings dropdown&#x27;s legacy glyph; no 14px icon-package preset matches it.
+      // https://github.com/openai/openai/blob/master/codex/codex-apps/webview/src/icons/chevron.svg
+      controls.innerHTML = `
+      &lt;button type=&quot;button&quot; class=&quot;viz-carousel-previous cursor-interaction&quot;&gt;&lt;i data-lucide=&quot;chevron-left&quot; aria-hidden=&quot;true&quot;&gt;&lt;/i&gt;&lt;/button&gt;
+      &lt;details class=&quot;viz-carousel-picker&quot;&gt;
+        &lt;summary class=&quot;cursor-interaction&quot;&gt;
+          &lt;span class=&quot;viz-carousel-count tabular-nums&quot;&gt;&lt;/span&gt;
+          &lt;span class=&quot;viz-carousel-name&quot;&gt;&lt;/span&gt;
+          &lt;svg class=&quot;viz-carousel-caret&quot; width=&quot;14&quot; height=&quot;14&quot; viewBox=&quot;0 0 20 21&quot; fill=&quot;none&quot; aria-hidden=&quot;true&quot; focusable=&quot;false&quot;&gt;
+            &lt;path d=&quot;M15.2793 7.71101C15.539 7.45131 15.961 7.45131 16.2207 7.71101C16.4804 7.97071 16.4804 8.39272 16.2207 8.65242L10.4707 14.4024C10.211 14.6621 9.78902 14.6621 9.52932 14.4024L3.77932 8.65242L3.69436 8.54792C3.52385 8.28979 3.55205 7.93828 3.77932 7.71101C4.00659 7.48374 4.3581 7.45554 4.61623 7.62605L4.72073 7.71101L10 12.9903L15.2793 7.71101Z&quot; fill=&quot;currentColor&quot; stroke=&quot;currentColor&quot; stroke-width=&quot;0.6&quot; /&gt;
+          &lt;/svg&gt;
+        &lt;/summary&gt;
+        &lt;div class=&quot;viz-carousel-options&quot;&gt;&lt;/div&gt;
+      &lt;/details&gt;
+      &lt;button type=&quot;button&quot; class=&quot;viz-carousel-next cursor-interaction&quot;&gt;&lt;i data-lucide=&quot;chevron-right&quot; aria-hidden=&quot;true&quot;&gt;&lt;/i&gt;&lt;/button&gt;`;
+      const previous = controls.querySelector(&quot;.viz-carousel-previous&quot;);
+      const next = controls.querySelector(&quot;.viz-carousel-next&quot;);
+      const picker = controls.querySelector(&quot;.viz-carousel-picker&quot;);
+      const summary = picker.querySelector(&quot;summary&quot;);
+      const count = controls.querySelector(&quot;.viz-carousel-count&quot;);
+      const name = controls.querySelector(&quot;.viz-carousel-name&quot;);
+      const options = controls.querySelector(&quot;.viz-carousel-options&quot;);
+      const status = document.createElement(&quot;span&quot;);
+      status.className = &quot;sr-only&quot;;
+      status.setAttribute(&quot;role&quot;, &quot;status&quot;);
+      status.setAttribute(&quot;aria-live&quot;, &quot;polite&quot;);
+      status.setAttribute(&quot;aria-atomic&quot;, &quot;true&quot;);
+      previous.setAttribute(
+        &quot;aria-label&quot;,
+        root.dataset.previousLabel ?? &quot;Previous variant&quot;,
+      );
+      next.setAttribute(&quot;aria-label&quot;, root.dataset.nextLabel ?? &quot;Next variant&quot;);
+
+      let active = 0;
+      let mousePointerId = null;
+      let summaryPointerHandled = false;
+      summary.addEventListener(&quot;pointerdown&quot;, (event) =&gt; {
+        summaryPointerHandled =
+          event.pointerType === &quot;mouse&quot; &amp;&amp; event.button === 0 &amp;&amp; !event.ctrlKey;
+        if (!summaryPointerHandled) {
+          return;
+        }
+        event.preventDefault();
+        summary.focus({ preventScroll: true });
+        picker.open = !picker.open;
+        mousePointerId = picker.open ? event.pointerId : null;
+      });
+      summary.addEventListener(&quot;click&quot;, (event) =&gt; {
+        if (summaryPointerHandled &amp;&amp; event.detail &gt; 0) {
+          event.preventDefault();
+        }
+      });
+      const choices = panels.map((panel, index) =&gt; {
+        const choice = document.createElement(&quot;button&quot;);
+        choice.type = &quot;button&quot;;
+        choice.className = &quot;cursor-interaction&quot;;
+        choice.textContent = panel.dataset.variant;
+        choice.addEventListener(&quot;click&quot;, () =&gt; {
+          select(index);
+          summary.focus();
+        });
+        choice.addEventListener(&quot;pointerup&quot;, (event) =&gt; {
+          if (
+            picker.open &amp;&amp;
+            event.pointerType === &quot;mouse&quot; &amp;&amp;
+            event.button === 0 &amp;&amp;
+            event.pointerId === mousePointerId
+          ) {
+            choice.click();
+          }
+        });
+        options.appendChild(choice);
+        return choice;
+      });
+      const select = (index) =&gt; {
+        const changed = active !== index;
+        active = index;
+        panels.forEach((panel, position) =&gt; {
+          panel.hidden = position !== active;
+          choices[position].setAttribute(
+            &quot;aria-current&quot;,
+            String(position === active),
+          );
+        });
+        root.dataset.activeVariant = panels[active].dataset.variant;
+        count.textContent = `${active + 1} / ${panels.length}`;
+        name.textContent = panels[active].dataset.variant;
+        picker.open = false;
+        mousePointerId = null;
+        if (changed) {
+          status.textContent = `${count.textContent}: ${name.textContent}`;
+        }
+      };
+      previous.addEventListener(&quot;click&quot;, () =&gt;
+        select((active + panels.length - 1) % panels.length),
+      );
+      next.addEventListener(&quot;click&quot;, () =&gt;
+        select((active + 1) % panels.length),
+      );
+      picker.addEventListener(&quot;keydown&quot;, (event) =&gt; {
+        if (event.key === &quot;Escape&quot; &amp;&amp; picker.open) {
+          event.preventDefault();
+          picker.open = false;
+          mousePointerId = null;
+          summary.focus();
+          return;
+        }
+        if (event.altKey || event.ctrlKey || event.metaKey) {
+          return;
+        }
+        const index = choices.indexOf(document.activeElement);
+        let nextIndex;
+        if (event.key === &quot;ArrowDown&quot;) {
+          nextIndex = index &lt; 0 ? active : (index + 1) % choices.length;
+        } else if (event.key === &quot;ArrowUp&quot;) {
+          nextIndex = index &lt; 0 ? active : (index + choices.length - 1) % choices.length;
+        } else if (picker.open &amp;&amp; event.key === &quot;Home&quot;) {
+          nextIndex = 0;
+        } else if (picker.open &amp;&amp; event.key === &quot;End&quot;) {
+          nextIndex = choices.length - 1;
+        } else {
+          return;
+        }
+        event.preventDefault();
+        picker.open = true;
+        choices[nextIndex].focus();
+      });
+      picker.addEventListener(&quot;focusout&quot;, (event) =&gt; {
+        if (!picker.contains(event.relatedTarget)) {
+          picker.open = false;
+          mousePointerId = null;
+        }
+      });
+      const dismiss = (event) =&gt; {
+        if (!summary.contains(event.target)) {
+          mousePointerId = null;
+        }
+        if (!picker.contains(event.target)) {
+          picker.open = false;
+        }
+      };
+      const endPointerSelection = () =&gt; {
+        mousePointerId = null;
+      };
+      const sizePicker = () =&gt; {
+        root.style.setProperty(
+          &quot;--viz-carousel-picker-height&quot;,
+          `${picker.open ? options.offsetHeight : 0}px`,
+        );
+      };
+      picker.addEventListener(&quot;toggle&quot;, sizePicker);
+      window.addEventListener(&quot;resize&quot;, sizePicker);
+      document.addEventListener(&quot;pointerdown&quot;, dismiss);
+      document.addEventListener(&quot;pointerup&quot;, endPointerSelection);
+      document.addEventListener(&quot;pointercancel&quot;, endPointerSelection);
+      window.addEventListener(&quot;blur&quot;, endPointerSelection);
+      window.addEventListener(
+        &quot;pagehide&quot;,
+        () =&gt; {
+          document.removeEventListener(&quot;pointerdown&quot;, dismiss);
+          document.removeEventListener(&quot;pointerup&quot;, endPointerSelection);
+          document.removeEventListener(&quot;pointercancel&quot;, endPointerSelection);
+          window.removeEventListener(&quot;blur&quot;, endPointerSelection);
+          window.removeEventListener(&quot;resize&quot;, sizePicker);
+        },
+        { once: true },
+      );
+      root.append(controls, status);
+      select(0);
+    }
+  })();
+&lt;/script&gt;
+&lt;script id=&quot;codex-visualization-lucide&quot; async src=&quot;https://unpkg.com/lucide@1.17.0/dist/umd/lucide.js&quot;&gt;&lt;/script&gt;
+&lt;script&gt;
+(() =&gt; {
+  const initialize = () =&gt; {
+    globalThis.lucide?.createIcons({ attrs: { width: 16, height: 16 } });
+  };
+  if (globalThis.lucide != null) {
+    initialize();
+    return;
+  }
+  document
+    .getElementById(&quot;codex-visualization-lucide&quot;)
+    ?.addEventListener(&quot;load&quot;, initialize, { once: true });
+})();
+&lt;/script&gt;
+
+&lt;/body&gt;
+&lt;/html&gt;
+"></iframe>
+
+<script>(() => {
+  const frame = document.getElementById("codex-visualization");
+  if (!(frame instanceof HTMLIFrameElement)) {
+    return;
+  }
+  let viewportHeight = globalThis.innerHeight;
+  const storageKey = `codex:visualization-widget-state-v2:${JSON.stringify([
+    globalThis.location.pathname,
+    globalThis.location.search,
+  ])}`;
+  const parseState = (serializedState) => {
+    if (
+      typeof serializedState !== "string" ||
+      new TextEncoder().encode(serializedState).length > 16 * 1024
+    ) {
+      throw new TypeError(
+        "Widget state must be a JSON object of at most 16 KiB",
+      );
+    }
+    /** @type {unknown} */
+    const state = JSON.parse(serializedState);
+    if (
+      state == null ||
+      typeof state !== "object" ||
+      Array.isArray(state) ||
+      ("imageIds" in state &&
+        (!Array.isArray(state.imageIds) || state.imageIds.length > 0))
+    ) {
+      throw new TypeError("Widget state must be a JSON object");
+    }
+    const storedState = { modelContent: null, privateContent: null, ...state };
+    const canonicalState = JSON.stringify(
+      storedState,
+      (_key, /** @type {unknown} */ value) => {
+        if (typeof value === "number" && !Number.isFinite(value)) {
+          throw new TypeError("Widget state must contain finite numbers");
+        }
+        return value;
+      },
+    );
+    if (new TextEncoder().encode(canonicalState).length > 16 * 1024) {
+      throw new TypeError(
+        "Widget state must be a JSON object of at most 16 KiB",
+      );
+    }
+    return storedState;
+  };
+  let storage = null;
+  let state = null;
+  try {
+    const localStorage = globalThis.localStorage;
+    const probeKey = `${storageKey}:probe`;
+    localStorage.setItem(probeKey, "1");
+    localStorage.removeItem(probeKey);
+    storage = localStorage;
+    const savedState = storage.getItem(storageKey);
+    if (savedState != null) {
+      try {
+        state = parseState(savedState);
+      } catch {
+        // Invalid saved state does not disable future writes.
+      }
+    }
+  } catch {
+    storage = null;
+  }
+  const initialGlobals = {
+    widgetState: state,
+    statePersistence: storage == null ? "none" : "local",
+  };
+
+  const channel = new MessageChannel();
+  channel.port1.addEventListener("message", (event) => {
+    const data = event.data;
+    if (typeof data !== "object" || data == null) {
+      return;
+    }
+    if (data.type === "widget-state-write") {
+      if (!Number.isSafeInteger(data.id) || data.id <= 0) {
+        return;
+      }
+      let ok = false;
+      try {
+        if (storage != null) {
+          const state = parseState(data.state);
+          storage.setItem(storageKey, JSON.stringify(state));
+          ok = true;
+        }
+      } catch {
+        // Storage denial, quota limits, and invalid state return a failed receipt.
+      }
+      channel.port1.postMessage({
+        type: "widget-state-result",
+        id: data.id,
+        ok,
+      });
+      return;
+    }
+    if (data.type === "height") {
+      const height = data.height;
+      if (
+        typeof height === "number" &&
+        Number.isFinite(height) &&
+        height >= 0 &&
+        height <= 10_000
+      ) {
+        frame.style.height = Math.ceil(height) + "px";
+      }
+      return;
+    }
+    if (data.type === "scroll-to") {
+      const top = data.top;
+      if (
+        typeof top === "number" &&
+        Number.isFinite(top) &&
+        top >= 0 &&
+        globalThis.navigator.userActivation?.isActive === true
+      ) {
+        globalThis.scrollTo({
+          top: Math.ceil(
+            globalThis.scrollY + frame.getBoundingClientRect().top + top,
+          ),
+        });
+      }
+      return;
+    }
+    if (data.type === "open-external") {
+      const rawHref = data.href;
+      if (typeof rawHref !== "string") {
+        return;
+      }
+      let href;
+      try {
+        const url = new URL(rawHref, document.baseURI);
+        if (url.protocol !== "https:") {
+          return;
+        }
+        href = url.href;
+      } catch {
+        return;
+      }
+      if (globalThis.navigator.userActivation?.isActive === true) {
+        const anchor = document.createElement("a");
+        anchor.href = href;
+        anchor.rel = "noopener noreferrer";
+        anchor.target = "_blank";
+        document.body.appendChild(anchor);
+        anchor.click();
+        anchor.remove();
+      }
+      return;
+    }
+    if (data.type === "follow-up") {
+      const prompt = data.prompt;
+      if (
+        typeof prompt !== "string" ||
+        globalThis.navigator.userActivation?.isActive !== true
+      ) {
+        return;
+      }
+      const title = data.title;
+      globalThis.prompt(typeof title === "string" ? title : prompt, prompt);
+    }
+  });
+  channel.port1.start();
+  const srcdoc = frame.dataset.srcdoc;
+  if (srcdoc == null) {
+    return;
+  }
+  globalThis.addEventListener("resize", () => {
+    const height = Number.parseFloat(frame.style.height);
+    if (!Number.isFinite(height) || height <= viewportHeight) {
+      frame.style.removeProperty("height");
+    }
+    viewportHeight = globalThis.innerHeight;
+    channel.port1.postMessage({ type: "measure" });
+  });
+  frame.addEventListener(
+    "load",
+    () => {
+      frame.contentWindow?.postMessage(
+        { type: "codex-visualization-initialize" },
+        "*",
+        [channel.port2],
+      );
+    },
+    { once: true },
+  );
+  // Match the trusted bootstrap element, not the same text in an authored title.
+  frame.srcdoc = srcdoc.replace(
+    '<script type="application/json" id="codex-visualization-widget-state">__CODEX_VISUALIZATION_WIDGET_STATE__<\/script>',
+    () =>
+      '<script type="application/json" id="codex-visualization-widget-state">' +
+      JSON.stringify(initialGlobals).replaceAll("<", "\\u003c") +
+      "<\/script>",
+  );
+  delete frame.dataset.srcdoc;
+})();
+</script>
+</body>
+</html>
